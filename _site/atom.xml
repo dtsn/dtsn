@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2012-12-29T12:25:30+00:00</updated>
+ <updated>2013-01-08T10:04:38+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -12,11 +12,24 @@
 
  
  <entry>
-   <title>Hello World</title>
-   <link href="http://dtsn.me/2012/12/28/Hello-World.html"/>
-   <updated>2012-12-28T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2012/12/28/Hello-World</id>
-   <content type="html">&lt;p&gt;boo&lt;/p&gt;</content>
+   <title>The Sound of Twitter</title>
+   <link href="http://dtsn.me/2012/02/28/sound-of-twitter.html"/>
+   <updated>2012-02-28T00:00:00+00:00</updated>
+   <id>http://tom.preston-werner.com/2012/02/28/sound-of-twitter</id>
+   <content type="html">&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
+
+&lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href='http://twitter.com/maxtillich'&gt;@maxtillich&lt;/a&gt; and &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href='http://datasift.com'&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
+&lt;h2&gt;HTML5 Audio&lt;/h2&gt;
+&lt;p&gt;I&amp;#8217;ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it&amp;#8217;s finally gotten support in most of the major browsers. Using &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
+
+&lt;p&gt;What we get is a slightly surreal experience of how twitter sounds.&lt;/p&gt;
+
+&lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
+
+&lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;UPDATE - &lt;a href='http://thelisteningmachine.org/'&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;
+&lt;!--&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/z1glJZZCEUQ?rel=0&quot; frameborder=&quot;0&quot;&gt;    &lt;/iframe&gt;--&gt;</content>
  </entry>
  
  

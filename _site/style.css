@@ -1,17 +1,21 @@
 body { 
 	background: #5a4c5e;
 	color: #FFFFFF;
-	font-family: sans-serif;
-	font-size: 14px;
+	font-family: museo-sans, sans-serif;
+	font-size: 18px;
 	line-height: 1.5em;
 	margin: 0;
 	padding: 100px 0 0 100px;
+	-webkit-font-smoothing: antialiased;
 }
+
+a { color: #de3a55; text-decoration: none; }
 
 h1 {
 	font-family: museo-sans-rounded;
-	font-weight: 300;
+	font-weight: 100;
 	font-size: 36px;
+	margin: 0 0 60px 0;
 }
 
 h1 a { 
@@ -24,10 +28,17 @@ h1 a:hover {
 	color: #de3a55;
 }
 
+h2 {
+	font-family: museo-sans-rounded;
+	font-weight: 100;
+	font-size: 32px;
+	margin: 40px 0 30px 0;
+}
+
 ul.entries {
 	font-family: museo-sans-rounded;
 	list-style: none;
-	margin: 60px 0 0 0;
+	margin: 0;
 	padding: 0;
 }
 
@@ -47,5 +58,7 @@ ul.entries a {
 }
 
 ul.entries a:hover {
-	opacity: 0.8;
+	background: #c43e57;
 }
+
+#wrap { max-width: 640px; }
