@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-01-23T11:57:45+00:00</updated>
+ <updated>2013-01-23T12:05:10+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -864,54 +864,6 @@ Element.insert($('hook'), {after: dummy});
 &lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;
 
 This code will add our Hello World text after the div with the id of hook.
-</content>
- </entry>
- 
- <entry>
-   <title>Highlighting Forms</title>
-   <link href="http://dtsn.me/2008/04/11/highlighting-forms.html"/>
-   <updated>2008-04-11T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2008/04/11/highlighting-forms</id>
-   <content type="html">This is quite a well known but under used technique for highlighting your form elements without any JavaScript. By using the CSS property &lt;a href=&quot;http://www.w3.org/TR/REC-CSS2/selector.html&quot;&gt;focus&lt;/a&gt; you can apply style to a form element when it is clicked, also know as focus.
-
-&lt;style type=&quot;text/css&quot;&gt;
-input.example { padding: 3px; border: 1px solid #DCDCDC; }
-input:focus.example, input:active.example { background-color: #d0f6b2; }
-&lt;/style&gt;
-
-&lt;strong&gt;Example:&lt;/strong&gt;
-
-&lt;input type=&quot;text&quot; class=&quot;example&quot; value=&quot;Click Me&quot;/&gt;
-
-&lt;h2&gt;The HTML&lt;/h2&gt;
-The HTML is really simple all you need is a input box:
-
-[code=&quot;html&quot;]
-&lt;input type=&quot;text&quot; /&gt;
-[/code]
-
-&lt;h2&gt;The CSS&lt;/h2&gt;
-The CSS can be approached by one of two ways you could either apply a class name to any form element which is applicable.
-
-[code=&quot;css&quot;]
-input:focus.yourclassname { background-color: red; }
-[/code]
-
-Or you can use the CSS selectors to highlight every form like this.
-
-[code=&quot;css&quot;]
-input[type=&quot;text&quot;]:focus { background-color: red; }
-[/code]
-
-&lt;strong&gt;The focus selector only works in the modern browsers, and not IE7 and below. If you want this to be compatible with IE6 use this JavaScript, along with &lt;a href=&quot;http://www.prototype.org&quot;&gt;prototype&lt;/a&gt;&lt;/strong&gt;
-
-[code=&quot;javascript&quot;]
-$$('input[type=&quot;text&quot;]').each(function(element)) {
-  Event.observe(element, 'click', function() {
-    element.toggleClassName('yourclassname');
-  });
-});
-[/code] 
 </content>
  </entry>
  
