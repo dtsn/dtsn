@@ -1,0 +1,51 @@
+--- 
+meta: 
+  _edit_lock: "1260374362"
+  _edit_last: "2"
+  _clicky_tweetpost: ""
+  _clicky_goal: a:2:{s:2:"id";s:0:"";s:5:"value";s:0:"";}
+title: JavaScript Check/Uncheck Checkboxes
+published: true
+tags: 
+- JavaScript
+- Prototype
+- Check All
+- Checkbox
+- Form
+- HTML
+- Uncheck All
+layout: post
+type: post
+status: publish
+---
+<p>This tutorial is a really simple one and is only a one liner in prototype (slight more in regular JavaScript). It will check all the checkboxes on a page, and a function to uncheck all checkboxes quite handy really especially if you are dealing with long lists.</p>  <h2>Check All</h2>  <pre class="js" name="code">$$('input[type=&quot;checkbox&quot;]').invoke('writeAttribute', 'checked', 'checked');</pre>
+
+<p>What we are doing here is selecting all the inputs of type checkbox and enumerating over them writing a check attribute to each one.</p>
+
+<h2>Uncheck All</h2>
+
+<pre class="js" name="code">$$('input[type=&quot;checkbox&quot;]').invoke('removeAttribute', 'checked');</pre>
+
+<p>As you can guess this just the opposite way round.</p>
+
+<h2>JavaScript</h2>
+
+<p>You can do the same basic principle without a framework:</p>
+
+<pre class="js" name="code">// check all
+var inputs = document.getElementsByTagName('input');
+for (var i = 0; i &lt; inputs.length; i++) {
+	if (inputs[i].type == 'checkbox') {
+		inputs[i].checked = true;
+	}
+}
+
+// uncheck all
+var inputs = document.getElementsByTagName('input');
+for (var i = 0; i &lt; inputs.length; i++) {
+	if (inputs[i].type == 'checkbox') {
+		inputs[i].checked = false
+	}
+}</pre>
+
+<p>That's it there isn't really much to it, but I thought it was worth sharing.</p>

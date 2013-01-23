@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Highlighting Forms</title>
+
+        <link rel="icon" type="image/ico" href="/favicon.ico" />
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+    
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://dtsn.me/2008/04/11/highlighting-forms.html" />
+        <meta name="twitter:title" content="Highlighting Forms" />
+        <meta name="twitter:site" content="DTSN - A Front End Developer &amp; Data Artist at DataSift" />
+
+        <!-- D3 -->
+        <script type="text/javascript" src="/scripts/d3.js"></script>
+
+        <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+    </head>
+    <body>
+
+    	<header>
+    		<h1><a href="/" title="Home">dtsn</a></h1>
+    	</header>
+
+<section class="post">
+
+	<h2>Highlighting Forms</h2>
+	<h4 class="date">11 April 2008</h4>
+
+	<hr />
+
+	This is quite a well known but under used technique for highlighting your form elements without any JavaScript. By using the CSS property <a href="http://www.w3.org/TR/REC-CSS2/selector.html">focus</a> you can apply style to a form element when it is clicked, also know as focus.
+
+<style type="text/css">
+input.example { padding: 3px; border: 1px solid #DCDCDC; }
+input:focus.example, input:active.example { background-color: #d0f6b2; }
+</style>
+
+<strong>Example:</strong>
+
+<input type="text" class="example" value="Click Me"/>
+
+<h2>The HTML</h2>
+The HTML is really simple all you need is a input box:
+
+[code="html"]
+<input type="text" />
+[/code]
+
+<h2>The CSS</h2>
+The CSS can be approached by one of two ways you could either apply a class name to any form element which is applicable.
+
+[code="css"]
+input:focus.yourclassname { background-color: red; }
+[/code]
+
+Or you can use the CSS selectors to highlight every form like this.
+
+[code="css"]
+input[type="text"]:focus { background-color: red; }
+[/code]
+
+<strong>The focus selector only works in the modern browsers, and not IE7 and below. If you want this to be compatible with IE6 use this JavaScript, along with <a href="http://www.prototype.org">prototype</a></strong>
+
+[code="javascript"]
+$$('input[type="text"]').each(function(element)) {
+  Event.observe(element, 'click', function() {
+    element.toggleClassName('yourclassname');
+  });
+});
+[/code] 
+
+
+</section>
+
+
+	
+	<footer>
+		Built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>, fork this on <a href="https://github.com/dtsn/dtsn">Github</a>
+	</footer>
+
+	<script type="text/javascript" src="/scripts/dtsn.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37892446-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	</body>
+</html>

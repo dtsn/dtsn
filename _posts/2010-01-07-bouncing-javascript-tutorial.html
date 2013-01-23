@@ -1,0 +1,46 @@
+--- 
+meta: 
+  _edit_lock: "1262893108"
+  _edit_last: "2"
+  _clicky_goal: a:2:{s:2:"id";s:0:"";s:5:"value";s:0:"";}
+  _clicky_tweetpost: ""
+title: Bouncing JavaScript Tutorial
+published: true
+tags: 
+- JavaScript
+- Prototype
+- Scriptaculous
+- Bounce
+layout: post
+type: post
+status: publish
+---
+<p><strong>Original Source</strong>: <a href="http://giancarlo.dimassa.net/2007/07/11/elastic-and-bouncing-transitions-in-scriptaculous/">http://giancarlo.dimassa.net</a></p>  <p>There have been many examples of bouncing effects in <a href="http://script.aculo.us/">scriptaculous</a> but this one has to be one of the most realistic. It uses the equations developed by <a href="http://www.robertpenner.com/">Robert Penner</a> to accurately represent a bounce, and it does look cool.</p>  <h2>What you need</h2>  <p>As with most of my tutorials this is based on <a href="http://script.aculo.us/">scriptaculous</a> and <a href="http://www.prototypejs.org/">prototype</a>, but the equations could easily be porter to other animation frameworks.</p>  <h2>The code</h2>  <p>This is really simple, basically what we are going to be doing is to add a new transitional effect to scriptaculous. To do this we just extend the Effect class.</p>  <p><strong>Add this to your own JavaScript file instead of scriptaculous, so you don’t loose it when you update.</strong></p>  <pre class="js" name="code">/*Based on Easing Equations v2.0
+(c) 2003 Robert Penner, all rights reserved.
+This work is subject to the terms in http://www.robertpenner.com/easing_terms_of_use.html
+
+Adapted for Scriptaculous by Ken Snyder (kendsnyder ~at~ gmail ~dot~ com) June 2006
+*/
+
+Effect.Transitions.Bounce = function (pos) {
+    if (pos &lt; 0.36363636363636365) {
+        return 7.5625 * pos * pos;
+    } else if (pos &lt; 0.7272727272727273) {
+        return 7.5625 * (pos -= 0.5454545454545454) * pos + 0.75;
+    } else if (pos &lt; 0.9090909090909091) {
+        return 7.5625 * (pos -= 0.8181818181818182) * pos + 0.9375;
+    } else {
+        return 7.5625 * (pos -= 0.9545454545454546) * pos + 0.984375;
+    }
+}</pre>
+
+<h2>Use it</h2>
+
+<p>You can use this effect as a transition type with lots of effects.</p>
+
+<pre>new Effect.BlindDown(div, {
+    duration: 0.5,
+    transition: Effect.Transitions.Bounce
+});</pre>
+
+<p>Check out <a href="http://giancarlo.dimassa.net/2007/07/11/elastic-and-bouncing-transitions-in-scriptaculous/">Ken Snyder’s</a> blog for more transitional effects.</p>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Prototype Element.Insert</title>
+
+        <link rel="icon" type="image/ico" href="/favicon.ico" />
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+    
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://dtsn.me/2008/05/01/elementinsert-javascript.html" />
+        <meta name="twitter:title" content="Prototype Element.Insert" />
+        <meta name="twitter:site" content="DTSN - A Front End Developer &amp; Data Artist at DataSift" />
+
+        <!-- D3 -->
+        <script type="text/javascript" src="/scripts/d3.js"></script>
+
+        <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+    </head>
+    <body>
+
+    	<header>
+    		<h1><a href="/" title="Home">dtsn</a></h1>
+    	</header>
+
+<section class="post">
+
+	<h2>Prototype Element.Insert</h2>
+	<h4 class="date">01 May 2008</h4>
+
+	<hr />
+
+	<a href="http://www.prototypejs.org">Prototype</a> has a very useful function which is not well documented, <a href="http://www.prototypejs.org/api/element/insert">Element.inset</a>. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, <em>before, after, top, bottom</em> of an element.
+
+If we wanted to insert an element after a element we would use this code:
+
+[code="javascript"]
+Element.insert(first-element, {top: content});
+[/code]
+
+Expanding this further:
+
+[code="javascript"]
+// lets create our element
+var dummy = new Element('div').update('Hello World');
+// add the element
+Element.insert($('hook'), {after: dummy});
+[/code]
+<em>Where hook is the element we want before our created element</em>
+
+This code will add our Hello World text after the div with the id of hook.
+
+
+</section>
+
+
+	
+	<footer>
+		Built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>, fork this on <a href="https://github.com/dtsn/dtsn">Github</a>
+	</footer>
+
+	<script type="text/javascript" src="/scripts/dtsn.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37892446-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	</body>
+</html>

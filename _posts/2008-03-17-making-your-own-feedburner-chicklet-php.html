@@ -1,0 +1,68 @@
+--- 
+meta: 
+  _edit_lock: "1236166988"
+  _edit_last: "2"
+title: Making Your Own FeedBurner Chicklet (PHP)
+published: true
+tags: 
+- PHP
+layout: post
+type: post
+status: publish
+---
+<p>The <a href="http://www.feedburner.com">FeedBurner</a> Chicklet is a great tool for publishing your feed, it does look a bit ugly though. By using the powerful <a href="http://code.google.com/apis/feedburner/">FeedBurner API</a> you can grab your feed count without the Chicklet. This means you can put it anywhere on your site!</p>
+
+<h2>Step 1: What you need</h2>
+
+<p>We are going to be using PHP's <a href="http://uk2.php.net/curl">cURL</a> library, which means, full details on what you need for this package can be found on <a href="http://uk2.php.net/curl">php.net</a>. You will also need your FeedBurner URL.</p>
+
+
+<h2>Step 2: The Code</h2>
+
+<p>First of all we need to create the URL to the data for our feed. We are using the <a href="http://code.google.com/apis/feedburner/awareness_api.html">FeedBurner Awareness API</a> to get the data. The API call is made up of 2 parts, the first being the call to FeedBurner, the second being the name of your feed (in FeedBurner).</p>
+
+<pre name="code" class="php">
+$feed="http://api.feedburner.com/awareness/" .
+         "1.0/GetFeedData?uri=YOURFEEDNAME";
+</pre>
+
+<p>Next we need to start our cURL session by initialising the PHP <em>curl_init()</em> call.</p>
+
+<pre name="code" class="php">
+$curl = curl_init();
+</pre>
+
+<p>We use CURLOPT_RETURNTRANSFER to make sure the data is returned instead of being printed out to the browser. After we have done that we can set the <a href="http://uk2.php.net/manual/en/function.curl-setopt.php">optiona</a> for the curl.</p>
+
+<pre name="code" class="php">
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+// Set the URL of the curl set options
+curl_setopt($curl, CURLOPT_URL, $feed);
+// Execute the fetch
+$data = curl_exec($curl);
+// Close the connection
+curl_close($curl);
+</pre>
+
+<p>After we have got the data we can parse the XML and find the bit we are looking for (circulation).</p>
+
+<pre name="code" class="php">
+$xml = new SimpleXMLElement($data);
+$feed = $xml->feed->entry['circulation'];
+</pre>
+
+<h2>Step 3: Putting It All Together</h2>
+
+<pre name="code" class="php">
+$feed="http://api.feedburner.com/awareness/1.0/GetFeedData?uri=dtsn";
+$curl = curl_init();
+curl_setopt($curl , CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl , CURLOPT_URL, $feed);
+$data = curl_exec($curl );
+curl_close($curl );
+
+$xml = new SimpleXMLElement($data);
+$feed = $xml->feed->entry['circulation'];
+</pre>
+
+<p>The subscription count is included in the variable <em>$feed</em>, which you can put anywhere. Or if you don't have any imagination like me you can just put it in your side bar. It makes a great alternative to the Chicklet.</p>

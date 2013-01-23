@@ -1,0 +1,71 @@
+--- 
+meta: 
+  _edit_lock: "1236534171"
+  _edit_last: "2"
+  redirect: http://ajaxbug.com/2008/11/scriptaculous-scrollto/
+title: Scriptaculous ScrollTo
+published: true
+tags: 
+- JavaScript
+- Scriptaculous
+layout: post
+type: post
+status: publish
+---
+<strong>Example: <a href="#" onclick="scroll.bottom()">Click Here!</a></strong>
+
+The <a href="http://script.aculo.us/">script.aculo.us</a> effects library is a fantastic tool. If this really simple tutorial I will show you how to utilize the <a href="http://wiki.script.aculo.us/scriptaculous/show/Effect.ScrollTo">scroll method</a> and a handy 'jump to top link'.
+
+<h2>Step 1: Add References</h2>
+
+Make sure you have the <a href="http://prototypejs.org">prototype</a> and <a href="http://script.aculo.us/">script.aculo.us</a>
+libraries attached to your web page, instructions for how to do this can be found <a href="http://wiki.script.aculo.us/scriptaculous/show/Usage">here</a>.
+
+<h2>Step 2: Create JavaScript</h2>
+
+You can either create a new JavaScript file or append these functions to an already existing one. So first of all we need the function. For that we create a new JavaScript object, we will call this 'scroll'.
+
+<pre name="code" class="javascript">
+var  scroll = { }
+</pre>
+
+Next we want to add the functions. In my case I want a function that will scroll to the top and to the bottom:
+
+<pre name="code" class="javascript">
+var  scroll = {
+	top: function(event) {  },
+	bottom: function(event) {  }
+}
+</pre>
+
+Now we have our framework we can call the ScrollTo function:
+<pre name="code" class="javascript">
+new Effect.ScrollTo('top');
+</pre>
+
+The ScrollTo function allows you to define a particular object that you want to scroll into view. In the case of dtsn.co.uk, I have a div on the top of every page with the ID of 'top'.
+
+Putting that all together we get:
+
+<pre name="code" class="javascript">
+var  scroll = {
+	top: function(event) { new Effect.ScrollTo('top'); },
+	bottom: function(event) { new Effect.ScrollTo('footer'); }
+}
+</pre>
+
+You can then call this function in one of two ways. You can call 'scroll.top()' and 'scroll.bottom()', respectively, through the onclick method on any HTML object. Alternative you can use the prototype method of <a href="http://prototypejs.org/api/event/observe">Event.Observe</a>:
+
+<pre name="code" class="javascript">
+// wait for the page to load
+Event.observe(document, 'load', function(){
+        // give an object an onclick method
+	$('go_to_top').observe('click', scroll.top);
+});
+</pre>
+
+<script type="text/javascript">
+   var  scroll = {
+       bottom: function(event) { new Effect.ScrollTo($(document.body).select('ul.footer')[0]); }
+   }
+</script>

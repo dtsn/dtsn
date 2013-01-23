@@ -1,0 +1,26 @@
+--- 
+meta: 
+  _edit_lock: "1280405662"
+  _edit_last: "2"
+  _clicky_tweetpost: ""
+  _clicky_goal: a:2:{s:2:"id";s:0:"";s:5:"value";s:0:"";}
+title: Link Prefetching
+published: true
+tags: 
+- CSS/HTML
+layout: post
+type: post
+status: publish
+---
+Link prefetching is a very little known HTML 5 tag which is currently only supported by Firefox. It utilizes browser idle time to download documents that the user might visit in the near future.
+
+For example:
+
+<pre class="html">&lt;link rel=&quot;prefetch&quot; href=&quot;page2.html&quot;&gt;
+</pre>
+
+Once the user has loaded up that page the next page (page2.html) will being loading significantly decreasing the time it takes to visit the next page. 
+
+It's a great idea really, and because it's gracefully degregating it means that users in FF will get the benefit while everyone else wouldn't see the difference. Refer to the <a href="https://developer.mozilla.org/en/link_prefetching_faq">Mozilla FAQ</a> for more information.
+
+(via <a href="http://keyboardy.com/programming/html5-link-prefetching/">Keyboardy</a>)

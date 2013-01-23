@@ -1,0 +1,153 @@
+--- 
+meta: 
+  _edit_lock: "1236811392"
+  _edit_last: "2"
+title: Super CSS, the power of the selector
+published: true
+tags: 
+- CSS/HTML
+layout: post
+type: post
+status: publish
+---
+<p><img style="border-width: 0px; margin: 0px 0px 0px 10px; float: right;" alt="super_css" src="/wp-content/uploads/2008/10/super-css-thumb.png" width="240" height="201" />We all love CSS it’s fundamental to the web. However most of us do not use the full power of CSS. A quick rummage around the W3C specification and you will see how powerful CSS can really be. I’m talking about the CSS selector, sure we all use the basic selectors, but what about the more complicated ones.</p>
+<p>Well here’s my guide to the most useful not very used CSS selectors (as well as what they are currently supported in).</p>
+<h3>CSS2</h3>
+<table class="table" width="480" border="0">
+<tbody>
+<tr>
+<th width="140">Pattern</th>
+<th width="360">Meaning</th>
+<th width="10">IE6</th>
+<th width="10">IE7</th>
+<th width="10">FF</th>
+<th width="10">SF</th>
+<th width="10">OP</th>
+</tr>
+<tr>
+<td>E &gt; F</td>
+<td>Matches any F element that is a child of an element E.</td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+<tr>
+<td>E:first-child</td>
+<td>Matches element E when E is the first child of its parent. </td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+<tr>
+<td>E:link          <br />E:visited </td>
+<td>Matches element E if E is the source anchor of a hyperlink of which the target is not yet visited (:link) or already visited (:visited). </td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+<tr>
+<td>E:active          <br />E:hover           <br />E:focus </td>
+<td>Matches E during certain user actions. </td>
+<td class="center">&nbsp;</td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center">&nbsp;</td>
+</tr>
+<tr>
+<td>E + F</td>
+<td>Matches any F element immediately preceded by an element E.</td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+<tr>
+<td>E[foo]</td>
+<td>Matches any E element with the "foo" attribute set (whatever the value). </td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+<tr>
+<td>E[foo="warning"]</td>
+<td>Matches any E element whose "foo" attribute value is exactly equal to "warning". </td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+<tr class="last">
+<td>E[foo~="warning"]</td>
+<td>Matches any E element whose "foo" attribute value is a list of space-separated values, one of which is exactly equal to "warning". </td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+</tbody>
+</table>
+<h3>CSS3</h3>
+<table class="table" width="480" border="0">
+<tbody>
+<tr>
+<th width="140">Pattern</th>
+<th width="360">Meaning</th>
+<th width="10">IE6</th>
+<th width="10">IE7</th>
+<th width="10">FF</th>
+<th width="10">SF</th>
+<th width="10">OP</th>
+</tr>
+<tr>
+<td>E ~ F</td>
+<td>Matches any F element preceded by an element E.</td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+<tr>
+<td>E:empty</td>
+<td>Matches element E where E has no children, including text nodes</td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center"><img style="display: inline;" title="tick" alt="tick" src="/wp-content/uploads/2008/10/tick-thumb.gif" width="16" border="0" height="16"></td>
+<td class="center">&nbsp;</td>
+<td class="center"><img style="display: inline;" title="cross" alt="cross" src="/wp-content/uploads/2008/10/cross-thumb.gif" width="16" border="0" height="16"></td>
+</tr>
+</tbody>
+</table>
+
+<p>If you need a detailed walkthrough on how these selectors work, please refer to the <a href="http://www.w3.org/TR/css3-selectors/">W3C Specification on CSS3 Selectors</a> (which includes all the CSS2 selectors).</p>
+<h3>A Couple of Examples</h3>
+<p>I couldn’t just give all these CSS selectors without giving you some great examples of how they can be used.</p>
+<p><strong>E:first-child/E:last-child – </strong>You have a <em>ul</em> list of elements which you float horizontally. With first child and last child you can easily set the margins for the first and last child different from the remaining items:</p>
+
+<pre class="css" name="code">
+ul { list-style: none; margin: 0px; padding: 0px; }
+ul li { float: left; margin: 0px 10px; }
+ul li:first-child { margin: 0px 10px 0px 0px; }
+ul li:last-child { margin: 0px 0px 0px 10px; }
+</pre>
+
+<p><strong>E:empty – </strong>You may have a situation where you have an empty paragraph. Paragraphs will always have a margin top and a margin bottom, which could look unsightly. So lets remove it.</p>
+
+<pre class="css" name="code">
+p:empty { display:none; }
+</pre>
+
+
+<p>What’s your favourite selector? Do you care that they are not always supported?</p>
