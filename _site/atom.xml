@@ -4,12 +4,58 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-01-08T10:04:38+00:00</updated>
+ <updated>2013-01-23T10:53:53+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
  </author>
 
+ 
+ <entry>
+   <title>U.S. Presidental Debates</title>
+   <link href="http://dtsn.me/2012/10/25/US-presidental-election.html"/>
+   <updated>2012-10-25T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/10/25/US-presidental-election</id>
+   <content type="html">&lt;p style='font-size: 14px; text-align: center;'&gt;&lt;em&gt;&lt;a href='http://election.datasift.com'&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The us presidential election is just around the corner. in the run up to the election there is a great deal of focus on the live debates. two debates based upon a different range of topics. this is very unfamiar to us in the uk we have only recently adopted televised live debates in the 2010 election.The past three years have just flown by but it looks like its another U.S. presential election.&lt;/p&gt;
+
+&lt;p&gt;To prove how versatile datasift can be the marketing &amp;amp; data science teams commissioned me to create something users can see the impact of the live debates on the general population through the use of Twitter.&lt;/p&gt;
+
+&lt;p&gt;To this end we developed a micro site of datasift.com which details a variety of information we are able to gather about what people talk about around the elections and make predictions on how we think people will vote. We are able to do this even down to a city level.&lt;/p&gt;
+&lt;h3&gt;Node == real time&lt;/h3&gt;
+&lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
+
+&lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
+&lt;img class='last' alt='election.datasift.com' src='/images/posts/election.png' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Arrow - Data Visualisation</title>
+   <link href="http://dtsn.me/2012/10/04/Arrow.html"/>
+   <updated>2012-10-04T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>Wikistats</title>
+   <link href="http://dtsn.me/2012/08/28/Wikistats.html"/>
+   <updated>2012-08-28T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
+   <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
+&lt;img class='last' alt='wikistats.co' src='/images/posts/wikistats.png' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Like Coffee?</title>
+   <link href="http://dtsn.me/2012/07/17/Like-Coffee.html"/>
+   <updated>2012-07-17T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
+   <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This must be a worlds first, a live infographic given you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
+&lt;img class='last' alt='http://demo.datasift.com/coffee/m' src='/images/posts/coffee.png' /&gt;</content>
+ </entry>
  
  <entry>
    <title>The Sound of Twitter</title>
@@ -19,17 +65,31 @@
    <content type="html">&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
 
 &lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href='http://twitter.com/maxtillich'&gt;@maxtillich&lt;/a&gt; and &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href='http://datasift.com'&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
-&lt;h2&gt;HTML5 Audio&lt;/h2&gt;
+&lt;h3&gt;&lt;span&gt;HTML5 Audio&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;I&amp;#8217;ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it&amp;#8217;s finally gotten support in most of the major browsers. Using &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
 
 &lt;p&gt;What we get is a slightly surreal experience of how twitter sounds.&lt;/p&gt;
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
-
+&lt;div class='video'&gt;
+&lt;iframe height='360' frameborder='0' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640'&gt; &lt;/iframe&gt;
+&lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;UPDATE - &lt;a href='http://thelisteningmachine.org/'&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;
-&lt;!--&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/z1glJZZCEUQ?rel=0&quot; frameborder=&quot;0&quot;&gt;    &lt;/iframe&gt;--&gt;</content>
+&lt;p&gt;UPDATE - &lt;a href='http://thelisteningmachine.org/'&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>DataSift Movies</title>
+   <link href="http://dtsn.me/2012/01/20/DataSift-Movies.html"/>
+   <updated>2012-01-20T00:00:00+00:00</updated>
+   <id>http://tom.preston-werner.com/2012/01/20/DataSift-Movies</id>
+   <content type="html">&lt;p&gt;Do you remember &lt;a href='http://fflick.com'&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
+
+&lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
+&lt;img class='last' alt='DataSift Movies' src='/images/posts/dsmovies.png' /&gt;</content>
  </entry>
  
  
