@@ -2,14 +2,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Archive: &ldquo;3-2008&rdquo;</title>
+        <title>Script.aculo.us Transitions</title>
 
         <link rel="icon" type="image/ico" href="/favicon.ico" />
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
-    
+        <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
+
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="http://dtsn.me2008/03/index.html" />
-        <meta name="twitter:title" content="Archive: &ldquo;3-2008&rdquo;" />
+        <meta name="twitter:url" content="http://dtsn.me/2009/03/08/script.aculo.us-transitions.html" />
+        <meta name="twitter:title" content="Script.aculo.us Transitions" />
         <meta name="twitter:site" content="DTSN - A Front End Developer &amp; Data Artist at DataSift" />
 
         <!-- D3 -->
@@ -23,26 +24,38 @@
     <body>
 
     	<header>
-    		<h1><a href="/" title="Home">dtsn</a></h1>
+    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
     	</header>
 
-<section class="main">
-	<h1> Posts archive: 3 - 2008 </h1><br>
+<section class="post">
+
+	<h2>Script.aculo.us Transitions</h2>
+	<h4 class="date">08 March 2009</h4>
+
+	<hr />
+
+	<p>I’ve been digging through the <a href="http://script.aculo.us/">Script.aculo.us</a> code a lot recently and have stumbled upon a number of very effective transitions which aren’t used widely. There are 9 effects in total comprising of:</p>
+
 <ul>
-
-<li> 
-    <a href="">Scriptaculous ScrollTo</a><br>
-    <span class="entry-meta">Published: March 14, 2008</span>
-</li>
-
-<li> 
-    <a href="">Making Your Own FeedBurner Chicklet (PHP)</a><br>
-    <span class="entry-meta">Published: March 17, 2008</span>
-</li>
-
+	<li>Transition</li>
+	<li>Linear</li>
+	<li>Reverse</li>
+	<li>Flicker</li>
+	<li>Wobble</li>
+	<li>Pulse</li>
+	<li>Spring</li>
+	<li>None</li>
+	<li>Full</li>
 </ul>
+
+<p>You can see a full demo of all the the effects on the <a href="http://github.com/madrobby/scriptaculous/wikis/effect-transitions">Script.aculo.us Wiki</a>.</p>
+
+<p>All of Script.aculo.us’s effects will take a transition in the options array. For example we could apply a spring transition to our scroll to effect.</p>
+
+
 </section>
-	
+
+
 	
 	<footer>
 		Built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>, fork this on <a href="https://github.com/dtsn/dtsn">Github</a>

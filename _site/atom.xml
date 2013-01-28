@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-01-23T12:05:10+00:00</updated>
+ <updated>2013-01-28T21:42:45+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -26,7 +26,7 @@
 &lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
-&lt;img class='last' alt='election.datasift.com' src='/images/posts/election.png' /&gt;</content>
+&lt;img alt='election.datasift.com' src='/images/posts/election.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -34,7 +34,7 @@
    <link href="http://dtsn.me/2012/10/04/Arrow.html"/>
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
-   <content type="html"></content>
+   <content type="html">&lt;img src='/images/posts/arrow.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -44,7 +44,7 @@
    <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
-&lt;img class='last' alt='wikistats.co' src='/images/posts/wikistats.png' /&gt;</content>
+&lt;img alt='wikistats.co' src='/images/posts/wikistats.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -54,7 +54,7 @@
    <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic given you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
-&lt;img class='last' alt='http://demo.datasift.com/coffee/m' src='/images/posts/coffee.png' /&gt;</content>
+&lt;img alt='http://demo.datasift.com/coffee/m' src='/images/posts/coffee.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -72,7 +72,7 @@
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
 &lt;div class='video'&gt;
-&lt;iframe height='360' frameborder='0' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640'&gt; &lt;/iframe&gt;
+&lt;iframe height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' frameborder='0' width='640'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
@@ -89,7 +89,7 @@
 &lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
-&lt;img class='last' alt='DataSift Movies' src='/images/posts/dsmovies.png' /&gt;</content>
+&lt;img alt='DataSift Movies' src='/images/posts/dsmovies.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -187,25 +187,6 @@ Here are the slides from the talk.
  </entry>
  
  <entry>
-   <title>Presenting at Twitter Development Nest</title>
-   <link href="http://dtsn.me/2010/06/30/presenting-at-twitter-development-nest.html"/>
-   <updated>2010-06-30T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2010/06/30/presenting-at-twitter-development-nest</id>
-   <content type="html">Next week I will be presenting the first, of what I hope to be many, presentation on what I do. This one will be focusing on Tweettabs and integrating @Anywhere support. It should be a interesting talk with lots of surprises.
-
-&lt;strong&gt;Tuesday 6th July, 6pm-9pm&lt;/strong&gt;
-
-&lt;em&gt;The Guardian
-King's Place
-90 York Way
-N1 9AG London
-United Kingdom&lt;/em&gt;
-
-Come along and check it out, you can get tickets &lt;a href=&quot;http://devnest.eventbrite.com/&quot;&gt;here&lt;/a&gt; and find more information about the event on their &lt;a href=&quot;http://twitterdevelopernest.com/2010/05/devnest-%E2%80%93-london-twitter-developer-nest-9/&quot;&gt;website&lt;/a&gt;.
-</content>
- </entry>
- 
- <entry>
    <title>Link Prefetching</title>
    <link href="http://dtsn.me/2010/06/04/link-prefetching.html"/>
    <updated>2010-06-04T00:00:00+01:00</updated>
@@ -238,21 +219,6 @@ It's a great idea really, and because it's gracefully degregating it means that 
 I would like to say that it was due to lots of research and investigation, but it was more of a accident. The button was originally designed to be 60px high but in the quest to fit an extra digit onto the button the font size was decreased and the button height was increased to 61px.
 &lt;h2&gt;The Standard&lt;/h2&gt;
 The TweetMeme button had a massive adoption rate, and was installed on millions of sites across the web therefore it became the one to beat! Large sites have now put pressure on the other social media sites to produce their buttons to the new standard. Therefore the 61px standard (if you have a better name let me know) is now the default for all social media buttons on the internet.
-</content>
- </entry>
- 
- <entry>
-   <title>Mouse Pointer Tracker</title>
-   <link href="http://dtsn.me/2010/01/26/mouse-pointer-tracker.html"/>
-   <updated>2010-01-26T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2010/01/26/mouse-pointer-tracker</id>
-   <content type="html">Anatoly Zenkov (&lt;a href=&quot;http://www.flickr.com/photos/anatoliy_zenkov/&quot;&gt;flickr&lt;/a&gt;) has created a great little Java app which will record your mouse pointer movements over your screen and then save the image of all your mouse movements. You get some great screenshots (have a look at &lt;a href=&quot;http://www.flickr.com/photos/anatoliy_zenkov/4271592658/&quot;&gt;some of the comments&lt;/a&gt; on the flickr post).
-
-You can download the little Java App from here &lt;a href=&quot;http://dl.dropbox.com/u/684632/mousepath.exe.zip&quot;&gt;PC&lt;/a&gt;, &lt;a href=&quot;http://dl.dropbox.com/u/684632/mousepath.jar&quot;&gt;Mac&lt;/a&gt;
-
-Here are some of my screenshots below. The best thing about this app is that it makes a great tool for UI testing. You can see where a user clicks and their mouse paths really easily!
-
-&lt;a href=&quot;http://dtsn.co.uk/wp-uploads/2010/01/mousepath16-04-16.png&quot;&gt;&lt;img style=&quot;border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px&quot; title=&quot;mousePath-16_04_16&quot; src=&quot;http://dtsn.co.uk/wp-uploads/2010/01/mousepath16-04-16-thumb.png&quot; border=&quot;0&quot; alt=&quot;mousePath-16_04_16&quot; width=&quot;480&quot; height=&quot;200&quot; /&gt;&lt;/a&gt;
 </content>
  </entry>
  
@@ -304,122 +270,35 @@ Effect.Transitions.Bounce = function (pos) {
  </entry>
  
  <entry>
-   <title>CSS Tips</title>
-   <link href="http://dtsn.me/2010/01/05/css-tips.html"/>
-   <updated>2010-01-05T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2010/01/05/css-tips</id>
-   <content type="html">&lt;p&gt;I thought I’d share some of my CSS habits/top tips, some of my habits may be more controversial than others, but it’s always good to share.&lt;/p&gt;&lt;!--more--&gt;  &lt;h2&gt;Looking Pretty&lt;/h2&gt;  &lt;p&gt;Always remember to format your CSS nicely. Most CSS coders are designers, and love to make things look pretty, which also makes the CSS easier to read.&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;One line CSS declarations&lt;/strong&gt; - I always put my entire declaration onto one line, it makes declarations a lot easier to find, and even better if you keep your properties in alphabetical order.&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;Use Shorthand&lt;/strong&gt; - My rule is that if you are setting any more than one property use shorthand, here’s a clue to what I mean:&lt;/p&gt;  &lt;pre class=&quot;css&quot; name=&quot;code&quot;&gt;/* You could right */
-.dummy {
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-/* but what's the point when this exists */
-.dummy { margin: 10px 0px; }
-/* or even */
-.dummy { background: url('myimage.jpg') blue no-repeat left top; }&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Shortcuts&lt;/strong&gt; - When your CSS file becomes massive instead of splitting the file up into manageable chucks, which causes unnecessary hits on your server, just split the file with comments. If you use a wild card character like @ you can easily search for specific sections.&lt;/p&gt;
-
-&lt;h2&gt;Make things easy&lt;/h2&gt;
-
-&lt;p&gt;CSS is tricky, so use tools to make it easier.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Grids&lt;/strong&gt; - While I am still debating whether grids are appropriate for smaller scale projects, if you use a wide variety of different layout, or are having trouble with the compatibility of your current layout take a look at CSS grids, there are loads available such as &lt;a href=&quot;http://code.google.com/p/blueprintcss/&quot;&gt;Blueprint&lt;/a&gt; and the &lt;a href=&quot;http://developer.yahoo.com/yui/grids/&quot;&gt;Yahoo UI&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Check&lt;/strong&gt; - Always validate your code, i personally run mine through &lt;a href=&quot;http://www.microsoft.com/expression/&quot;&gt;Microsoft Expression Web&lt;/a&gt; which checks for bugs, you can also use the &lt;a href=&quot;http://jigsaw.w3.org/css-validator/&quot;&gt;W3C Validation Checker&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jigsaw.w3.org/css-validator/&quot;&gt;&lt;img title=&quot;opps&quot; alt=&quot;&quot; src=&quot;http://www.dtsn.co.uk/wp-content/uploads/2008/05/opps1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;W3C CSS Validation Checker&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Avoid using too many selectors&lt;/strong&gt; - Just specify the minimum number of selectors needed. A td always appears within a tr which always appears within a table. If you find yourself nesting your selectors like the example below, you are probably being too verbose.&lt;/p&gt;
-
-&lt;pre class=&quot;css&quot; name=&quot;code&quot;&gt;table tr td {...}
-/* is the same as */
-td {...}&lt;/pre&gt;
-
-&lt;h2&gt;Points, they all add up&lt;/h2&gt;
-
-&lt;p&gt;Don’t forget that all the different selectors have a different weighting (also known as &lt;strong&gt;specificity&lt;/strong&gt;), and the ordering of your selectors will affect which one has president.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A selector's specificity is calculated as follows:&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;count 1 if the declaration is from is a 'style' attribute rather than a rule with a selector, 0 otherwise (= a) (In HTML, values of an element's &amp;quot;style&amp;quot; attribute are style sheet rules. These rules have no selectors, so a=1, b=0, c=0, and d=0.) &lt;/li&gt;
-
-    &lt;li&gt;count the number of ID attributes in the selector (= b) &lt;/li&gt;
-
-    &lt;li&gt;count the number of other attributes and pseudo-classes in the selector (= c) &lt;/li&gt;
-
-    &lt;li&gt;count the number of element names and pseudo-elements in the selector (= d) &lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;p&gt;The specificity is based only on the form of the selector. In particular, a selector of the form &amp;quot;[id=p33]&amp;quot; is counted as an attribute selector (a=0, b=0, c=1, d=0), even if the id attribute is defined as an &amp;quot;ID&amp;quot; in the source document's DTD. &lt;/p&gt;
-
-  &lt;p&gt;Concatenating the four numbers a-b-c-d (in a number system with a large base) gives the specificity. &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;- Taken from the &lt;a href=&quot;http://www.w3.org/TR/CSS21/cascade.html&quot;&gt;W3C specification&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;Browser Support&lt;/h2&gt;
-
-&lt;p&gt;Avoid supporting anything but the most recent browsers. I don’t know anyone who use IE5 anymore do you? Also stop uses hacks for IE6, some careful rethinking and workarounds could be explored before resulting to using hacks. With the less hacks the more you can avoid having a separate style sheet for each browser. If you look at &lt;a href=&quot;http://wikipedia.com&quot;&gt;Wikipedia&lt;/a&gt; in source view you will see they have a separate style sheet for IE5, IE5.5, IE6, IE7.&lt;/p&gt;
-
-&lt;h2&gt;Set things up&lt;/h2&gt;
-
-&lt;p&gt;Spending a couple of minutes at the start of the project setting up all your colours and classes could save you hours in the long run.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Utilities&lt;/strong&gt; - Build a set of CSS utilities which you could use everywhere. E.g.&lt;/p&gt;
-
-&lt;pre class=&quot;css&quot; name=&quot;code&quot;&gt;.left { float:left; }
-.right { float: right; }
-.overflow { overflow: hidden; }
-.clear { clear: both; }
-.pad { padding: 10px; }&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Define your colours&lt;/strong&gt; - Define your commonly used colours at the start of the stylesheet then you will always know where they are for easy reference.&lt;/p&gt;
-
-&lt;h2&gt;Keep Things Simple&lt;/h2&gt;
-
-&lt;p&gt;Always go back and try and make your code simpler, and remember to comment everything. This make it easier to find changes and edit them. There is no need to get any more complicated than you need to be. For some more tips check out &lt;a href=&quot;http://smashingmagazine.com&quot;&gt;Smashing Magazine&lt;/a&gt; who have a great article on &lt;a href=&quot;http://www.smashingmagazine.com/2007/05/10/70-expert-ideas-for-better-css-coding/&quot;&gt;CSS ideas&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2&gt;More Resources&lt;/h2&gt;
-
-&lt;p&gt;&lt;a title=&quot;http://www.w3.org/Style/Examples/007/&quot; href=&quot;http://www.w3.org/Style/Examples/007/&quot;&gt;W3C Tricks &amp;amp; Tips&lt;/a&gt;
-
-  &lt;br /&gt;&lt;a title=&quot;http://www.hongkiat.com/blog/20-useful-css-tips-for-beginners/&quot; href=&quot;http://www.hongkiat.com/blog/20-useful-css-tips-for-beginners/&quot;&gt;20 Useful CSS Tips for Beginners&lt;/a&gt;
-
-  &lt;br /&gt;&lt;a title=&quot;http://snook.ca/archives/html_and_css/top_css_tips/&quot; href=&quot;http://snook.ca/archives/html_and_css/top_css_tips/&quot;&gt;Top CSS Tips (snooka)&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>CSS3 Selectors :last-child</title>
    <link href="http://dtsn.me/2009/12/15/css3-selectors-last-child.html"/>
    <updated>2009-12-15T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2009/12/15/css3-selectors-last-child</id>
-   <content type="html">&lt;p&gt;Of all the &lt;a href=&quot;http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/&quot;&gt;CSS3 selectors&lt;/a&gt; the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.&lt;/p&gt;  &lt;h2&gt;CSS 2.1&lt;/h2&gt;  &lt;pre class=&quot;css&quot; name=&quot;code&quot;&gt;/*Each Element*
-.image { margin-right: 5px; height: 20px; width: 20px; float:left; background-color: red; }
-/* remove the margin on the last element so it lines up
-.image.last { margin-right: 0px; }&lt;/pre&gt;
+   <content type="html">&lt;p&gt;Of all the &lt;a href=&quot;http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/&quot;&gt;CSS3 selectors&lt;/a&gt; the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.&lt;/p&gt;  &lt;h3&gt;CSS 2.1&lt;/h3&gt;  
 
-&lt;h2&gt;CSS 3&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;/*&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;Each&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Element&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.image&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;/*&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;remove&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;last&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;so&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;up&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.image.last&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class=&quot;css&quot; name=&quot;code&quot;&gt;/* parent of the image element */
-.parent div:last-child { margin-right: 0px; }&lt;/pre&gt;
+&lt;h3&gt;CSS 3&lt;/h3&gt;
 
-&lt;h2&gt;The Downside&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* parent of the image element */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.parent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:last-child&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;The Downside&lt;/h3&gt;
 
 &lt;p&gt;Unfortunately the bad aspect of this selector is that it does not fail gracefully. Meaning that a user in a none CSS3 compliant browser, &lt;strong&gt;(IE)&lt;/strong&gt;, it would fail horribly, this means that everything will be out of line.&lt;/p&gt;
 
-&lt;h2&gt;Example&lt;/h2&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
 
-&lt;p&gt;If you look at this in anything but a browser which supports CSS3 the last element will be on the next line.&lt;/p&gt;
+&lt;p&gt;If you look at this in anything but a browser which supports CSS3 the last element won't be red.&lt;/p&gt;
 &lt;style type=&quot;text/css&quot;&gt;
 .example { margin-right: 6px; height: 20px; width: 75px; float:left; background-color: #317b9e; }
 .example-block { overflow: hidden; margin-bottom: 10px; }
-.example-block div:last-child { margin-right: 0px; }&lt;/style&gt;
+.example-block div:last-child { background: red; }&lt;/style&gt;
 
 &lt;div class=&quot;example-block&quot;&gt;
   &lt;div class=&quot;example&quot;&gt;&lt;/div&gt;
@@ -430,7 +309,7 @@ td {...}&lt;/pre&gt;
   &lt;div class=&quot;example&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;h2&gt;More Resources&lt;/h2&gt;
+&lt;h3&gt;More Resources&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/css3-selectors/&quot;&gt;W3C Selectors Level 3&lt;/a&gt;&lt;/li&gt;
@@ -442,54 +321,19 @@ td {...}&lt;/pre&gt;
  </entry>
  
  <entry>
-   <title>JavaScript Check/Uncheck Checkboxes</title>
-   <link href="http://dtsn.me/2009/12/10/javascript-checkuncheck-checkboxes.html"/>
-   <updated>2009-12-10T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/12/10/javascript-checkuncheck-checkboxes</id>
-   <content type="html">&lt;p&gt;This tutorial is a really simple one and is only a one liner in prototype (slight more in regular JavaScript). It will check all the checkboxes on a page, and a function to uncheck all checkboxes quite handy really especially if you are dealing with long lists.&lt;/p&gt;  &lt;h2&gt;Check All&lt;/h2&gt;  &lt;pre class=&quot;js&quot; name=&quot;code&quot;&gt;$$('input[type=&amp;quot;checkbox&amp;quot;]').invoke('writeAttribute', 'checked', 'checked');&lt;/pre&gt;
-
-&lt;p&gt;What we are doing here is selecting all the inputs of type checkbox and enumerating over them writing a check attribute to each one.&lt;/p&gt;
-
-&lt;h2&gt;Uncheck All&lt;/h2&gt;
-
-&lt;pre class=&quot;js&quot; name=&quot;code&quot;&gt;$$('input[type=&amp;quot;checkbox&amp;quot;]').invoke('removeAttribute', 'checked');&lt;/pre&gt;
-
-&lt;p&gt;As you can guess this just the opposite way round.&lt;/p&gt;
-
-&lt;h2&gt;JavaScript&lt;/h2&gt;
-
-&lt;p&gt;You can do the same basic principle without a framework:&lt;/p&gt;
-
-&lt;pre class=&quot;js&quot; name=&quot;code&quot;&gt;// check all
-var inputs = document.getElementsByTagName('input');
-for (var i = 0; i &amp;lt; inputs.length; i++) {
-	if (inputs[i].type == 'checkbox') {
-		inputs[i].checked = true;
-	}
-}
-
-// uncheck all
-var inputs = document.getElementsByTagName('input');
-for (var i = 0; i &amp;lt; inputs.length; i++) {
-	if (inputs[i].type == 'checkbox') {
-		inputs[i].checked = false
-	}
-}&lt;/pre&gt;
-
-&lt;p&gt;That's it there isn't really much to it, but I thought it was worth sharing.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>JSON(P) Stacking</title>
    <link href="http://dtsn.me/2009/12/06/jsonp-stacking.html"/>
    <updated>2009-12-06T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2009/12/06/jsonp-stacking</id>
-   <content type="html">&lt;p&gt;JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this &lt;a href=&quot;http://ajaxian.com/archives/jsonp-json-with-padding&quot;&gt;Ajaxian article&lt;/a&gt; for more information). It requires a call to an external API where you specificy the a callback function, you do this through the use of script tag. For example:&lt;/p&gt;  &lt;pre class=&quot;html&quot; name=&quot;code&quot;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://yourdomain.com/api?callback=myfunction&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+   <content type="html">&lt;p&gt;JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this &lt;a href=&quot;http://ajaxian.com/archives/jsonp-json-with-padding&quot;&gt;Ajaxian article&lt;/a&gt; for more information). It requires a call to an external API where you specificy the a callback function, you do this through the use of script tag. For example:&lt;/p&gt;  
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://yourdomain.com/api?callback=myfunction&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;When the script tag has been loaded your function would be called with the JSON data, like so.&lt;/p&gt;
 
-&lt;pre class=&quot;js&quot; name=&quot;code&quot;&gt;myfunction(‘some JSON data’);&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;myfunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;some JSON data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;However you become reliant on that external service to always be available, if for any reason that service goes down you wouldn’t get any data and your page would be likely to hang.&lt;/p&gt;
 
@@ -497,33 +341,34 @@ for (var i = 0; i &amp;lt; inputs.length; i++) {
 
 &lt;p&gt;This can be easily achieved by having the following function:&lt;/p&gt;
 
-&lt;pre class=&quot;js&quot; name=&quot;code&quot;&gt;// callback function
-var _c = false;
-// success flag
-var _s = false;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// callback function&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// success flag&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-function JSONPStacking(url, callback) {
-	// create the element
-	var script = document.createElement('script');
-	// set the source
-	script.src = url + '&amp;amp;callback=callback';
-	// render the element
-	document.appendChild(script);
-	// start the counter, this one last for 5 seconds
-	setTimeout(function() {
-		if (!_s) {
-			// remove the element
-			document.body.removeChild(script);
-		}
-	}, 5000);
-}
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSONPStacking&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// create the element&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// set the source&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;amp;callback=callback&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// render the element&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// start the counter, this one last for 5 seconds&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;c1&quot;&gt;// remove the element&lt;/span&gt;
+			&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-function callback(data) {
-	// say the data has been received
-	_s = true;
-	// call the callback with the data
-	_c(data);
-}&lt;/pre&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// say the data has been received&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// call the callback with the data&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;_c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Basically what we are doing here is to create a normal JSONP request by creating a script tag and loading it into the body. However we are overriding the standard callback function with our own one, &lt;em&gt;callback. &lt;/em&gt;When the request succeeds this will call that function with the data and in turn we call our success function. If 5 seconds have past the timeout will trigger, see if the success flag has been set if not it will remove the element from the DOM thereby stopping the request.&lt;/p&gt;
 
@@ -536,23 +381,24 @@ function callback(data) {
    <link href="http://dtsn.me/2009/11/26/javascript-weather.html"/>
    <updated>2009-11-26T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2009/11/26/javascript-weather</id>
-   <content type="html">&lt;p&gt;Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;UPDATE - Chris Heilmann over at the &lt;/em&gt;&lt;a href=&quot;http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html&quot;&gt;&lt;em&gt;Yahoo! Developer Network Blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt; has made this even simpler through the use of YQL.&lt;/em&gt;&lt;/p&gt;  &lt;h2&gt;The Data&lt;/h2&gt;  &lt;p&gt;First of all we need a data source which will provide the weather for a particular location, we can grab this from the &lt;a href=&quot;http://developer.yahoo.com/weather/&quot;&gt;Yahoo Weather API&lt;/a&gt;. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here &lt;a title=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot; href=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot;&gt;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&lt;/a&gt;. Great but how can we process this RSS feed? That’s where &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.&lt;/p&gt;  &lt;p&gt;&lt;img style=&quot;border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px&quot; title=&quot;image&quot; border=&quot;0&quot; alt=&quot;image&quot; src=&quot;http://dtsn.co.uk/wp-uploads/2009/11/image3.png&quot; width=&quot;480&quot; height=&quot;269&quot; /&gt;&lt;/p&gt;  &lt;p&gt;Now we can access the JSON data for the weather in Reading &lt;a href=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;  &lt;h2&gt;JavaScript&lt;/h2&gt;  &lt;p&gt;The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at &lt;a href=&quot;http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/&quot;&gt;from__future__import&lt;/a&gt;. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.&lt;/p&gt;  &lt;pre class=&quot;html&quot; name=&quot;code&quot;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&amp;amp;_callback=weather&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+   <content type="html">&lt;p&gt;Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;UPDATE - Chris Heilmann over at the &lt;/em&gt;&lt;a href=&quot;http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html&quot;&gt;&lt;em&gt;Yahoo! Developer Network Blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt; has made this even simpler through the use of YQL.&lt;/em&gt;&lt;/p&gt;  &lt;h2&gt;The Data&lt;/h2&gt;  &lt;p&gt;First of all we need a data source which will provide the weather for a particular location, we can grab this from the &lt;a href=&quot;http://developer.yahoo.com/weather/&quot;&gt;Yahoo Weather API&lt;/a&gt;. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here &lt;a title=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot; href=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot;&gt;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&lt;/a&gt;. Great but how can we process this RSS feed? That’s where &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.&lt;/p&gt; &lt;p&gt;Now we can access the JSON data for the weather in Reading &lt;a href=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;  &lt;h2&gt;JavaScript&lt;/h2&gt;  &lt;p&gt;The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at &lt;a href=&quot;http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/&quot;&gt;from__future__import&lt;/a&gt;. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.&lt;/p&gt;  
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&amp;amp;_callback=weather&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;This will call the function weather passing through a weather status code as the parameter.&lt;/p&gt;
 
 &lt;p&gt;That is really it, you can do whatever you want with the data, here’s a quick example of how I would use it.&lt;/p&gt;
 
-&lt;pre class=&quot;js&quot; name=&quot;code&quot;&gt;function weather(data) { 
-        var code = data.value.items[0].content;
-	switch(code) {
-		case '32': $(document.body).addClassName('sunny');
-		break;	
-	}
-}&lt;/pre&gt;
-
-&lt;h2&gt;Example&lt;/h2&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&amp;amp;_callback=weather&quot;&gt;&lt;/script&gt;
-</content>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;weather&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;32&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addClassName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;sunny&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;	
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
  </entry>
  
  <entry>
@@ -560,25 +406,9 @@ function callback(data) {
    <link href="http://dtsn.me/2009/11/04/im-in-wired.html"/>
    <updated>2009-11-04T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2009/11/04/im-in-wired</id>
-   <content type="html">&lt;p&gt;At the end of September I was invited to a shoot for the UK edition of Wired. It was a shoot based around the twitterati of the UK and included some big names like Iain Dodsworth. The shoot was based at the old BT museum, which became defunct when their archive went online. You can see me and the other 24 people in Wired’s December Issue, on sale from today.&lt;/p&gt;  &lt;p&gt;&lt;img alt=&quot;Wired&amp;#39;s guide to the UK Twitterati&quot; src=&quot;http://img.wired.co.uk.s3.amazonaws.com/674x281/s_v/twitter674.jpg&quot; width=&quot;480&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;  &lt;p&gt;Can you find me?&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Dixons Honest Advertising</title>
-   <link href="http://dtsn.me/2009/09/19/dixons-honest-advertising.html"/>
-   <updated>2009-09-19T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2009/09/19/dixons-honest-advertising</id>
-   <content type="html">&lt;p&gt;I have just seen this posters from Dixons, the electronics retailer, over at &lt;a href=&quot;http://creativereview.co.uk/cr-blog/2009/september/dixons&quot;&gt;Creative Review&lt;/a&gt; and i was shocked to see how honest this advertising campaign is, it clearly reflects how Dixons sees itself in the market place. &lt;/p&gt;  &lt;p&gt;&lt;a href=&quot;http://dtsn.co.uk/wp-uploads/2009/09/image1.png&quot;&gt;&lt;img style=&quot;border-bottom: 0px; border-left: 0px; margin: 0px 5px 0px 0px; display: inline; border-top: 0px; border-right: 0px&quot; title=&quot;image&quot; border=&quot;0&quot; alt=&quot;image&quot; src=&quot;http://dtsn.co.uk/wp-uploads/2009/09/image-thumb.png&quot; width=&quot;235&quot; height=&quot;352&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://dtsn.co.uk/wp-uploads/2009/09/image2.png&quot;&gt;&lt;img style=&quot;border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px&quot; title=&quot;image&quot; border=&quot;0&quot; alt=&quot;image&quot; src=&quot;http://dtsn.co.uk/wp-uploads/2009/09/image-thumb1.png&quot; width=&quot;235&quot; height=&quot;352&quot; /&gt;&lt;/a&gt; &lt;/p&gt;  &lt;p&gt;These posters created by M&amp;amp;C Saatchi in London are Dixons latest effort in advertising on the tube. These adverts do something that most adverts overlook, the recognise Dixons position in the market and how their customers both behave and view them, firmly at the bottom. The cleverest bit of these adverts in to use the easily recognisable fonts of the two major retailers, Selfridges and John Lewis. These, however are really subtle, and without realising this the adverts become really bland. Therefore do they really appeal to everyone, or are they just a bit too complicated, it probably would of been more effective to actually mention these retailers by name. &lt;/p&gt;  &lt;p&gt;This problem would become even more apparent if the adverts where only displayed singly, then you wouldn’t get the contrast, and even through the brands which the fonts come from are strong, i don’t think typically consumers easily recognise the font of a brand out of context with their logo.&lt;/p&gt;  &lt;p&gt;What do you think?&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>TweetTabs, A Story</title>
-   <link href="http://dtsn.me/2009/06/17/tweettabs-a-story.html"/>
-   <updated>2009-06-17T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2009/06/17/tweettabs-a-story</id>
-   <content type="html">&lt;p&gt;For everyone who follows me on twitter or knows me personally would know that yesterday I launched something that i have been working on for a very long time. &lt;a href=&quot;http://tweettabs.com&quot;&gt;TweetTabs&lt;/a&gt; is a way of tracking real-time twitter trends and searches, and has been my little project since i first started on it back in Easter. The idea came from the lack on online real-time ways to interface with twitter, the premise is simple, i wanted an easy way to search for things in twitter which constantly updated, so TweetTabs was born. &lt;/p&gt;  &lt;p&gt;The initial application was written in about 2 hours entirely in JavaScript, it later went through a number of huge revisions especially over the Easter weekend. It gained quite a lot of features, and then lost them. I wrote an entire OAuth module in JavaScript, then realised that you can’t authenticate headers. The project was basically done apart from one of the most complicated features. Then my life changed, I broke up with my long term girlfriend, of 5 years, and had to move back home with my parents. Even though this didn’t dent my enthusiasm for the project it definitely affected the timescales.&lt;/p&gt;  &lt;h2&gt;How it works&lt;/h2&gt;  &lt;p&gt;&lt;img style=&quot;border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px&quot; title=&quot;image&quot; border=&quot;0&quot; alt=&quot;image&quot; src=&quot;http://dtsn.co.uk/wp-content/uploads/2009/06/image-thumb.png&quot; width=&quot;480&quot; height=&quot;310&quot; /&gt;&lt;/p&gt;  &lt;p&gt;TweetTabs is a very simple idea, but it takes a very long time to solve the problems it presents. The entire application is written in JavaScript, this gets around the notion of having a API limit for your twitter searches, you are now only limited by your I.P. address, which has a much higher (not declared) limit. For every tab TweetTab hits twitter to fetch the data, this is controlled by our adaptive pollrate. Put simply this means that each tab can work out the optimum time to fetch more data from twitter. We try and limit the number of times TweetTabs hits twitter in the hour, mostly so that you don't reach your API limit (it is possible, and I did it a lot in testing), and we don't overload twitter.&lt;/p&gt; &lt;object width=&quot;480&quot; height=&quot;360&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=5208057&amp;amp;server=vimeo.com&amp;amp;show_title=0&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=00ADEF&amp;amp;fullscreen=1&quot; /&gt;&lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=5208057&amp;amp;server=vimeo.com&amp;amp;show_title=0&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=00ADEF&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;480&quot; height=&quot;360&quot;&gt;&lt;/embed&gt;&lt;/object&gt;  &lt;p&gt;&lt;a href=&quot;http://vimeo.com/5208057&quot;&gt;TweetTabs Screencast&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user546294&quot;&gt;Daniel Saxil-Nielsen&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;  &lt;h2&gt;Coverage&lt;/h2&gt;  &lt;p&gt;So now TweetTabs has been launched and has had loads of positive feedback and has been covered on loads of huge sites:&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;&lt;a title=&quot;http://www.techcrunch.com/2009/06/16/tweettabs-is-an-awesome-way-to-search-twitter/&quot; href=&quot;http://www.techcrunch.com/2009/06/16/tweettabs-is-an-awesome-way-to-search-twitter/&quot;&gt;http://www.techcrunch.com/2009/06/16/tweettabs-is-an-awesome-way-to-search-twitter/&lt;/a&gt; &lt;/li&gt;    &lt;li&gt;&lt;a title=&quot;http://mashable.com/2009/06/16/tweettabs/&quot; href=&quot;http://mashable.com/2009/06/16/tweettabs/&quot;&gt;http://mashable.com/2009/06/16/tweettabs/&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt;  &lt;h2&gt;Dedications&lt;/h2&gt;  &lt;p&gt;I don’t know whether this is normally done for releasing products, but I feel it is appropriate, I would like to mention everyone who helped with the process along the way. Starting firstly with &lt;a href=&quot;http://twitter.com/nickhalstead&quot; target=&quot;_blank&quot;&gt;@nickhalstead&lt;/a&gt;, who supported me the whole way (and sorry it took so long). &lt;a href=&quot;http://twitter.com/nicktelford&quot; target=&quot;_blank&quot;&gt;@nicktelford&lt;/a&gt; who was there to bounce ideas of and to find lots of bugs just before we were about the launch. &lt;a href=&quot;http://twitter.com/alexforrow&quot; target=&quot;_blank&quot;&gt;@alexforrow&lt;/a&gt; for writing a really good deployment script, which merges all the files and obfuscates them. All the great people that tested it along the way: &lt;a href=&quot;http://twitter.com/chris_alexander&quot; target=&quot;_blank&quot;&gt;@chris_alexander&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/craigyd&quot; target=&quot;_blank&quot;&gt;@craigyd&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/amykate&quot; target=&quot;_blank&quot;&gt;@amykate&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/girlygeekdom&quot; target=&quot;_blank&quot;&gt;@girlygeekdom&lt;/a&gt; (who is probably the one who answers &lt;a href=&quot;http://twitter.com/tweettabs&quot; target=&quot;_blank&quot;&gt;@tweettabs&lt;/a&gt; questions online). &lt;/p&gt;  &lt;p&gt;TweetTabs is built using &lt;a href=&quot;http://prototypejs.org&quot; target=&quot;_blank&quot;&gt;Prototype&lt;/a&gt; and the JavaScript framework, and is powered by &lt;a href=&quot;http://tweetmeme.com&quot;&gt;TweetMeme&lt;/a&gt;, and &lt;a href=&quot;http://twitter.com&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;.     &lt;/p&gt;
+   <content type="html">&lt;p&gt;At the end of September I was invited to a shoot for the UK edition of Wired. It was a shoot based around the twitterati of the UK and included some big names like Iain Dodsworth. The shoot was based at the old BT museum, which became defunct when their archive went online. You can see me and the other 24 people in Wired’s December Issue, on sale from today.&lt;/p&gt; 
+
+&lt;img class=&quot;last&quot; src=&quot;http://img.wired.co.uk.s3.amazonaws.com/674x281/s_v/twitter674.jpg&quot; width=&quot;480&quot; height=&quot;200&quot; /&gt;
 </content>
  </entry>
  
@@ -587,71 +417,74 @@ function callback(data) {
    <link href="http://dtsn.me/2009/03/15/building-javascript-widgets.html"/>
    <updated>2009-03-15T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2009/03/15/building-javascript-widgets</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://dtsn.co.uk/wp-content/uploads/2009/03/buidling_javascript_widgets1.gif&quot; alt=&quot;Building JavaScript Widgets&quot; /&gt;&lt;/p&gt;&lt;p&gt;Little pieces of JavaScript you embed onto your website are getting more popular. Every major provider of a service on the web also gives you a little widget that you can put on your blog or webpage to promote what you are doing, for example &lt;a href=&quot;http://twitter.com/widgets&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.last.fm/widgets&quot; target=&quot;_blank&quot;&gt;Last FM&lt;/a&gt; and &lt;a href=&quot;http://digg.com/add-digg&quot; target=&quot;_blank&quot;&gt;Digg&lt;/a&gt; all provide widgets which are great for you and great for the service.&lt;/p&gt;  &lt;p&gt;I am going to talk you through the development and pitfalls associated with the design and development of widgets. &lt;/p&gt;  &lt;p&gt;First and foremost, you need to decide what you want to show with your widget. Knowing this you can make an educated choice about which method you want to use to create a widget, there are basically two methods associated with widget development.&lt;/p&gt;  &lt;h4&gt;iframe’s&lt;/h4&gt;  &lt;p&gt;No, iframe’s aren’t dead. They are a major part of widget development. Using a &lt;code&gt;iframe&lt;/code&gt; is the easiest way to generate a widget - you host a small file on your web site which contains the information you want to show, like the &lt;a href=&quot;http://digg.com/tools/diggthis.php?u=http%3A//hehe2.net/linux-general/linuxcom-to-bring-social-web-to-linux-geeks/&amp;amp;t=Linux.com%20to%20Bring%20%u201CSocial%20Web%u201D%20To%20Linux%20Geeks%3F&quot; target=&quot;_blank&quot;&gt;Digg button&lt;/a&gt; for example, and get the JavaScript on the client side to build the URL to it. In the case of Digg the client side JavaScript builds a URL based on the current posts URL.&lt;/p&gt;&lt;pre class=&quot;javascript&quot; name=&quot;code&quot;&gt;
-document.write('&lt;iframe src=&quot;http://yoururl&quot; width=&quot;50&quot; height=&quot;50&quot;&gt;&lt;/iframe&gt;');
-&lt;/pre&gt;  &lt;p&gt;To install the widget all you have to do is to point the user at your bit of JavaScript:&lt;/p&gt; &lt;pre class=&quot;html&quot; name=&quot;code&quot;&gt;
-&lt;script src=&quot;http://yoururl/script.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;/pre&gt;  &lt;p&gt;You can pass any variables you want through to the user at this point by simply making them JavaScript variables, and using the JavaScript to build up the &lt;code&gt;iframe&lt;/code&gt; URL based on these variables.&lt;/p&gt; &lt;pre class=&quot;html&quot; name=&quot;code&quot;&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-	var greeting = 'hello world';
-&lt;/script&gt;
-&lt;script src=&quot;http://yoururl/script.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;/pre&gt;  &lt;p&gt;If you want your widget to be able to appear multiple times on the same webpage, you need to remember to set all the variables to &lt;code&gt;null&lt;/code&gt; at the end of your JavaScript file.&lt;/p&gt;  &lt;p&gt;That's it! &lt;code&gt;iframe&lt;/code&gt; based widgets are very easy to build and to use, however they do come with their downsides. The biggest of these is that the user can't customise the widget at all - it lives within an &lt;code&gt;iframe&lt;/code&gt; and therefore is untouchable by CSS. That's why certain widgets, like the twitter widget, which are made entirely on the client side in JavaScript.&lt;/p&gt;  &lt;h4&gt;Client Side&lt;/h4&gt;  &lt;p&gt;A widget that is built in JavaScript on the client side is definitely the harder option. For this you have to make the JavaScript file create all the HTML, write out a basic style to apply to the HTML and load in the data. When building this try to avoid using frameworks to build the HTML, this only creates more request for your web servers and make the widget slower to load. Instead resort to using the classical JavaScript methods for creating elements.&lt;/p&gt; &lt;pre class=&quot;javascript&quot; name=&quot;code&quot;&gt;
-document.write('&lt;div id=&quot;your_id&quot;&gt;&lt;/div&gt;');
-var widget = document.getElementById('you_id');
-var div = document.createElement('div');
-div.innerHTML = 'Hello World';
-widget.appendChild(div);
-&lt;/pre&gt;  &lt;p&gt;You will have to load your data in from another source, and for this I recommend extending your API to give you a JavaScript variable followed by the JSON encoded data. Here's an example from &lt;a href=&quot;http://api.tweetmeme.com/popular.js?count=5&amp;amp;category=all&quot; target=&quot;_blank&quot;&gt;tweetmeme&lt;/a&gt;.&lt;/p&gt;  &lt;h4&gt;Pitfalls&lt;/h4&gt;  &lt;p&gt;There are a lot of difficulties involved in creating widgets and here are just a few of them:&lt;/p&gt;  &lt;ul&gt;   &lt;li&gt;AJAX won’t work! You cannot post information between domains. &lt;/li&gt;    &lt;li&gt;Don’t use a JavaScript framework - for a simple widget it’s is over kill. &lt;/li&gt;    &lt;li&gt;Try to keep the requests down. These widgets are coming from your servers. &lt;/li&gt;    &lt;li&gt;Anonymise the JavaScript, you don’t want it conflicting with other JavaScript. &lt;/li&gt;    &lt;li&gt;Minimize your JavaScript. This will save on bandwidth for you, and make the widget faster to load.&amp;#160; &lt;/li&gt; &lt;/ul&gt;  &lt;h4&gt;Questions&lt;/h4&gt;  &lt;p&gt;If you have any questions, or want to show off any widgets you have made please comment below.&lt;/p&gt;
-</content>
+   <content type="html">&lt;p&gt;Little pieces of JavaScript you embed onto your website are getting more popular. Every major provider of a service on the web also gives you a little widget that you can put on your blog or webpage to promote what you are doing, for example &lt;a href=&quot;http://twitter.com/widgets&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.last.fm/widgets&quot; target=&quot;_blank&quot;&gt;Last FM&lt;/a&gt; and &lt;a href=&quot;http://digg.com/add-digg&quot; target=&quot;_blank&quot;&gt;Digg&lt;/a&gt; all provide widgets which are great for you and great for the service.&lt;/p&gt;
+&lt;p&gt;I am going to talk you through the development and pitfalls associated with the design and development of widgets. &lt;/p&gt;
+&lt;p&gt;First and foremost, you need to decide what you want to show with your widget. Knowing this you can make an educated choice about which method you want to use to create a widget, there are basically two methods associated with widget development.&lt;/p&gt;
+&lt;h3&gt;IFrame’s&lt;/h3&gt;
+&lt;p&gt;No, iframe’s aren’t dead. They are a major part of widget development. Using a &lt;code&gt;iframe&lt;/code&gt; is the easiest way to generate a widget - you host a small file on your web site which contains the information you want to show, like the &lt;a href=&quot;http://digg.com/tools/diggthis.php?u=http%3A//hehe2.net/linux-general/linuxcom-to-bring-social-web-to-linux-geeks/&amp;amp;t=Linux.com%20to%20Bring%20%u201CSocial%20Web%u201D%20To%20Linux%20Geeks%3F&quot; target=&quot;_blank&quot;&gt;Digg button&lt;/a&gt; for example, and get the JavaScript on the client side to build the URL to it. In the case of Digg the client side JavaScript builds a URL based on the current posts URL.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;iframe src=&amp;quot;http://yoururl&amp;quot; width=&amp;quot;50&amp;quot; height=&amp;quot;50&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To install the widget all you have to do is to point the user at your bit of JavaScript:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://yoururl/script.js&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can pass any variables you want through to the user at this point by simply making them JavaScript variables, and using the JavaScript to build up the &lt;code&gt;iframe&lt;/code&gt; URL based on these variables.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;hello world&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://yoururl/script.js&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want your widget to be able to appear multiple times on the same webpage, you need to remember to set all the variables to &lt;code&gt;null&lt;/code&gt; at the end of your JavaScript file.&lt;/p&gt;
+&lt;p&gt;That's it! &lt;code&gt;iframe&lt;/code&gt; based widgets are very easy to build and to use, however they do come with their downsides. The biggest of these is that the user can't customise the widget at all - it lives within an &lt;code&gt;iframe&lt;/code&gt; and therefore is untouchable by CSS. That's why certain widgets, like the twitter widget, which are made entirely on the client side in JavaScript.&lt;/p&gt;
+&lt;h3&gt;Client Side&lt;/h3&gt;
+&lt;p&gt;A widget that is built in JavaScript on the client side is definitely the harder option. For this you have to make the JavaScript file create all the HTML, write out a basic style to apply to the HTML and load in the data. When building this try to avoid using frameworks to build the HTML, this only creates more request for your web servers and make the widget slower to load. Instead resort to using the classical JavaScript methods for creating elements.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;div id=&amp;quot;your_id&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;you_id&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You will have to load your data in from another source, and for this I recommend extending your API to give you a JavaScript variable followed by the JSON encoded data. Here's an example from &lt;a href=&quot;http://api.tweetmeme.com/popular.js?count=5&amp;amp;category=all&quot; target=&quot;_blank&quot;&gt;tweetmeme&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Pitfalls&lt;/h3&gt;
+&lt;p&gt;There are a lot of difficulties involved in creating widgets and here are just a few of them:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;AJAX won’t work! You cannot post information between domains. &lt;/li&gt;
+	&lt;li&gt;Don’t use a JavaScript framework - for a simple widget it’s is over kill. &lt;/li&gt;
+	&lt;li&gt;Try to keep the requests down. These widgets are coming from your servers. &lt;/li&gt;
+	&lt;li&gt;Anonymise the JavaScript, you don’t want it conflicting with other JavaScript. &lt;/li&gt;
+	&lt;li&gt;Minimize your JavaScript. This will save on bandwidth for you, and make the widget faster to load.&amp;#160; &lt;/li&gt;
+&lt;/ul&gt;</content>
  </entry>
  
  <entry>
-   <title>Twestival</title>
-   <link href="http://dtsn.me/2009/02/15/twestival.html"/>
-   <updated>2009-02-15T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/02/15/twestival</id>
-   <content type="html">&lt;p&gt;I would just like to say thank you to &lt;a href=&quot;http://twitter.com/RDGTwestival&quot; target=&quot;_blank&quot;&gt;@RDGTwestival&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/simonster&quot; target=&quot;_blank&quot;&gt;@simonster&lt;/a&gt; for organising the &lt;a href=&quot;http://reading.twestival.com&quot; target=&quot;_blank&quot;&gt;Reading Twestival&lt;/a&gt; and say it was great meeting some of the local Twitter crowd, we should all do it again – how about Wednesday?&lt;/p&gt; &lt;!--more--&gt;  &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/jamin2/3276386479/&quot; target=&quot;_blank&quot;&gt;&lt;img style=&quot;border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px&quot; title=&quot;image&quot; border=&quot;0&quot; alt=&quot;image&quot; src=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/image2.png&quot; width=&quot;478&quot; height=&quot;317&quot; /&gt;&lt;/a&gt;     &lt;br /&gt;&lt;small&gt;See &lt;a href=&quot;http://twitter.com/benjaminellis&quot; target=&quot;_blank&quot;&gt;@BenjaminEllis&lt;/a&gt; fab photo's of RDGTwestival http://bit.ly/sLowO&lt;/small&gt;&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; You can still buy the &lt;a href=&quot;http://dtsn.spreadshirt.co.uk&quot;&gt;T-shirts&lt;/a&gt;.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Tweetmeme Revamp</title>
-   <link href="http://dtsn.me/2009/02/11/tweetmeme-revamp.html"/>
-   <updated>2009-02-11T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/02/11/tweetmeme-revamp</id>
-   <content type="html">&lt;p&gt;Over the last couple of days we have been working hard at &lt;a href=&quot;http://fav.or.it&quot;&gt;fav.or.it&lt;/a&gt; on a new design for &lt;a href=&quot;http://tweetmeme.com&quot;&gt;tweetmeme&lt;/a&gt;. The old design wasn’t very nice and lots of users were put off the site because of it’s garish colour scheme, but now we are back with, hopefully, a really successful new design.&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;You can find a full review of the new features on the &lt;/strong&gt;&lt;a href=&quot;http://blog.tweetmeme.com/2009/02/11/major-revamp/&quot;&gt;&lt;strong&gt;tweetmeme blog&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt; &lt;!--more--&gt;  &lt;div align=&quot;center&quot;&gt;   &lt;p&gt;&lt;a href=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/holding.gif&quot;&gt;&lt;img style=&quot;border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px&quot; title=&quot;holding&quot; border=&quot;0&quot; alt=&quot;holding&quot; src=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/holding-thumb.gif&quot; width=&quot;363&quot; height=&quot;236&quot; /&gt;&lt;/a&gt; &lt;/p&gt; &lt;/div&gt;  &lt;h4&gt;Minimal&lt;/h4&gt;  &lt;p&gt;Much like this website, Nick wanted the tweetmeme website to be really minimal and as far away from the old design as possible. A quick search on Kuler found the &lt;a href=&quot;http://kuler.adobe.com/#themeID/193782&quot;&gt;perfect colour scheme&lt;/a&gt;. Combine that colour scheme with a few shades of grey and we have the perfect website.&lt;/p&gt;  &lt;h4&gt;Rockwell&lt;/h4&gt;  &lt;p&gt;You will notice that &lt;a href=&quot;http://www.fonts.com/findfonts/detail.asp?pid=201908&quot;&gt;Rockwel&lt;/a&gt;l is used a lot around the website, i thought that the bold text contrasted really nicely with the small and minimal design.&lt;/p&gt;  &lt;h4&gt;Feedback&lt;/h4&gt;  &lt;p&gt;I am always interested in any feedback any can give me about my designs, so please leave feedback here, or on the tweetmeme blog.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Twitter T-Shirt Design</title>
-   <link href="http://dtsn.me/2009/02/09/twitter-t-shirt-design.html"/>
-   <updated>2009-02-09T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/02/09/twitter-t-shirt-design</id>
-   <content type="html">&lt;a href=&quot;http://twestival.com&quot;&gt;Twestival&lt;/a&gt; is just around the corner (Feb. 12th) and I thought I would share the special T-shirt that I designed for the occasion. I wanted a T-shirt which I could put my own username on, but I was unable to find one, therefore I broke out illustrator and started designing.
+   <title>Script.aculo.us Transitions</title>
+   <link href="http://dtsn.me/2009/03/08/script.aculo.us-transitions.html"/>
+   <updated>2009-03-08T00:00:00+00:00</updated>
+   <id>http://tom.preston-werner.com/2009/03/08/script.aculo.us-transitions</id>
+   <content type="html">&lt;p&gt;I’ve been digging through the &lt;a href=&quot;http://script.aculo.us/&quot;&gt;Script.aculo.us&lt;/a&gt; code a lot recently and have stumbled upon a number of very effective transitions which aren’t used widely. There are 9 effects in total comprising of:&lt;/p&gt;
 
-&lt;!--more--&gt;
+&lt;ul&gt;
+	&lt;li&gt;Transition&lt;/li&gt;
+	&lt;li&gt;Linear&lt;/li&gt;
+	&lt;li&gt;Reverse&lt;/li&gt;
+	&lt;li&gt;Flicker&lt;/li&gt;
+	&lt;li&gt;Wobble&lt;/li&gt;
+	&lt;li&gt;Pulse&lt;/li&gt;
+	&lt;li&gt;Spring&lt;/li&gt;
+	&lt;li&gt;None&lt;/li&gt;
+	&lt;li&gt;Full&lt;/li&gt;
+&lt;/ul&gt;
 
-I really wanted something that wasn’t in your face and was subtle, and preferably something that didn’t have the twitter logo on it. Therefore I chose a simple design using the original twitter bird, designed by Simon Oxley, available on &lt;a href=&quot;http://www.istockphoto.com/file_closeup/concepts-and-ideas/time/2437874-blue-bird.php?id=2437874&quot;&gt;iStockPhoto&lt;/a&gt;, and a cloud to hold the name.
+&lt;p&gt;You can see a full demo of all the the effects on the &lt;a href=&quot;http://github.com/madrobby/scriptaculous/wikis/effect-transitions&quot;&gt;Script.aculo.us Wiki&lt;/a&gt;.&lt;/p&gt;
 
-There were some modifications that had to be made to the vector images, firstly none of the lines could be two small and all the objects had to be converted so that none of their paths crossed.
-
-&lt;a href=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/tshirt.png&quot;&gt;&lt;img style=&quot;border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px&quot; title=&quot;t-shirt&quot; src=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/tshirt-thumb.png&quot; border=&quot;0&quot; alt=&quot;t-shirt&quot; width=&quot;415&quot; height=&quot;415&quot; /&gt;&lt;/a&gt;
-&lt;h4&gt;Using SpreadShirt&lt;/h4&gt;
-&lt;a href=&quot;http://spreadshirt.net&quot;&gt;SpreadShirt&lt;/a&gt; was chosen to print the T-Shirts because they accept vector drawings which allow for the most flexibility when it comes to colours, they allow up the 3 colours, but I would only be using two. The uploading process is really old tech, each vector drawing has to be approved by a human before they let you use it, but this process should takes less than 24 hours.
-
-After the design has been approved the design can then be added to products, anything from T-shirts to umbrella’s can be printed with your design. I choose 2 different forms of T-shirt one a slim fit and one a normal fit, £14.50 and £14 respectively. You can then tweak around with the designs/colours/text to get your design perfect. I also converted mine into a product for my own store.
-
-You can currently buy this T-shirt which will be printed with your name, in one of 7 colours at &lt;a href=&quot;http://dtsn.spreadshirt.net&quot;&gt;http://dtsn.spreadshirt.co.uk.&lt;/a&gt;
-
-&lt;strong&gt;N.B. The Slim-Fit Tee is really slim fit, leave a comment if you would like the design on any other products like girl tee's, mugs, umbrella's etc.&lt;/strong&gt;
-
-&lt;a href=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/image.png&quot;&gt;&lt;img style=&quot;border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin: 0px 10px 0px 0px; border-right-width: 0px&quot; title=&quot;image&quot; src=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/image-thumb.png&quot; border=&quot;0&quot; alt=&quot;image&quot; width=&quot;230&quot; height=&quot;305&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/tshirt2.jpg&quot;&gt;&lt;img style=&quot;border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px&quot; title=&quot;t-shirt2&quot; src=&quot;http://dtsn.co.uk/wp-content/uploads/2009/02/tshirt2-thumb.jpg&quot; border=&quot;0&quot; alt=&quot;t-shirt2&quot; width=&quot;230&quot; height=&quot;306&quot; /&gt;&lt;/a&gt;
-
-&lt;em&gt;All the profits for this T-shirt will go to &lt;/em&gt;&lt;a href=&quot;http://twestival.com&quot;&gt;&lt;em&gt;Twestival&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;
-
-&lt;em&gt;Roughly £1.40 - VAT will go to Twestival for every T-shirt brought, however spreadshirt will only release the money if more than 30 shirts are sold (thats just their store policy).&lt;/em&gt;
+&lt;p&gt;All of Script.aculo.us’s effects will take a transition in the options array. For example we could apply a spring transition to our scroll to effect.&lt;/p&gt;
 </content>
  </entry>
  
@@ -660,10 +493,10 @@ You can currently buy this T-shirt which will be printed with your name, in one 
    <link href="http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector.html"/>
    <updated>2008-10-15T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2008/10/15/super-css-the-power-of-the-selector</id>
-   <content type="html">&lt;p&gt;&lt;img style=&quot;border-width: 0px; margin: 0px 0px 0px 10px; float: right;&quot; alt=&quot;super_css&quot; src=&quot;/wp-content/uploads/2008/10/super-css-thumb.png&quot; width=&quot;240&quot; height=&quot;201&quot; /&gt;We all love CSS it’s fundamental to the web. However most of us do not use the full power of CSS. A quick rummage around the W3C specification and you will see how powerful CSS can really be. I’m talking about the CSS selector, sure we all use the basic selectors, but what about the more complicated ones.&lt;/p&gt;
+   <content type="html">&lt;p&gt;We all love CSS it’s fundamental to the web. However most of us do not use the full power of CSS. A quick rummage around the W3C specification and you will see how powerful CSS can really be. I’m talking about the CSS selector, sure we all use the basic selectors, but what about the more complicated ones.&lt;/p&gt;
 &lt;p&gt;Well here’s my guide to the most useful not very used CSS selectors (as well as what they are currently supported in).&lt;/p&gt;
 &lt;h3&gt;CSS2&lt;/h3&gt;
-&lt;table class=&quot;table&quot; width=&quot;480&quot; border=&quot;0&quot;&gt;
+&lt;table class=&quot;table&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;th width=&quot;140&quot;&gt;Pattern&lt;/th&gt;
@@ -677,74 +510,74 @@ You can currently buy this T-shirt which will be printed with your name, in one 
 &lt;tr&gt;
 &lt;td&gt;E &amp;gt; F&lt;/td&gt;
 &lt;td&gt;Matches any F element that is a child of an element E.&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;E:first-child&lt;/td&gt;
 &lt;td&gt;Matches element E when E is the first child of its parent. &lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;E:link          &lt;br /&gt;E:visited &lt;/td&gt;
 &lt;td&gt;Matches element E if E is the source anchor of a hyperlink of which the target is not yet visited (:link) or already visited (:visited). &lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;E:active          &lt;br /&gt;E:hover           &lt;br /&gt;E:focus &lt;/td&gt;
 &lt;td&gt;Matches E during certain user actions. &lt;/td&gt;
 &lt;td class=&quot;center&quot;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;td class=&quot;center&quot;&gt;&amp;nbsp;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;E + F&lt;/td&gt;
 &lt;td&gt;Matches any F element immediately preceded by an element E.&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;E[foo]&lt;/td&gt;
 &lt;td&gt;Matches any E element with the &quot;foo&quot; attribute set (whatever the value). &lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;E[foo=&quot;warning&quot;]&lt;/td&gt;
 &lt;td&gt;Matches any E element whose &quot;foo&quot; attribute value is exactly equal to &quot;warning&quot;. &lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&quot;last&quot;&gt;
 &lt;td&gt;E[foo~=&quot;warning&quot;]&lt;/td&gt;
 &lt;td&gt;Matches any E element whose &quot;foo&quot; attribute value is a list of space-separated values, one of which is exactly equal to &quot;warning&quot;. &lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -763,20 +596,20 @@ You can currently buy this T-shirt which will be printed with your name, in one 
 &lt;tr&gt;
 &lt;td&gt;E ~ F&lt;/td&gt;
 &lt;td&gt;Matches any F element preceded by an element E.&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;E:empty&lt;/td&gt;
 &lt;td&gt;Matches element E where E has no children, including text nodes&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;tick&quot; alt=&quot;tick&quot; src=&quot;/wp-content/uploads/2008/10/tick-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10003;&lt;/td&gt;
 &lt;td class=&quot;center&quot;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td class=&quot;center&quot;&gt;&lt;img style=&quot;display: inline;&quot; title=&quot;cross&quot; alt=&quot;cross&quot; src=&quot;/wp-content/uploads/2008/10/cross-thumb.gif&quot; width=&quot;16&quot; border=&quot;0&quot; height=&quot;16&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;center&quot;&gt;&amp;#10007;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -786,22 +619,16 @@ You can currently buy this T-shirt which will be printed with your name, in one 
 &lt;p&gt;I couldn’t just give all these CSS selectors without giving you some great examples of how they can be used.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;E:first-child/E:last-child – &lt;/strong&gt;You have a &lt;em&gt;ul&lt;/em&gt; list of elements which you float horizontally. With first child and last child you can easily set the margins for the first and last child different from the remaining items:&lt;/p&gt;
 
-&lt;pre class=&quot;css&quot; name=&quot;code&quot;&gt;
-ul { list-style: none; margin: 0px; padding: 0px; }
-ul li { float: left; margin: 0px 10px; }
-ul li:first-child { margin: 0px 10px 0px 0px; }
-ul li:last-child { margin: 0px 0px 0px 10px; }
-&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:first-child&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:last-child&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;E:empty – &lt;/strong&gt;You may have a situation where you have an empty paragraph. Paragraphs will always have a margin top and a margin bottom, which could look unsightly. So lets remove it.&lt;/p&gt;
 
-&lt;pre class=&quot;css&quot; name=&quot;code&quot;&gt;
-p:empty { display:none; }
-&lt;/pre&gt;
-
-
-&lt;p&gt;What’s your favourite selector? Do you care that they are not always supported?&lt;/p&gt;
-</content>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:empty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
  </entry>
  
  <entry>
@@ -809,7 +636,12 @@ p:empty { display:none; }
    <link href="http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea.html"/>
    <updated>2008-07-05T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2008/07/05/if-the-web-was-smaller-idea</id>
-   <content type="html">&lt;p&gt;I’ve just had this crazy idea, what would happen if all the &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; tags in the world were converted into &lt;em&gt;&amp;lt;d&amp;gt;&lt;/em&gt; tags. Image how much space it would save, well you don’t need to imagine I have broken out my calculator and worked it all out.&lt;/p&gt; &lt;!--more--&gt; &lt;p&gt;Taking the top 5 website's from &lt;a href=&quot;http://www.alexa.com/site/ds/top_sites?ts_mode=global&amp;amp;lang=none&quot;&gt;Alexa&lt;/a&gt;:&lt;/p&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;2&quot; width=&quot;492&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;     &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;100&quot;&gt;&lt;strong&gt;Website&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;&lt;strong&gt;Number of &amp;lt;div&amp;gt; Elements&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;&lt;strong&gt;Size&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;&lt;strong&gt;Size when &amp;lt;div&amp;gt; = &amp;lt;d&amp;gt;&lt;/strong&gt;&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Yahoo.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;85&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;153Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;152Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;98&quot;&gt;Google.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;6&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;7.5Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;7.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Youtube.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;377&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;76.8Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;75.3Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Live.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;27&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;18.6Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;18.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;MSN.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;140&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;48.9Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;48.3Kb&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt;&lt;/table&gt;  &lt;p&gt;&lt;a href=&quot;http://dtsn.co.uk/wp-content/uploads/2008/07/image.png&quot;&gt;&lt;img title=&quot;image&quot; style=&quot;border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px&quot; height=&quot;143&quot; alt=&quot;image&quot; src=&quot;http://dtsn.co.uk/wp-content/uploads/2008/07/image-thumb.png&quot; width=&quot;490&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;     &lt;br /&gt;&lt;em&gt;Approximate byte size per 2 characters.&lt;/em&gt;&lt;/p&gt;  &lt;p&gt;For every element that would be converted to a &lt;em&gt;&amp;lt;d&amp;gt;,&lt;/em&gt; on average 5.93 bytes are saved. Considering that a typically website has 127 &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; elements, taking from the average of the top 5 website's, this will create a saving of 0.753Kb per web page. That might not seem like a lot but added together across all the website's imagine how much time it would save.&lt;/p&gt;  &lt;p&gt;Of course this is just pie in the sky, but if the W3C thought of shrinking the HTML tags we use, website's would load faster, and every millisecond counts. Hopefully this will cause some debate on why HTML elements are longer than they need to be.&lt;/p&gt;  &lt;p&gt;I am only suggesting the HTML tags div and span since they convey no semantical meaning, unlike elements like p.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I’ve just had this crazy idea, what would happen if all the &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; tags in the world were converted into &lt;em&gt;&amp;lt;d&amp;gt;&lt;/em&gt; tags. Image how much space it would save, well you don’t need to imagine I have broken out my calculator and worked it all out.&lt;/p&gt;
+
+&lt;p&gt;Taking the top 5 website's from &lt;a href=&quot;http://www.alexa.com/site/ds/top_sites?ts_mode=global&amp;amp;lang=none&quot;&gt;Alexa&lt;/a&gt;:&lt;/p&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;2&quot; width=&quot;492&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;     &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;100&quot;&gt;&lt;strong&gt;Website&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;&lt;strong&gt;Number of &amp;lt;div&amp;gt; Elements&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;&lt;strong&gt;Size&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;&lt;strong&gt;Size when &amp;lt;div&amp;gt; = &amp;lt;d&amp;gt;&lt;/strong&gt;&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Yahoo.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;85&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;153Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;152Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;98&quot;&gt;Google.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;6&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;7.5Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;7.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Youtube.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;377&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;76.8Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;75.3Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Live.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;27&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;18.6Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;18.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;MSN.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;140&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;48.9Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;48.3Kb&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt;&lt;/table&gt; 
+ &lt;p&gt;For every element that would be converted to a &lt;em&gt;&amp;lt;d&amp;gt;,&lt;/em&gt; on average 5.93 bytes are saved. Considering that a typically website has 127 &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; elements, taking from the average of the top 5 website's, this will create a saving of 0.753Kb per web page. That might not seem like a lot but added together across all the website's imagine how much time it would save.&lt;/p&gt;  
+
+ &lt;p&gt;Of course this is just pie in the sky, but if the W3C thought of shrinking the HTML tags we use, website's would load faster, and every millisecond counts. Hopefully this will cause some debate on why HTML elements are longer than they need to be.&lt;/p&gt;  &lt;p&gt;I am only suggesting the HTML tags div and span since they convey no semantical meaning, unlike elements like p.&lt;/p&gt;
 </content>
  </entry>
  
@@ -818,26 +650,18 @@ p:empty { display:none; }
    <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting.html"/>
    <updated>2008-05-12T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2008/05/12/javascript-in-css-ugly-but-intresting</id>
-   <content type="html">There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.
+   <content type="html">&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;width&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='nx'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;clientWidth&lt;/span&gt; &lt;span class='o'&gt;&amp;gt;&lt;/span&gt; &lt;span class='mi'&gt;950&lt;/span&gt; &lt;span class='o'&gt;?&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;950px&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class='p'&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Do not use CSS Expression, they are unreliable, slow and are only supported in IE!&lt;/strong&gt;&lt;/p&gt;
 
-[code=&quot;css&quot;]
-width:expression(document.body.clientWidth &gt; 950 ? &quot;950px&quot;: &quot;100%&quot; );
-[/code]
-
-&lt;strong&gt;Do not use CSS Expression, they are unreliable, slow and are only supported in IE!&lt;/strong&gt;
-
-CSS Expression suddenly came to me as a solution for the currently much debated feature (&lt;a href=&quot;http://www.dave-woods.co.uk/index.php/css-variables/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.css3.info/new-features-proposed-for-css/&quot;&gt;here&lt;/a&gt;) of &lt;a href=&quot;http://disruptive-innovations.com/zoo/cssvariables/&quot;&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.
-
-[code=&quot;css&quot;]
-function blue() {
-return 'blue';
-}
-
-body { background: expression(blue()); }
-[/code]
-
-CSS Expressions are horrible and unsupported, so please don't use them in development. They do, however, highlight a interesting and little known feature of CSS.
-</content>
+&lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href='http://www.dave-woods.co.uk/index.php/css-variables/'&gt;here&lt;/a&gt; and &lt;a href='http://www.css3.info/new-features-proposed-for-css/'&gt;here&lt;/a&gt; of &lt;a href='http://disruptive-innovations.com/zoo/cssvariables/'&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='nx'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nt'&gt;body&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;());&lt;/span&gt; &lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;CSS Expressions are horrible and unsupported, so please don&amp;#8217;t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -845,155 +669,24 @@ CSS Expressions are horrible and unsupported, so please don't use them in develo
    <link href="http://dtsn.me/2008/05/01/elementinsert-javascript.html"/>
    <updated>2008-05-01T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2008/05/01/elementinsert-javascript</id>
-   <content type="html">&lt;a href=&quot;http://www.prototypejs.org&quot;&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href=&quot;http://www.prototypejs.org/api/element/insert&quot;&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.
+   <content type="html">&lt;p&gt;&lt;a href='http://www.prototypejs.org'&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href='http://www.prototypejs.org/api/element/insert'&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
 
-If we wanted to insert an element after a element we would use this code:
+&lt;p&gt;If we wanted to insert an element after a element we would use this code:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;first&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='nx'&gt;top&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;content&lt;/span&gt;
+&lt;span class='p'&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Expanding this further:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='c1'&gt;// lets create our element&lt;/span&gt;
+&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='k'&gt;new&lt;/span&gt; &lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;update&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;span class='c1'&gt;// add the element&lt;/span&gt;
+&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;$&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;hook&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='nx'&gt;after&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt;
+&lt;span class='p'&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;&lt;/p&gt;
 
-[code=&quot;javascript&quot;]
-Element.insert(first-element, {top: content});
-[/code]
-
-Expanding this further:
-
-[code=&quot;javascript&quot;]
-// lets create our element
-var dummy = new Element('div').update('Hello World');
-// add the element
-Element.insert($('hook'), {after: dummy});
-[/code]
-&lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;
-
-This code will add our Hello World text after the div with the id of hook.
-</content>
- </entry>
- 
- <entry>
-   <title>Making Your Own FeedBurner Chicklet (PHP)</title>
-   <link href="http://dtsn.me/2008/03/17/making-your-own-feedburner-chicklet-php.html"/>
-   <updated>2008-03-17T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2008/03/17/making-your-own-feedburner-chicklet-php</id>
-   <content type="html">&lt;p&gt;The &lt;a href=&quot;http://www.feedburner.com&quot;&gt;FeedBurner&lt;/a&gt; Chicklet is a great tool for publishing your feed, it does look a bit ugly though. By using the powerful &lt;a href=&quot;http://code.google.com/apis/feedburner/&quot;&gt;FeedBurner API&lt;/a&gt; you can grab your feed count without the Chicklet. This means you can put it anywhere on your site!&lt;/p&gt;
-
-&lt;h2&gt;Step 1: What you need&lt;/h2&gt;
-
-&lt;p&gt;We are going to be using PHP's &lt;a href=&quot;http://uk2.php.net/curl&quot;&gt;cURL&lt;/a&gt; library, which means, full details on what you need for this package can be found on &lt;a href=&quot;http://uk2.php.net/curl&quot;&gt;php.net&lt;/a&gt;. You will also need your FeedBurner URL.&lt;/p&gt;
-
-
-&lt;h2&gt;Step 2: The Code&lt;/h2&gt;
-
-&lt;p&gt;First of all we need to create the URL to the data for our feed. We are using the &lt;a href=&quot;http://code.google.com/apis/feedburner/awareness_api.html&quot;&gt;FeedBurner Awareness API&lt;/a&gt; to get the data. The API call is made up of 2 parts, the first being the call to FeedBurner, the second being the name of your feed (in FeedBurner).&lt;/p&gt;
-
-&lt;pre name=&quot;code&quot; class=&quot;php&quot;&gt;
-$feed=&quot;http://api.feedburner.com/awareness/&quot; .
-         &quot;1.0/GetFeedData?uri=YOURFEEDNAME&quot;;
-&lt;/pre&gt;
-
-&lt;p&gt;Next we need to start our cURL session by initialising the PHP &lt;em&gt;curl_init()&lt;/em&gt; call.&lt;/p&gt;
-
-&lt;pre name=&quot;code&quot; class=&quot;php&quot;&gt;
-$curl = curl_init();
-&lt;/pre&gt;
-
-&lt;p&gt;We use CURLOPT_RETURNTRANSFER to make sure the data is returned instead of being printed out to the browser. After we have done that we can set the &lt;a href=&quot;http://uk2.php.net/manual/en/function.curl-setopt.php&quot;&gt;optiona&lt;/a&gt; for the curl.&lt;/p&gt;
-
-&lt;pre name=&quot;code&quot; class=&quot;php&quot;&gt;
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-// Set the URL of the curl set options
-curl_setopt($curl, CURLOPT_URL, $feed);
-// Execute the fetch
-$data = curl_exec($curl);
-// Close the connection
-curl_close($curl);
-&lt;/pre&gt;
-
-&lt;p&gt;After we have got the data we can parse the XML and find the bit we are looking for (circulation).&lt;/p&gt;
-
-&lt;pre name=&quot;code&quot; class=&quot;php&quot;&gt;
-$xml = new SimpleXMLElement($data);
-$feed = $xml-&gt;feed-&gt;entry['circulation'];
-&lt;/pre&gt;
-
-&lt;h2&gt;Step 3: Putting It All Together&lt;/h2&gt;
-
-&lt;pre name=&quot;code&quot; class=&quot;php&quot;&gt;
-$feed=&quot;http://api.feedburner.com/awareness/1.0/GetFeedData?uri=dtsn&quot;;
-$curl = curl_init();
-curl_setopt($curl , CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($curl , CURLOPT_URL, $feed);
-$data = curl_exec($curl );
-curl_close($curl );
-
-$xml = new SimpleXMLElement($data);
-$feed = $xml-&gt;feed-&gt;entry['circulation'];
-&lt;/pre&gt;
-
-&lt;p&gt;The subscription count is included in the variable &lt;em&gt;$feed&lt;/em&gt;, which you can put anywhere. Or if you don't have any imagination like me you can just put it in your side bar. It makes a great alternative to the Chicklet.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Scriptaculous ScrollTo</title>
-   <link href="http://dtsn.me/2008/03/14/scriptaculous-scrollto-tutorial.html"/>
-   <updated>2008-03-14T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2008/03/14/scriptaculous-scrollto-tutorial</id>
-   <content type="html">&lt;strong&gt;Example: &lt;a href=&quot;#&quot; onclick=&quot;scroll.bottom()&quot;&gt;Click Here!&lt;/a&gt;&lt;/strong&gt;
-
-The &lt;a href=&quot;http://script.aculo.us/&quot;&gt;script.aculo.us&lt;/a&gt; effects library is a fantastic tool. If this really simple tutorial I will show you how to utilize the &lt;a href=&quot;http://wiki.script.aculo.us/scriptaculous/show/Effect.ScrollTo&quot;&gt;scroll method&lt;/a&gt; and a handy 'jump to top link'.
-
-&lt;h2&gt;Step 1: Add References&lt;/h2&gt;
-
-Make sure you have the &lt;a href=&quot;http://prototypejs.org&quot;&gt;prototype&lt;/a&gt; and &lt;a href=&quot;http://script.aculo.us/&quot;&gt;script.aculo.us&lt;/a&gt;
-libraries attached to your web page, instructions for how to do this can be found &lt;a href=&quot;http://wiki.script.aculo.us/scriptaculous/show/Usage&quot;&gt;here&lt;/a&gt;.
-
-&lt;h2&gt;Step 2: Create JavaScript&lt;/h2&gt;
-
-You can either create a new JavaScript file or append these functions to an already existing one. So first of all we need the function. For that we create a new JavaScript object, we will call this 'scroll'.
-
-&lt;pre name=&quot;code&quot; class=&quot;javascript&quot;&gt;
-var  scroll = { }
-&lt;/pre&gt;
-
-Next we want to add the functions. In my case I want a function that will scroll to the top and to the bottom:
-
-&lt;pre name=&quot;code&quot; class=&quot;javascript&quot;&gt;
-var  scroll = {
-	top: function(event) {  },
-	bottom: function(event) {  }
-}
-&lt;/pre&gt;
-
-Now we have our framework we can call the ScrollTo function:
-&lt;pre name=&quot;code&quot; class=&quot;javascript&quot;&gt;
-new Effect.ScrollTo('top');
-&lt;/pre&gt;
-
-The ScrollTo function allows you to define a particular object that you want to scroll into view. In the case of dtsn.co.uk, I have a div on the top of every page with the ID of 'top'.
-
-Putting that all together we get:
-
-&lt;pre name=&quot;code&quot; class=&quot;javascript&quot;&gt;
-var  scroll = {
-	top: function(event) { new Effect.ScrollTo('top'); },
-	bottom: function(event) { new Effect.ScrollTo('footer'); }
-}
-&lt;/pre&gt;
-
-You can then call this function in one of two ways. You can call 'scroll.top()' and 'scroll.bottom()', respectively, through the onclick method on any HTML object. Alternative you can use the prototype method of &lt;a href=&quot;http://prototypejs.org/api/event/observe&quot;&gt;Event.Observe&lt;/a&gt;:
-
-&lt;pre name=&quot;code&quot; class=&quot;javascript&quot;&gt;
-// wait for the page to load
-Event.observe(document, 'load', function(){
-        // give an object an onclick method
-	$('go_to_top').observe('click', scroll.top);
-});
-&lt;/pre&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-   var  scroll = {
-       bottom: function(event) { new Effect.ScrollTo($(document.body).select('ul.footer')[0]); }
-   }
-&lt;/script&gt;
-</content>
+&lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;</content>
  </entry>
  
  

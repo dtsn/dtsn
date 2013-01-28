@@ -6,7 +6,8 @@
 
         <link rel="icon" type="image/ico" href="/favicon.ico" />
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
-    
+        <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
+
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content="http://dtsn.me/2009/12/15/css3-selectors-last-child.html" />
         <meta name="twitter:title" content="CSS3 Selectors :last-child" />
@@ -23,7 +24,7 @@
     <body>
 
     	<header>
-    		<h1><a href="/" title="Home">dtsn</a></h1>
+    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
     	</header>
 
 <section class="post">
@@ -33,27 +34,31 @@
 
 	<hr />
 
-	<p>Of all the <a href="http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/">CSS3 selectors</a> the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.</p>  <h2>CSS 2.1</h2>  <pre class="css" name="code">/*Each Element*
-.image { margin-right: 5px; height: 20px; width: 20px; float:left; background-color: red; }
-/* remove the margin on the last element so it lines up
-.image.last { margin-right: 0px; }</pre>
+	<p>Of all the <a href="http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/">CSS3 selectors</a> the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.</p>  <h3>CSS 2.1</h3>  
 
-<h2>CSS 3</h2>
+<div class="highlight"><pre><code class="css"><span class="o">/*</span><span class="nt">Each</span> <span class="nt">Element</span><span class="o">*</span>
+<span class="nc">.image</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span> <span class="k">height</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span> <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span> <span class="k">background-color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span> <span class="p">}</span>
+<span class="o">/*</span> <span class="nt">remove</span> <span class="nt">the</span> <span class="nt">margin</span> <span class="nt">on</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">element</span> <span class="nt">so</span> <span class="nt">it</span> <span class="nt">lines</span> <span class="nt">up</span>
+<span class="nc">.image.last</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>
 
-<pre class="css" name="code">/* parent of the image element */
-.parent div:last-child { margin-right: 0px; }</pre>
+<h3>CSS 3</h3>
 
-<h2>The Downside</h2>
+<div class="highlight"><pre><code class="css"><span class="c">/* parent of the image element */</span>
+<span class="nc">.parent</span> <span class="nt">div</span><span class="nd">:last-child</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>
+
+<h3>The Downside</h3>
 
 <p>Unfortunately the bad aspect of this selector is that it does not fail gracefully. Meaning that a user in a none CSS3 compliant browser, <strong>(IE)</strong>, it would fail horribly, this means that everything will be out of line.</p>
 
-<h2>Example</h2>
+<h3>Example</h3>
 
-<p>If you look at this in anything but a browser which supports CSS3 the last element will be on the next line.</p>
+<p>If you look at this in anything but a browser which supports CSS3 the last element won't be red.</p>
 <style type="text/css">
 .example { margin-right: 6px; height: 20px; width: 75px; float:left; background-color: #317b9e; }
 .example-block { overflow: hidden; margin-bottom: 10px; }
-.example-block div:last-child { margin-right: 0px; }</style>
+.example-block div:last-child { background: red; }</style>
 
 <div class="example-block">
   <div class="example"></div>
@@ -64,7 +69,7 @@
   <div class="example"></div>
 </div>
 
-<h2>More Resources</h2>
+<h3>More Resources</h3>
 
 <ol>
 <li><a href="http://www.w3.org/TR/css3-selectors/">W3C Selectors Level 3</a></li>

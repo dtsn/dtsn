@@ -5,8 +5,13 @@ var DTSN = (function () {
 
 	var createBar = function () {
 
-		var bar = document.getElementById('bar'),
-			data = bar.getAttribute('data-posts'),
+		var bar = document.getElementById('bar');
+
+		if (!bar || !bar.getAttribute('data-posts')) {
+			return;
+		}
+
+		var data = bar.getAttribute('data-posts'),
 			tmpData = [],
 			posts = {},
 			width = 40,
@@ -88,9 +93,9 @@ var DTSN = (function () {
 			.data(data)
 		.enter()
 			.append('rect')
-			.attr('x', function (d, i) { return (i+1) * ((bodyWidth / (data.length + 1)) - (width / 2)); })
+			.attr('x', function (d, i) { return (i+0.5) * ((bodyWidth / (data.length + 1))); })
 			.attr('y', function (d) { return height - y(d.value); })
-			.attr('width', width)
+			.attr('width', function (d, i) { return bodyWidth/(data.length + 1); })
 			.attr('height', function (d) { return y(d.value); })
 			.on('click', function (d) { window.location = '/' + d.key; });
 
@@ -99,12 +104,19 @@ var DTSN = (function () {
 			.data(data)
 		.enter()
 			.append('text')
-			.text(function (d) { return (d.time.getMonth() + 1) + '/' + d.time.getFullYear(); })
+			.text(function (d) { 
+
+				if (d.value === 0) {
+					return;
+				}
+
+				return ((d.time.getMonth() + 1) < 10 ? '0' : '') + (d.time.getMonth() + 1) + '/' + d.time.getFullYear();
+			})
 			.attr('transform', function (d, i) {
-				var xpos = (i+1) * ((bodyWidth / (data.length + 1)) - (width / 2)),
-					ypos = height - y(d.value);
-				return 'translate(' + (xpos + 15) + ', ' + 65 + ')rotate(90)';
-			});
+				var xpos = (i+0.5) * ((bodyWidth / (data.length + 1)));
+				return 'translate(' + (xpos + (((bodyWidth/(data.length + 1)) - 10) / 2)) + ', ' + 70 + ')rotate(90)';
+			})
+			.on('click', function (d) { window.location = '/' + d.key; });
 
 		/*	
 
