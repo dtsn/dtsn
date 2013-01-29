@@ -21,13 +21,17 @@ var DTSN = (function () {
 
 		data = data.split(',');
 
+		console.log(data);
+
 		// count how many posts we have
 		data.forEach(function (date) {
 			if (!date) {
 				return;
 			}
 
-			date = new Date(date);
+			date = date.split('-');
+			date = new Date(date[0], date[1], date[2]);
+			console.log(date);
 
 			var str = date.getFullYear() + '/' + (date.getMonth()+1 < 10 ? '0' + (date.getMonth()+1) : date.getMonth()+1);
 
@@ -45,6 +49,8 @@ var DTSN = (function () {
 				'value': posts[post]
 			});
 		}
+
+		console.log(data);
 
 		// sort the data by date
 		data = data.sort(function (a, b) {
