@@ -30,7 +30,7 @@ var DTSN = (function () {
 			}
 
 			date = date.split('-');
-			date = new Date(date[0], date[1], date[2]);
+			date = new Date(date[2], date[1], date[0]);
 			console.log(date);
 
 			var str = date.getFullYear() + '/' + (date.getMonth()+1 < 10 ? '0' + (date.getMonth()+1) : date.getMonth()+1);
