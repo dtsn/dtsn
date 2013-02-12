@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-01-29T16:30:46+00:00</updated>
+ <updated>2013-02-12T15:38:30+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -26,7 +26,7 @@
 &lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
-&lt;img src='/images/posts/election.png' class='last' alt='election.datasift.com' /&gt;</content>
+&lt;img class='last' alt='election.datasift.com' src='/images/posts/election.png' /&gt;</content>
  </entry>
  
  <entry>
@@ -34,7 +34,7 @@
    <link href="http://dtsn.me/2012/10/04/Arrow.html"/>
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
-   <content type="html">&lt;img src='/images/posts/arrow.png' class='last' /&gt;</content>
+   <content type="html">&lt;img class='last' src='/images/posts/arrow.png' /&gt;</content>
  </entry>
  
  <entry>
@@ -44,7 +44,7 @@
    <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
-&lt;img src='/images/posts/wikistats.png' class='last' alt='wikistats.co' /&gt;</content>
+&lt;img class='last' alt='wikistats.co' src='/images/posts/wikistats.png' /&gt;</content>
  </entry>
  
  <entry>
@@ -54,7 +54,7 @@
    <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
-&lt;img src='/images/posts/coffee.png' class='last' alt='http://demo.datasift.com/coffee/m' /&gt;</content>
+&lt;img class='last' alt='http://demo.datasift.com/coffee/m' src='/images/posts/coffee.png' /&gt;</content>
  </entry>
  
  <entry>
@@ -72,7 +72,7 @@
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
 &lt;div class='video'&gt;
-&lt;iframe width='640' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' height='360' frameborder='0'&gt; &lt;/iframe&gt;
+&lt;iframe width='640' height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
@@ -89,7 +89,7 @@
 &lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
-&lt;img src='/images/posts/dsmovies.png' class='last' alt='DataSift Movies' /&gt;</content>
+&lt;img class='last' alt='DataSift Movies' src='/images/posts/dsmovies.png' /&gt;</content>
  </entry>
  
  <entry>
