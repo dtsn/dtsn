@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>The Sound of Twitter - dtsn</title>
+
+        <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+        <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
+         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://dtsn.me/2012/02/28/sound-of-twitter/">
+        <meta name="twitter:title" content="The Sound of Twitter">
+        <meta name="twitter:site" content="dtsn">
+        <meta name="twitter:description" content="Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?... ">
+
+        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+
+
+        <!-- D3 -->
+        <script type="text/javascript" src="/scripts/d3.js"></script>
+
+        <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+    </head>
+    <body>
+
+    	<header>
+    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    	</header>
+
+<section class="post">
+
+	<h2>The Sound of Twitter</h2>
+	<h4 class="date">28 February 2012</h4>
+
+	<hr />
+
+	<p>Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?</p>
+
+<p>This thought inspired our latest hack-a-thon project. Alongside <a href='http://twitter.com/maxtillich'>@maxtillich</a> and <a href='http://twitter.com/aguming'>@aguming</a>. We decided to use <a href='http://datasift.com'>DataSift</a> to measure the sentiment of users and assign sounds based on how happy or sad a user is.</p>
+<h3><span>HTML5 Audio</span></h3>
+<p>I&#8217;ve been itching to use the new <code>&lt;audio&gt;</code> tag in HTML5 and it&#8217;s finally gotten support in most of the major browsers. Using <a href='http://twitter.com/aguming'>@aguming</a> music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.</p>
+
+<p>What we get is a slightly surreal experience of how twitter sounds.</p>
+
+<p>What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.</p>
+<div class='video'>
+<iframe src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640' frameborder='0' height='360'> </iframe>
+</div>
+<p>This project is available on <a href='https://github.com/datasift/Sound-of-Twitter'>Github</a></p>
+
+<p>UPDATE - <a href='http://thelisteningmachine.org/'>The Listening Machine</a> explores this idea more fully but is not associated with this project.</p>
+
+</section>
+
+
+	
+	<footer itemscope itemtype="http://data-vocabulary.org/Person">
+		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+	</footer>
+
+	<script type="text/javascript" src="/scripts/dtsn.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37892446-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	</body>
+</html>
