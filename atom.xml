@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://dtsn.me/"/>
- <updated>2013-02-12T16:12:09+00:00</updated>
+ <updated>2013-02-13T08:38:07+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -13,7 +13,7 @@
  
  <entry>
    <title>U.S. Presidental Debates</title>
-   <link href="http://dtsn.me/2012/10/25/US-presidental-election.html"/>
+   <link href="http://dtsn.me/2012/10/25/US-presidental-election/"/>
    <updated>2012-10-25T00:00:00+01:00</updated>
    <id>http://dtsn.me/2012/10/25/US-presidental-election</id>
    <content type="html">&lt;p style='font-size: 14px; text-align: center;'&gt;&lt;em&gt;&lt;a href='http://election.datasift.com'&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -26,12 +26,12 @@
 &lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
-&lt;img alt='election.datasift.com' src='/images/posts/election.png' class='last' /&gt;</content>
+&lt;img src='/images/posts/election.png' class='last' alt='election.datasift.com' /&gt;</content>
  </entry>
  
  <entry>
    <title>Arrow - Data Visualisation</title>
-   <link href="http://dtsn.me/2012/10/04/Arrow.html"/>
+   <link href="http://dtsn.me/2012/10/04/Arrow/"/>
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://dtsn.me/2012/10/04/Arrow</id>
    <content type="html">&lt;img src='/images/posts/arrow.png' class='last' /&gt;</content>
@@ -39,27 +39,27 @@
  
  <entry>
    <title>Wikistats</title>
-   <link href="http://dtsn.me/2012/08/28/Wikistats.html"/>
+   <link href="http://dtsn.me/2012/08/28/Wikistats/"/>
    <updated>2012-08-28T00:00:00+01:00</updated>
    <id>http://dtsn.me/2012/08/28/Wikistats</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
-&lt;img alt='wikistats.co' src='/images/posts/wikistats.png' class='last' /&gt;</content>
+&lt;img src='/images/posts/wikistats.png' class='last' alt='wikistats.co' /&gt;</content>
  </entry>
  
  <entry>
    <title>Like Coffee?</title>
-   <link href="http://dtsn.me/2012/07/17/Like-Coffee.html"/>
+   <link href="http://dtsn.me/2012/07/17/Like-Coffee/"/>
    <updated>2012-07-17T00:00:00+01:00</updated>
    <id>http://dtsn.me/2012/07/17/Like-Coffee</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
-&lt;img alt='http://demo.datasift.com/coffee/m' src='/images/posts/coffee.png' class='last' /&gt;</content>
+&lt;img src='/images/posts/coffee.png' class='last' alt='http://demo.datasift.com/coffee/m' /&gt;</content>
  </entry>
  
  <entry>
    <title>The Sound of Twitter</title>
-   <link href="http://dtsn.me/2012/02/28/sound-of-twitter.html"/>
+   <link href="http://dtsn.me/2012/02/28/sound-of-twitter/"/>
    <updated>2012-02-28T00:00:00+00:00</updated>
    <id>http://dtsn.me/2012/02/28/sound-of-twitter</id>
    <content type="html">&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
@@ -72,7 +72,7 @@
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
 &lt;div class='video'&gt;
-&lt;iframe frameborder='0' height='360' width='640' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0'&gt; &lt;/iframe&gt;
+&lt;iframe src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640' frameborder='0' height='360'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
@@ -81,7 +81,7 @@
  
  <entry>
    <title>DataSift Movies</title>
-   <link href="http://dtsn.me/2012/01/20/DataSift-Movies.html"/>
+   <link href="http://dtsn.me/2012/01/20/DataSift-Movies/"/>
    <updated>2012-01-20T00:00:00+00:00</updated>
    <id>http://dtsn.me/2012/01/20/DataSift-Movies</id>
    <content type="html">&lt;p&gt;Do you remember &lt;a href='http://fflick.com'&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
@@ -89,12 +89,12 @@
 &lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
-&lt;img alt='DataSift Movies' src='/images/posts/dsmovies.png' class='last' /&gt;</content>
+&lt;img src='/images/posts/dsmovies.png' class='last' alt='DataSift Movies' /&gt;</content>
  </entry>
  
  <entry>
    <title>Styling Odd and Even Elements in CSS</title>
-   <link href="http://dtsn.me/2010/08/17/styling-odd-and-even-elements-in-css.html"/>
+   <link href="http://dtsn.me/2010/08/17/styling-odd-and-even-elements-in-css/"/>
    <updated>2010-08-17T00:00:00+01:00</updated>
    <id>http://dtsn.me/2010/08/17/styling-odd-and-even-elements-in-css</id>
    <content type="html">A part of CSS3 are a fantastic new range of selectors, these include the &lt;code&gt;;nth-child&lt;/code&gt; sudo class. These allow you to style the nth child of a parent element. Therefore you can easily style the odd:
@@ -136,7 +136,7 @@ You can find more information on this on the &lt;a href=&quot;http://www.w3.org/
  
  <entry>
    <title>Reading Geek Night</title>
-   <link href="http://dtsn.me/2010/08/08/reading-geek-night.html"/>
+   <link href="http://dtsn.me/2010/08/08/reading-geek-night/"/>
    <updated>2010-08-08T00:00:00+01:00</updated>
    <id>http://dtsn.me/2010/08/08/reading-geek-night</id>
    <content type="html">I will be presenting at this months&lt;a href=&quot;http://readinggeeknight.com/event/10/&quot;&gt;Reading Geek Night&lt;/a&gt; all about 'How to build a Humoid Robot'. Here's a quick peek at the opening slide.
@@ -149,7 +149,7 @@ You can find more information on this on the &lt;a href=&quot;http://www.w3.org/
  
  <entry>
    <title>TweetTabs & @Anywhere</title>
-   <link href="http://dtsn.me/2010/07/14/tweettabs-anywhere.html"/>
+   <link href="http://dtsn.me/2010/07/14/tweettabs-anywhere/"/>
    <updated>2010-07-14T00:00:00+01:00</updated>
    <id>http://dtsn.me/2010/07/14/tweettabs-anywhere</id>
    <content type="html">&lt;em&gt;This was presented at &lt;a href=&quot;http://twitterdevelopernest.com/2010/05/devnest-%E2%80%93-london-twitter-developer-nest-9/&quot;&gt;Devnest 9&lt;/a&gt;&lt;/em&gt;
@@ -188,7 +188,7 @@ Here are the slides from the talk.
  
  <entry>
    <title>Link Prefetching</title>
-   <link href="http://dtsn.me/2010/06/04/link-prefetching.html"/>
+   <link href="http://dtsn.me/2010/06/04/link-prefetching/"/>
    <updated>2010-06-04T00:00:00+01:00</updated>
    <id>http://dtsn.me/2010/06/04/link-prefetching</id>
    <content type="html">Link prefetching is a very little known HTML 5 tag which is currently only supported by Firefox. It utilizes browser idle time to download documents that the user might visit in the near future.
@@ -208,7 +208,7 @@ It's a great idea really, and because it's gracefully degregating it means that 
  
  <entry>
    <title>The 61px Standard</title>
-   <link href="http://dtsn.me/2010/04/18/61px-standard.html"/>
+   <link href="http://dtsn.me/2010/04/18/61px-standard/"/>
    <updated>2010-04-18T00:00:00+01:00</updated>
    <id>http://dtsn.me/2010/04/18/61px-standard</id>
    <content type="html">The &lt;a href=&quot;http://tweetmeme.com&quot;&gt;TweetMeme&lt;/a&gt; button is one of the most successful social media buttons, it is served to millions of websites around the web. One of the more unusual points about the TweetMeme button is it’s height, 61px. This height has now been adopted by &lt;a href=&quot;http://facebook.com&quot;&gt;facebook &lt;/a&gt;and &lt;a href=&quot;http://digg.com&quot;&gt;digg&lt;/a&gt;.
@@ -224,7 +224,7 @@ The TweetMeme button had a massive adoption rate, and was installed on millions 
  
  <entry>
    <title>Optimizing JavaScript</title>
-   <link href="http://dtsn.me/2010/01/12/optimizing-javascript.html"/>
+   <link href="http://dtsn.me/2010/01/12/optimizing-javascript/"/>
    <updated>2010-01-12T00:00:00+00:00</updated>
    <id>http://dtsn.me/2010/01/12/optimizing-javascript</id>
    <content type="html">&lt;p&gt;JavaScript is in the middle of a massive comeback and developers are abusing it. JavaScript addons and widgets are becoming are the norm for large sites and are so easy to install, in large numbers and quantities. For example &lt;a href=&quot;http://mashable.com&quot;&gt;Mashable&lt;/a&gt; loads nearly a mega byte in JavaScript files. In this article I will go through some tips to help you optimize your JavaScript and reduce both the load on your servers and make your pages respond faster.&lt;/p&gt; 
@@ -234,7 +234,7 @@ The TweetMeme button had a massive adoption rate, and was installed on millions 
  
  <entry>
    <title>Bouncing JavaScript Tutorial</title>
-   <link href="http://dtsn.me/2010/01/07/bouncing-javascript-tutorial.html"/>
+   <link href="http://dtsn.me/2010/01/07/bouncing-javascript-tutorial/"/>
    <updated>2010-01-07T00:00:00+00:00</updated>
    <id>http://dtsn.me/2010/01/07/bouncing-javascript-tutorial</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Original Source&lt;/strong&gt;: &lt;a href=&quot;http://giancarlo.dimassa.net/2007/07/11/elastic-and-bouncing-transitions-in-scriptaculous/&quot;&gt;http://giancarlo.dimassa.net&lt;/a&gt;&lt;/p&gt;  &lt;p&gt;There have been many examples of bouncing effects in &lt;a href=&quot;http://script.aculo.us/&quot;&gt;scriptaculous&lt;/a&gt; but this one has to be one of the most realistic. It uses the equations developed by &lt;a href=&quot;http://www.robertpenner.com/&quot;&gt;Robert Penner&lt;/a&gt; to accurately represent a bounce, and it does look cool.&lt;/p&gt;  &lt;h2&gt;What you need&lt;/h2&gt;  &lt;p&gt;As with most of my tutorials this is based on &lt;a href=&quot;http://script.aculo.us/&quot;&gt;scriptaculous&lt;/a&gt; and &lt;a href=&quot;http://www.prototypejs.org/&quot;&gt;prototype&lt;/a&gt;, but the equations could easily be porter to other animation frameworks.&lt;/p&gt;  &lt;h2&gt;The code&lt;/h2&gt;  &lt;p&gt;This is really simple, basically what we are going to be doing is to add a new transitional effect to scriptaculous. To do this we just extend the Effect class.&lt;/p&gt;  &lt;p&gt;&lt;strong&gt;Add this to your own JavaScript file instead of scriptaculous, so you don’t loose it when you update.&lt;/strong&gt;&lt;/p&gt;  &lt;pre class=&quot;js&quot; name=&quot;code&quot;&gt;/*Based on Easing Equations v2.0
@@ -271,7 +271,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>CSS3 Selectors :last-child</title>
-   <link href="http://dtsn.me/2009/12/15/css3-selectors-last-child.html"/>
+   <link href="http://dtsn.me/2009/12/15/css3-selectors-last-child/"/>
    <updated>2009-12-15T00:00:00+00:00</updated>
    <id>http://dtsn.me/2009/12/15/css3-selectors-last-child</id>
    <content type="html">&lt;p&gt;Of all the &lt;a href=&quot;http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/&quot;&gt;CSS3 selectors&lt;/a&gt; the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.&lt;/p&gt;  &lt;h3&gt;CSS 2.1&lt;/h3&gt;  
@@ -322,7 +322,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>JSON(P) Stacking</title>
-   <link href="http://dtsn.me/2009/12/06/jsonp-stacking.html"/>
+   <link href="http://dtsn.me/2009/12/06/jsonp-stacking/"/>
    <updated>2009-12-06T00:00:00+00:00</updated>
    <id>http://dtsn.me/2009/12/06/jsonp-stacking</id>
    <content type="html">&lt;p&gt;JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this &lt;a href=&quot;http://ajaxian.com/archives/jsonp-json-with-padding&quot;&gt;Ajaxian article&lt;/a&gt; for more information). It requires a call to an external API where you specificy the a callback function, you do this through the use of script tag. For example:&lt;/p&gt;  
@@ -378,7 +378,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>JavaScript Weather</title>
-   <link href="http://dtsn.me/2009/11/26/javascript-weather.html"/>
+   <link href="http://dtsn.me/2009/11/26/javascript-weather/"/>
    <updated>2009-11-26T00:00:00+00:00</updated>
    <id>http://dtsn.me/2009/11/26/javascript-weather</id>
    <content type="html">&lt;p&gt;Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;UPDATE - Chris Heilmann over at the &lt;/em&gt;&lt;a href=&quot;http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html&quot;&gt;&lt;em&gt;Yahoo! Developer Network Blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt; has made this even simpler through the use of YQL.&lt;/em&gt;&lt;/p&gt;  &lt;h2&gt;The Data&lt;/h2&gt;  &lt;p&gt;First of all we need a data source which will provide the weather for a particular location, we can grab this from the &lt;a href=&quot;http://developer.yahoo.com/weather/&quot;&gt;Yahoo Weather API&lt;/a&gt;. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here &lt;a title=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot; href=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot;&gt;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&lt;/a&gt;. Great but how can we process this RSS feed? That’s where &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.&lt;/p&gt; &lt;p&gt;Now we can access the JSON data for the weather in Reading &lt;a href=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;  &lt;h2&gt;JavaScript&lt;/h2&gt;  &lt;p&gt;The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at &lt;a href=&quot;http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/&quot;&gt;from__future__import&lt;/a&gt;. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.&lt;/p&gt;  
@@ -403,7 +403,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>Feature in Wired (UK)</title>
-   <link href="http://dtsn.me/2009/11/04/im-in-wired.html"/>
+   <link href="http://dtsn.me/2009/11/04/im-in-wired/"/>
    <updated>2009-11-04T00:00:00+00:00</updated>
    <id>http://dtsn.me/2009/11/04/im-in-wired</id>
    <content type="html">&lt;p&gt;At the end of September I was invited to a shoot for the UK edition of Wired. It was a shoot based around the twitterati of the UK and included some big names like Iain Dodsworth. The shoot was based at the old BT museum, which became defunct when their archive went online. You can see me and the other 24 people in Wired’s December Issue, on sale from today.&lt;/p&gt; 
@@ -414,7 +414,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>Building JavaScript Widgets</title>
-   <link href="http://dtsn.me/2009/03/15/building-javascript-widgets.html"/>
+   <link href="http://dtsn.me/2009/03/15/building-javascript-widgets/"/>
    <updated>2009-03-15T00:00:00+00:00</updated>
    <id>http://dtsn.me/2009/03/15/building-javascript-widgets</id>
    <content type="html">&lt;p&gt;Little pieces of JavaScript you embed onto your website are getting more popular. Every major provider of a service on the web also gives you a little widget that you can put on your blog or webpage to promote what you are doing, for example &lt;a href=&quot;http://twitter.com/widgets&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.last.fm/widgets&quot; target=&quot;_blank&quot;&gt;Last FM&lt;/a&gt; and &lt;a href=&quot;http://digg.com/add-digg&quot; target=&quot;_blank&quot;&gt;Digg&lt;/a&gt; all provide widgets which are great for you and great for the service.&lt;/p&gt;
@@ -465,7 +465,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>Script.aculo.us Transitions</title>
-   <link href="http://dtsn.me/2009/03/08/script.aculo.us-transitions.html"/>
+   <link href="http://dtsn.me/2009/03/08/script.aculo.us-transitions/"/>
    <updated>2009-03-08T00:00:00+00:00</updated>
    <id>http://dtsn.me/2009/03/08/script.aculo.us-transitions</id>
    <content type="html">&lt;p&gt;I’ve been digging through the &lt;a href=&quot;http://script.aculo.us/&quot;&gt;Script.aculo.us&lt;/a&gt; code a lot recently and have stumbled upon a number of very effective transitions which aren’t used widely. There are 9 effects in total comprising of:&lt;/p&gt;
@@ -490,7 +490,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>Super CSS, the power of the selector</title>
-   <link href="http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector.html"/>
+   <link href="http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector/"/>
    <updated>2008-10-15T00:00:00+01:00</updated>
    <id>http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector</id>
    <content type="html">&lt;p&gt;We all love CSS it’s fundamental to the web. However most of us do not use the full power of CSS. A quick rummage around the W3C specification and you will see how powerful CSS can really be. I’m talking about the CSS selector, sure we all use the basic selectors, but what about the more complicated ones.&lt;/p&gt;
@@ -633,7 +633,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>If the web was smaller</title>
-   <link href="http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea.html"/>
+   <link href="http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea/"/>
    <updated>2008-07-05T00:00:00+01:00</updated>
    <id>http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea</id>
    <content type="html">&lt;p&gt;I’ve just had this crazy idea, what would happen if all the &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; tags in the world were converted into &lt;em&gt;&amp;lt;d&amp;gt;&lt;/em&gt; tags. Image how much space it would save, well you don’t need to imagine I have broken out my calculator and worked it all out.&lt;/p&gt;
@@ -647,7 +647,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>JavaScript in CSS, Ugly But Interesting</title>
-   <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting.html"/>
+   <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/"/>
    <updated>2008-05-12T00:00:00+01:00</updated>
    <id>http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting</id>
    <content type="html">&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
@@ -666,7 +666,7 @@ Effect.Transitions.Bounce = function (pos) {
  
  <entry>
    <title>Prototype Element.Insert</title>
-   <link href="http://dtsn.me/2008/05/01/elementinsert-javascript.html"/>
+   <link href="http://dtsn.me/2008/05/01/elementinsert-javascript/"/>
    <updated>2008-05-01T00:00:00+01:00</updated>
    <id>http://dtsn.me/2008/05/01/elementinsert-javascript</id>
    <content type="html">&lt;p&gt;&lt;a href='http://www.prototypejs.org'&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href='http://www.prototypejs.org/api/element/insert'&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
