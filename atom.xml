@@ -4,12 +4,69 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://dtsn.me/"/>
- <updated>2013-02-13T08:38:07+00:00</updated>
+ <updated>2013-03-12T11:44:18+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
  </author>
 
+ 
+ <entry>
+   <title>Downloading Data From localStorage</title>
+   <link href="http://dtsn.me/2013/03/12/downloading-data-from-localstorage/"/>
+   <updated>2013-03-12T00:00:00+00:00</updated>
+   <id>http://dtsn.me/2013/03/12/downloading-data-from-localstorage</id>
+   <content type="html">&lt;p&gt;Lately i've been working extensively on a project which includes &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/Storage&quot;&gt;&lt;code&gt;localStorage&lt;/code&gt;&lt;/a&gt;. I hit a small problem regarding how an end user can recover
+thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if the user ever wanted to transfer their data to a new computer or browser.&lt;/p&gt;
+
+&lt;h3&gt;Data URI's&lt;/h3&gt;
+&lt;p&gt;I stumbled on a &lt;del&gt;very hackey&lt;/del&gt; elegant way to download the data through the use of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/data_URIs&quot;&gt;data URI's&lt;/a&gt;. These allow you to embed small files inline in documents. Give it a go below.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// create a fake object&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// add it to our localstorage&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// encode the data into base64&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;base64&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;btoa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// create an a tag&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data:application/octet-stream;base64,&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;base64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Download&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// add to the body&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p style=&quot;text-align: center&quot;&gt;
+	&lt;br /&gt;
+	&lt;a id=&quot;demobutton&quot; href=&quot;&quot; class=&quot;btn&quot;&gt;Give it a try!&lt;/a&gt;
+	&lt;br/&gt;&lt;br/&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You could easily pair this with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/FileReader&quot;&gt;&lt;code&gt;FileReader&lt;/code&gt;&lt;/a&gt; object to read the files back in.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var myData = {
+		'a': 'a',
+		'b': 'b',
+		'c': 'c'
+	};
+
+	localStorage.setItem('data', JSON.stringify(myData));
+
+	base64 = window.btoa(localStorage.getItem('data'));
+
+	var a = document.getElementById('demobutton');
+	a.href = 'data:application/octet-stream;base64,' + base64;
+&lt;/script&gt;
+</content>
+ </entry>
  
  <entry>
    <title>U.S. Presidental Debates</title>
@@ -26,7 +83,7 @@
 &lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
-&lt;img src='/images/posts/election.png' class='last' alt='election.datasift.com' /&gt;</content>
+&lt;img alt='election.datasift.com' src='/images/posts/election.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -44,7 +101,7 @@
    <id>http://dtsn.me/2012/08/28/Wikistats</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
-&lt;img src='/images/posts/wikistats.png' class='last' alt='wikistats.co' /&gt;</content>
+&lt;img alt='wikistats.co' src='/images/posts/wikistats.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -54,7 +111,7 @@
    <id>http://dtsn.me/2012/07/17/Like-Coffee</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
-&lt;img src='/images/posts/coffee.png' class='last' alt='http://demo.datasift.com/coffee/m' /&gt;</content>
+&lt;img alt='http://demo.datasift.com/coffee/m' src='/images/posts/coffee.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
@@ -72,7 +129,7 @@
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
 &lt;div class='video'&gt;
-&lt;iframe src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640' frameborder='0' height='360'&gt; &lt;/iframe&gt;
+&lt;iframe width='640' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' height='360' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
@@ -89,7 +146,7 @@
 &lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
-&lt;img src='/images/posts/dsmovies.png' class='last' alt='DataSift Movies' /&gt;</content>
+&lt;img alt='DataSift Movies' src='/images/posts/dsmovies.png' class='last' /&gt;</content>
  </entry>
  
  <entry>
