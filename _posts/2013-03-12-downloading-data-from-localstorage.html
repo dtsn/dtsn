@@ -1,0 +1,55 @@
+--- 
+title: Downloading Data From localStorage
+layout: post
+---
+
+<p>Lately i've been working extensively on a project which includes <a href="https://developer.mozilla.org/en-US/docs/DOM/Storage"><code>localStorage</code></a>. I hit a small problem regarding how an end user can recover
+thier data from <code>localStorage</code>. This would be useful if the user ever wanted to transfer their data to a new computer or browser.</p>
+
+<h3>Data URI's</h3>
+<p>I stumbled on a <del>very hackey</del> elegant way to download the data through the use of <a href="https://developer.mozilla.org/en-US/docs/data_URIs">data URI's</a>. These allow you to embed small files inline in documents. Give it a go below.</p>
+
+{% highlight javascript %}
+// create a fake object
+var myData = {
+	'a': 'a',
+	'b': 'b',
+	'c': 'c'
+};
+// add it to our localstorage
+localStorage.setItem('data', JSON.stringify(myData));
+
+// encode the data into base64
+base64 = window.btoa(localStorage.getItem('data'));
+
+// create an a tag
+var a = document.createElement('a');
+a.href = 'data:application/octet-stream;base64,' + base64;
+a.innerHTML = 'Download';
+
+// add to the body
+document.body.appendChild(a);
+{% endhighlight %}
+
+<p style="text-align: center">
+	<br />
+	<a id="demobutton" href="" class="btn">Give it a try!</a>
+	<br/><br/>
+</p>
+
+<p>You could easily pair this with the <a href="https://developer.mozilla.org/en-US/docs/DOM/FileReader"><code>FileReader</code></a> object to read the files back in.</p>
+
+<script type="text/javascript">
+	var myData = {
+		'a': 'a',
+		'b': 'b',
+		'c': 'c'
+	};
+
+	localStorage.setItem('data', JSON.stringify(myData));
+
+	base64 = window.btoa(localStorage.getItem('data'));
+
+	var a = document.getElementById('demobutton');
+	a.href = 'data:application/octet-stream;base64,' + base64;
+</script>

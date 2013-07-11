@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript in CSS, Ugly But Interesting - dtsn</title>
+
+        <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+        <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
+         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/">
+        <meta name="twitter:title" content="JavaScript in CSS, Ugly But Interesting">
+        <meta name="twitter:site" content="dtsn">
+        <meta name="twitter:description" content="There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you... ">
+
+        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+
+
+        <!-- D3 -->
+        <script type="text/javascript" src="/scripts/d3.js"></script>
+
+        <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+    </head>
+    <body>
+
+    	<header>
+    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    	</header>
+
+<section class="post">
+
+	<h2>JavaScript in CSS, Ugly But Interesting</h2>
+	<h4 class="date">12 May 2008</h4>
+
+	<hr />
+
+	<p>There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>width</span><span class='o'>:</span><span class='nx'>expression</span><span class='p'>(</span><span class='nb'>document</span><span class='p'>.</span><span class='nx'>body</span><span class='p'>.</span><span class='nx'>clientWidth</span> <span class='o'>&gt;</span> <span class='mi'>950</span> <span class='o'>?</span> <span class='s2'>&quot;950px&quot;</span><span class='o'>:</span> <span class='s2'>&quot;100%&quot;</span> <span class='p'>);</span>
+</code></pre></div>
+<p><strong>Do not use CSS Expression, they are unreliable, slow and are only supported in IE!</strong></p>
+
+<p>CSS Expression suddenly came to me as a solution for the currently much debated feature <a href='http://www.dave-woods.co.uk/index.php/css-variables/'>here</a> and <a href='http://www.css3.info/new-features-proposed-for-css/'>here</a> of <a href='http://disruptive-innovations.com/zoo/cssvariables/'>variables</a> in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.</p>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>function</span> <span class='nx'>blue</span><span class='p'>()</span> <span class='p'>{</span>
+	<span class='k'>return</span> <span class='s1'>&#39;blue&#39;</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div><div class='highlight'><pre><code class='css'><span class='nt'>body</span> <span class='p'>{</span> <span class='k'>background</span><span class='o'>:</span> <span class='n'>expression</span><span class='p'>(</span><span class='nb'>blue</span><span class='p'>());</span> <span class='p'>}</span>
+</code></pre></div>
+<p>CSS Expressions are horrible and unsupported, so please don&#8217;t use them in development. They do, however, highlight a interesting and little known feature of CSS.</p>
+
+</section>
+
+
+	
+	<footer itemscope itemtype="http://data-vocabulary.org/Person">
+		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+	</footer>
+
+	<script type="text/javascript" src="/scripts/dtsn.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37892446-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	</body>
+</html>
