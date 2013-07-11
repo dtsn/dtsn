@@ -1,27 +1,54 @@
-/* Typography */
-body { color: #434343; font: 14px proxima-nova, sans-serif; font-weight: 300; }
+body { 
+	background: #5a4c5e;
+	color: #FFFFFF;
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 100px 0 0 100px;
+}
 
-h1, h2, h3 { font-family: proxima-nova; font-weight: 300; }
-h1 { color: #666666; font-size: 36px; text-transform: uppercase; }
-h2 { color: #666666; font-size: 30px; }
-h3 { color: #666666; font-size: 24px; }
+h1 {
+	font-family: museo-sans-rounded;
+	font-weight: 300;
+	font-size: 36px;
+}
 
-P { font-family: sans-serif; font-size: 16px; font-weight: 300; line-height: 24px; margin: 20px auto; width: 600px; }
-.post { font-size: 16px; }
+h1 a { 
+	color: #FFFFFF;
+	font-weight: 600;
+	text-decoration: none;
+}
 
-/* links */
-a { color: #69a184; text-decoration: none; }
-a:hover { text-decoration: underline; }
-a:focus {}
+h1 a:hover {
+	color: #de3a55;
+}
 
-/* utilities */
-.left { float: left; }
-.right { float: right; }
-.clear { clear: both; }
-.center { text-align: center; }
+ul.entries {
+	font-family: museo-sans-rounded;
+	list-style: none;
+	margin: 60px 0 0 0;
+	padding: 0;
+}
 
-/* body */
-body { background: #FFFFFF; margin: 0; padding: 0; }
+ul.entries span {
+	text-transform: uppercase;
+}
+
+ul.entries a {
+	background: #de3a55;
+	border-radius: 5px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 24px;
+	margin: 5px 0 0 15px;
+	padding: 15px 18px;
+	text-decoration: none;
+}
+
+ul.entries a:hover {
+	opacity: 0.8;
+}FFFFF; margin: 0; padding: 0; }
 section { margin: 110px auto 0 auto; width: 800px; padding-bottom: 100px; }
 section.post { width: 600px; }
 
