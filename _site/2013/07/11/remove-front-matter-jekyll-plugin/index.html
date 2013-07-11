@@ -34,6 +34,7 @@
     	</header>
 
 
+
 <section class="main">
 	<p>I&#8217;m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn&#8217;t automatically excluded from files in the /_include directory. So I&#8217;ve written a little plugin which will remove it from the file.</p>
 <div class='highlight'><pre><code class='ruby'><span class='k'>module</span> <span class='nn'>Jekyll</span>
@@ -69,7 +70,6 @@
 {{ includedfile | removefrontmatter }}
 </code></pre></div>
 </section>
-
 
 	<footer itemscope itemtype="http://data-vocabulary.org/Person">
 		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.

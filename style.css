@@ -29,6 +29,7 @@ section.post { width: 600px; }
 header { background: #F4F4F4; height: 100px; }
 header h1 { background: url('images/bg.png') no-repeat; height: 135px; line-height: 135px; margin: 0 auto; position: relative; text-align: center; top: 33px; z-index: 1; width: 156px; }
 header h1 a { color: #FFFFFF; }
+header h1 a:hover { text-decoration: none; }
 
 /* front page */
 h2 { margin: 40px 0; text-align: center; }
@@ -74,9 +75,9 @@ hr { background: #dcdcdc; border: none; height: 1px; margin: 40px auto; width: 5
 #bar rect:hover { opacity: 0.5; }
 #bar text { cursor: pointer; fill: #666666; font-size: 12px; }
 
-img.last { margin: 0 -200px 0; width: 1200px; }
+img.last { margin: 0 -300px 0; width: 1200px; }
 
-footer { background: #EFEFEF; height: 100px; line-height: 100px; margin-top: 40px; text-align: center; position: fixed; bottom: 0; left: 0; right: 0; }
+footer { background: #EFEFEF; height: 100px; line-height: 100px; margin-top: 40px; text-align: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 3; }
 
 [data-tip] { position:relative; }
 [data-tip]:before { content:''; display:none; border:5px solid #69a184; border-top-color:#69a184; border-right-color:transparent; border-bottom-color:transparent; border-left-color:transparent; position:absolute; top:-7px; left:10px; z-index:9999; font-size:0; line-height:0; width:0; height:0; }
@@ -92,29 +93,38 @@ table td:last-child { border-right: 1px solid #DCDCDC; }
 
 .highlight { word-wrap: break-word; margin: 0 auto; width: 600px; }
 
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to { 
+		-webkit-transform: rotate(360deg);
+		transform: roatate(360deg);
+	}
+}
 
+@-moz-keyframes rotate {
+	from {
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to { 
+		-moz-transform: rotate(360deg);
+		transform: roatate(360deg);
+	}
+}
 
+header h1:hover {
+	-webkit-animation-name: rotate; 
+	-moz-animation-name: rotate;
+	-webkit-animation-duration: 2s; 
+	-moz-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn { background: #7b707e; border-radius: 2px; padding: 15px 30px; margin: 20px; color: #FFFFFF; cursor: pointer; }
+.btn:hover { text-decoration: none; }
