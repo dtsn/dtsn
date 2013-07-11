@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSON(P) Stacking - dtsn</title>
+
+        <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+        <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
+         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://dtsn.me/2009/12/06/jsonp-stacking/">
+        <meta name="twitter:title" content="JSON(P) Stacking">
+        <meta name="twitter:site" content="dtsn">
+        <meta name="twitter:description" content="JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this Ajaxian article for more information). It requires a... ">
+
+        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+
+
+        <!-- D3 -->
+        <script type="text/javascript" src="/scripts/d3.v3.js"></script>
+
+
+        <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+    </head>
+    <body>
+
+    	<header>
+    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    	</header>
+
+
+<section class="main">
+	<p>JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this <a href="http://ajaxian.com/archives/jsonp-json-with-padding">Ajaxian article</a> for more information). It requires a call to an external API where you specificy the a callback function, you do this through the use of script tag. For example:</p>  
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://yourdomain.com/api?callback=myfunction&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+
+<p>When the script tag has been loaded your function would be called with the JSON data, like so.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">myfunction</span><span class="p">(</span><span class="s1">&#39;some JSON data&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+<p>However you become reliant on that external service to always be available, if for any reason that service goes down you wouldn’t get any data and your page would be likely to hang.</p>
+
+<p><strong>Therefore I propose a system of JSONP stacking, quite simply you stack up your JSON requests if you don’t receive a response in a set time it will stop the request.</strong></p>
+
+<p>This can be easily achieved by having the following function:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="c1">// callback function</span>
+<span class="kd">var</span> <span class="nx">_c</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="c1">// success flag</span>
+<span class="kd">var</span> <span class="nx">_s</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">JSONPStacking</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c1">// create the element</span>
+	<span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+	<span class="c1">// set the source</span>
+	<span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span> <span class="o">+</span> <span class="s1">&#39;&amp;amp;callback=callback&#39;</span><span class="p">;</span>
+	<span class="c1">// render the element</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+	<span class="c1">// start the counter, this one last for 5 seconds</span>
+	<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">_s</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">// remove the element</span>
+			<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c1">// say the data has been received</span>
+	<span class="nx">_s</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="c1">// call the callback with the data</span>
+	<span class="nx">_c</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Basically what we are doing here is to create a normal JSONP request by creating a script tag and loading it into the body. However we are overriding the standard callback function with our own one, <em>callback. </em>When the request succeeds this will call that function with the data and in turn we call our success function. If 5 seconds have past the timeout will trigger, see if the success flag has been set if not it will remove the element from the DOM thereby stopping the request.</p>
+
+<p>That's it, it is a really simple principle but will hopefully stop your site from hanging on long request, such as for the Twitter widget. It will also make your widgets that you build a lot more stable and won't overload your site.</p>
+
+</section>
+
+
+	<footer itemscope itemtype="http://data-vocabulary.org/Person">
+		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+	</footer>
+
+	<script type="text/javascript" src="/scripts/dtsn.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37892446-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	</body>
+</html>

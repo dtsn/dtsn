@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Downloading Data From localStorage - dtsn</title>
+
+        <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+        <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
+         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://dtsn.me/2013/03/12/downloading-data-from-localstorage/">
+        <meta name="twitter:title" content="Downloading Data From localStorage">
+        <meta name="twitter:site" content="dtsn">
+        <meta name="twitter:description" content="Lately i've been working extensively on a project which includes localStorage. I hit a small problem regarding how an end user can recover thier data... ">
+
+        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+
+
+        <!-- D3 -->
+        <script type="text/javascript" src="/scripts/d3.v3.js"></script>
+
+
+        <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
+    </head>
+    <body>
+
+    	<header>
+    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    	</header>
+
+
+<section class="main">
+	<p>Lately i've been working extensively on a project which includes <a href="https://developer.mozilla.org/en-US/docs/DOM/Storage"><code>localStorage</code></a>. I hit a small problem regarding how an end user can recover
+thier data from <code>localStorage</code>. This would be useful if the user ever wanted to transfer their data to a new computer or browser.</p>
+
+<h3><span>Data URI's</span></h3>
+<p>I stumbled on a <del>very hackey</del> elegant way to download the data through the use of <a href="https://developer.mozilla.org/en-US/docs/data_URIs">data URI's</a>. These allow you to embed small files inline in documents. Give it a go below.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="c1">// create a fake object</span>
+<span class="kd">var</span> <span class="nx">myData</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s1">&#39;a&#39;</span><span class="o">:</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>
+	<span class="s1">&#39;b&#39;</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
+	<span class="s1">&#39;c&#39;</span><span class="o">:</span> <span class="s1">&#39;c&#39;</span>
+<span class="p">};</span>
+<span class="c1">// add it to our localstorage</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">myData</span><span class="p">));</span>
+
+<span class="c1">// encode the data into base64</span>
+<span class="nx">base64</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">btoa</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">));</span>
+
+<span class="c1">// create an a tag</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;data:application/octet-stream;base64,&#39;</span> <span class="o">+</span> <span class="nx">base64</span><span class="p">;</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;Download&#39;</span><span class="p">;</span>
+
+<span class="c1">// add to the body</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+</code></pre></div>
+
+<p style="text-align: center">
+	<br />
+	<a id="demobutton" href="" class="btn">Give it a try!</a>
+	<br/><br/>
+</p>
+
+<p>You could easily pair this with the <a href="https://developer.mozilla.org/en-US/docs/DOM/FileReader"><code>FileReader</code></a> object to read the files back in.</p>
+
+<script type="text/javascript">
+	var myData = {
+		'a': 'a',
+		'b': 'b',
+		'c': 'c'
+	};
+
+	localStorage.setItem('data', JSON.stringify(myData));
+
+	base64 = window.btoa(localStorage.getItem('data'));
+
+	var a = document.getElementById('demobutton');
+	a.href = 'data:application/octet-stream;base64,' + base64;
+</script>
+
+</section>
+
+
+	<footer itemscope itemtype="http://data-vocabulary.org/Person">
+		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+	</footer>
+
+	<script type="text/javascript" src="/scripts/dtsn.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37892446-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	</body>
+</html>
