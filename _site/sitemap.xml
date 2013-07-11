@@ -1,47 +1,79 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://dtsn.me/2008/05/01/elementinsert-javascript.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/hello,/world/2008/05/01/elementinsert-javascript/</loc>
+        <lastmod>2013-07-11T11:31:18+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2012/01/20/DataSift-Movies.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2012/02/28/sound-of-twitter.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector/</loc>
+        <lastmod>2013-07-11T11:32:23+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2012/07/17/Like-Coffee.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2009/03/08/script.aculo.us-transitions/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2012/08/28/Wikistats.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2009/03/15/building-javascript-widgets/</loc>
+        <lastmod>2013-07-11T11:32:48+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2012/10/04/Arrow.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2009/11/04/im-in-wired/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2012/10/25/US-presidental-election.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2009/11/26/javascript-weather/</loc>
+        <lastmod>2013-07-11T11:33:34+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2013/03/12/downloading-data-from-localstorage.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2009/12/06/jsonp-stacking/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin.html</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <loc>http://dtsn.me/2009/12/15/css3-selectors-last-child/</loc>
+        <lastmod>2013-07-11T11:33:57+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2012/01/20/DataSift-Movies/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2012/02/28/sound-of-twitter/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2012/07/17/Like-Coffee/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2012/08/28/Wikistats/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2012/10/04/Arrow/</loc>
+        <lastmod>2013-07-11T11:13:16+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2012/10/25/US-presidental-election/</loc>
+        <lastmod>2013-07-11T11:34:23+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2013/03/12/downloading-data-from-localstorage/</loc>
+        <lastmod>2013-07-11T11:29:24+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin/</loc>
+        <lastmod>2013-07-11T11:34:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://dtsn.me/</loc>
-        <lastmod>2013-07-11T10:54:57+01:00</lastmod>
+        <lastmod>2013-07-11T11:34:31+01:00</lastmod>
     </url>
 </urlset>

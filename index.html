@@ -1,13 +1,30 @@
 ---
 layout: default
-title: dtsn
+title: dtsn - Daniel Saxil-Nielsen
 ---
 
+<h2>A Front End Developer &amp; Data Artist at DataSift</h2>
+
+{% capture posts %}{% for post in site.posts %}{{ post.date | date: "%d-%m-%Y" }},{% endfor %}{% endcapture %}
+
+<div id="bar" data-posts="{{ posts }}">
+</div>
+<div id="bargap"></div>
+
+<h3><span>Recent Posts</span></h3>
+
 <ul class="entries">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
   <li>
-      <span>{{ post.date | date: "%d %b" }}</span>
+      <span>{{ post.date | date: "%d %b %Y" }}</span>
       <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
+</ul>
+
+<h3><span>More</span></h3>
+
+<ul class="more">
+	<li><a href="http://twitter.com/dtsn" class="twitter">Twitter: @dtsn</a></li>
+	<li><a href="http://github.com/dtsn" class="github">Github: dtsn</a></li>
 </ul>
