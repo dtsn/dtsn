@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2012-12-29T12:25:30+00:00</updated>
+ <updated>2013-07-11T10:58:17+01:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -12,11 +12,225 @@
 
  
  <entry>
-   <title>Hello World</title>
-   <link href="http://dtsn.me/2012/12/28/Hello-World.html"/>
-   <updated>2012-12-28T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2012/12/28/Hello-World</id>
-   <content type="html">&lt;p&gt;boo&lt;/p&gt;</content>
+   <title>Remove Front Matter in Jekyll Includes</title>
+   <link href="http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin.html"/>
+   <updated>2013-07-11T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2013/07/11/remove-front-matter-jekyll-plugin</id>
+   <content type="html">&lt;p&gt;I&amp;#8217;m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn&amp;#8217;t automatically excluded from files in the /_include directory. So I&amp;#8217;ve written a little plugin which will remove it from the file.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;module&lt;/span&gt; &lt;span class='nn'&gt;Jekyll&lt;/span&gt;
+	&lt;span class='k'&gt;module&lt;/span&gt; &lt;span class='nn'&gt;RemoveFrontMatterFilter&lt;/span&gt;
+		&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;removefrontmatter&lt;/span&gt; &lt;span class='n'&gt;input&lt;/span&gt;
+			&lt;span class='c1'&gt;# find the first&lt;/span&gt;
+			&lt;span class='n'&gt;first&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;input&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;index&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;---&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+			&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;first&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='kp'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; 
+				&lt;span class='n'&gt;input&lt;/span&gt;
+			&lt;span class='k'&gt;end&lt;/span&gt;
+
+			&lt;span class='c1'&gt;# find the second&lt;/span&gt;
+			&lt;span class='n'&gt;second&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;input&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;index&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;---&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;first&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+			&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;second&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='kp'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+				&lt;span class='n'&gt;input&lt;/span&gt;
+			&lt;span class='k'&gt;end&lt;/span&gt;
+
+			&lt;span class='c1'&gt;#{}&amp;quot;First: #{first} Second: #{second}&amp;quot;&lt;/span&gt;
+
+			&lt;span class='c1'&gt;#strip the string&lt;/span&gt;
+			&lt;span class='n'&gt;input&lt;/span&gt;&lt;span class='o'&gt;[&lt;/span&gt;&lt;span class='n'&gt;first&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;.second&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='mi'&gt;2&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+			&lt;span class='c1'&gt;#return input&lt;/span&gt;
+			&lt;span class='n'&gt;input&lt;/span&gt;
+		&lt;span class='k'&gt;end&lt;/span&gt;
+	&lt;span class='k'&gt;end&lt;/span&gt;
+&lt;span class='k'&gt;end&lt;/span&gt;
+&lt;span class='ss'&gt;Liquid&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;&lt;span class='ss'&gt;:Template&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;register_filter&lt;/span&gt; &lt;span class='ss'&gt;Jekyll&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;&lt;span class='ss'&gt;:RemoveFrontMatterFilter&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Use use it as follows:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;{% capture includedfile %}
+	{% include includedfile.html %}
+{% endcapture %}
+{{ includedfile | removefrontmatter }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Downloading Data From localStorage</title>
+   <link href="http://dtsn.me/2013/03/12/downloading-data-from-localstorage.html"/>
+   <updated>2013-03-12T00:00:00+00:00</updated>
+   <id>http://tom.preston-werner.com/2013/03/12/downloading-data-from-localstorage</id>
+   <content type="html">&lt;p&gt;Lately i've been working extensively on a project which includes &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/Storage&quot;&gt;&lt;code&gt;localStorage&lt;/code&gt;&lt;/a&gt;. I hit a small problem regarding how an end user can recover
+thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if the user ever wanted to transfer their data to a new computer or browser.&lt;/p&gt;
+
+&lt;h3&gt;Data URI's&lt;/h3&gt;
+&lt;p&gt;I stumbled on a &lt;del&gt;very hackey&lt;/del&gt; elegant way to download the data through the use of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/data_URIs&quot;&gt;data URI's&lt;/a&gt;. These allow you to embed small files inline in documents. Give it a go below.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// create a fake object&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// add it to our localstorage&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// encode the data into base64&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;base64&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;btoa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// create an a tag&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data:application/octet-stream;base64,&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;base64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Download&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// add to the body&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p style=&quot;text-align: center&quot;&gt;
+	&lt;br /&gt;
+	&lt;a id=&quot;demobutton&quot; href=&quot;&quot; class=&quot;btn&quot;&gt;Give it a try!&lt;/a&gt;
+	&lt;br/&gt;&lt;br/&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You could easily pair this with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/FileReader&quot;&gt;&lt;code&gt;FileReader&lt;/code&gt;&lt;/a&gt; object to read the files back in.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var myData = {
+		'a': 'a',
+		'b': 'b',
+		'c': 'c'
+	};
+
+	localStorage.setItem('data', JSON.stringify(myData));
+
+	base64 = window.btoa(localStorage.getItem('data'));
+
+	var a = document.getElementById('demobutton');
+	a.href = 'data:application/octet-stream;base64,' + base64;
+&lt;/script&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>U.S. Presidental Debates</title>
+   <link href="http://dtsn.me/2012/10/25/US-presidental-election.html"/>
+   <updated>2012-10-25T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/10/25/US-presidental-election</id>
+   <content type="html">&lt;p style='font-size: 14px; text-align: center;'&gt;&lt;em&gt;&lt;a href='http://election.datasift.com'&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The us presidential election is just around the corner. in the run up to the election there is a great deal of focus on the live debates. two debates based upon a different range of topics. this is very unfamiar to us in the uk we have only recently adopted televised live debates in the 2010 election.The past three years have just flown by but it looks like its another U.S. presential election.&lt;/p&gt;
+
+&lt;p&gt;To prove how versatile datasift can be the marketing &amp;amp; data science teams commissioned me to create something users can see the impact of the live debates on the general population through the use of Twitter.&lt;/p&gt;
+
+&lt;p&gt;To this end we developed a micro site of datasift.com which details a variety of information we are able to gather about what people talk about around the elections and make predictions on how we think people will vote. We are able to do this even down to a city level.&lt;/p&gt;
+&lt;h3&gt;Node == real time&lt;/h3&gt;
+&lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
+
+&lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
+&lt;img alt='election.datasift.com' src='/images/posts/election.png' class='last' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Arrow - Data Visualisation</title>
+   <link href="http://dtsn.me/2012/10/04/Arrow.html"/>
+   <updated>2012-10-04T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
+   <content type="html">&lt;img src='/images/posts/arrow.png' class='last' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Wikistats</title>
+   <link href="http://dtsn.me/2012/08/28/Wikistats.html"/>
+   <updated>2012-08-28T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
+   <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
+&lt;img alt='wikistats.co' src='/images/posts/wikistats.png' class='last' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Like Coffee?</title>
+   <link href="http://dtsn.me/2012/07/17/Like-Coffee.html"/>
+   <updated>2012-07-17T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
+   <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
+&lt;img alt='http://demo.datasift.com/coffee/m' src='/images/posts/coffee.png' class='last' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>The Sound of Twitter</title>
+   <link href="http://dtsn.me/2012/02/28/sound-of-twitter.html"/>
+   <updated>2012-02-28T00:00:00+00:00</updated>
+   <id>http://tom.preston-werner.com/2012/02/28/sound-of-twitter</id>
+   <content type="html">&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
+
+&lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href='http://twitter.com/maxtillich'&gt;@maxtillich&lt;/a&gt; and &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href='http://datasift.com'&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
+&lt;h3&gt;&lt;span&gt;HTML5 Audio&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;I&amp;#8217;ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it&amp;#8217;s finally gotten support in most of the major browsers. Using &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
+
+&lt;p&gt;What we get is a slightly surreal experience of how twitter sounds.&lt;/p&gt;
+
+&lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
+&lt;div class='video'&gt;
+&lt;iframe height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640' frameborder='0'&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;UPDATE - &lt;a href='http://thelisteningmachine.org/'&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>DataSift Movies</title>
+   <link href="http://dtsn.me/2012/01/20/DataSift-Movies.html"/>
+   <updated>2012-01-20T00:00:00+00:00</updated>
+   <id>http://tom.preston-werner.com/2012/01/20/DataSift-Movies</id>
+   <content type="html">&lt;p&gt;Do you remember &lt;a href='http://fflick.com'&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
+
+&lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
+&lt;img alt='DataSift Movies' src='/images/posts/dsmovies.png' class='last' /&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>JavaScript in CSS, Ugly But Interesting</title>
+   <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting.html"/>
+   <updated>2008-05-12T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2008/05/12/javascript-in-css-ugly-but-intresting</id>
+   <content type="html">&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;width&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='nx'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;clientWidth&lt;/span&gt; &lt;span class='o'&gt;&amp;gt;&lt;/span&gt; &lt;span class='mi'&gt;950&lt;/span&gt; &lt;span class='o'&gt;?&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;950px&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class='p'&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Do not use CSS Expression, they are unreliable, slow and are only supported in IE!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href='http://www.dave-woods.co.uk/index.php/css-variables/'&gt;here&lt;/a&gt; and &lt;a href='http://www.css3.info/new-features-proposed-for-css/'&gt;here&lt;/a&gt; of &lt;a href='http://disruptive-innovations.com/zoo/cssvariables/'&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='nx'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nt'&gt;body&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;());&lt;/span&gt; &lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;CSS Expressions are horrible and unsupported, so please don&amp;#8217;t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Prototype Element.Insert</title>
+   <link href="http://dtsn.me/2008/05/01/elementinsert-javascript.html"/>
+   <updated>2008-05-01T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2008/05/01/elementinsert-javascript</id>
+   <content type="html">&lt;p&gt;&lt;a href='http://www.prototypejs.org'&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href='http://www.prototypejs.org/api/element/insert'&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
+
+&lt;p&gt;If we wanted to insert an element after a element we would use this code:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;first&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='nx'&gt;top&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;content&lt;/span&gt;
+&lt;span class='p'&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Expanding this further:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='c1'&gt;// lets create our element&lt;/span&gt;
+&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='k'&gt;new&lt;/span&gt; &lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;update&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;span class='c1'&gt;// add the element&lt;/span&gt;
+&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;$&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;hook&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='nx'&gt;after&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt;
+&lt;span class='p'&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;</content>
  </entry>
  
  
