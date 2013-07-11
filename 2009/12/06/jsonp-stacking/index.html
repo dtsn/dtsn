@@ -19,12 +19,13 @@
 
 
         <!-- D3 -->
-        <script type="text/javascript" src="/scripts/d3.js"></script>
+        <script type="text/javascript" src="/scripts/d3.v3.js"></script>
+
 
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-
+		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
@@ -32,13 +33,9 @@
     		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
     	</header>
 
-<section class="post">
 
-	<h2>JSON(P) Stacking</h2>
-	<h4 class="date">06 December 2009</h4>
 
-	<hr />
-
+<section class="main">
 	<p>JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this <a href="http://ajaxian.com/archives/jsonp-json-with-padding">Ajaxian article</a> for more information). It requires a call to an external API where you specificy the a callback function, you do this through the use of script tag. For example:</p>  
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://yourdomain.com/api?callback=myfunction&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -88,11 +85,8 @@
 
 <p>That's it, it is a really simple principle but will hopefully stop your site from hanging on long request, such as for the Twitter widget. It will also make your widgets that you build a lot more stable and won't overload your site.</p>
 
-
 </section>
 
-
-	
 	<footer itemscope itemtype="http://data-vocabulary.org/Person">
 		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
 	</footer>

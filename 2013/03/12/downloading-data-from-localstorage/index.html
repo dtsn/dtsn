@@ -19,12 +19,13 @@
 
 
         <!-- D3 -->
-        <script type="text/javascript" src="/scripts/d3.js"></script>
+        <script type="text/javascript" src="/scripts/d3.v3.js"></script>
+
 
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-
+		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
@@ -32,17 +33,13 @@
     		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
     	</header>
 
-<section class="post">
 
-	<h2>Downloading Data From localStorage</h2>
-	<h4 class="date">12 March 2013</h4>
 
-	<hr />
-
+<section class="main">
 	<p>Lately i've been working extensively on a project which includes <a href="https://developer.mozilla.org/en-US/docs/DOM/Storage"><code>localStorage</code></a>. I hit a small problem regarding how an end user can recover
 thier data from <code>localStorage</code>. This would be useful if the user ever wanted to transfer their data to a new computer or browser.</p>
 
-<h3>Data URI's</h3>
+<h3><span>Data URI's</span></h3>
 <p>I stumbled on a <del>very hackey</del> elegant way to download the data through the use of <a href="https://developer.mozilla.org/en-US/docs/data_URIs">data URI's</a>. These allow you to embed small files inline in documents. Give it a go below.</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="c1">// create a fake object</span>
@@ -89,11 +86,8 @@ thier data from <code>localStorage</code>. This would be useful if the user ever
 	a.href = 'data:application/octet-stream;base64,' + base64;
 </script>
 
-
 </section>
 
-
-	
 	<footer itemscope itemtype="http://data-vocabulary.org/Person">
 		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
 	</footer>

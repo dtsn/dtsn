@@ -19,12 +19,13 @@
 
 
         <!-- D3 -->
-        <script type="text/javascript" src="/scripts/d3.js"></script>
+        <script type="text/javascript" src="/scripts/d3.v3.js"></script>
+
 
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-
+		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
@@ -32,13 +33,9 @@
     		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
     	</header>
 
-<section class="post">
 
-	<h2>CSS3 Selectors :last-child</h2>
-	<h4 class="date">15 December 2009</h4>
 
-	<hr />
-
+<section class="main">
 	<p>Of all the <a href="http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/">CSS3 selectors</a> the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.</p>  <h3>CSS 2.1</h3>  
 
 <div class="highlight"><pre><code class="css"><span class="o">/*</span><span class="nt">Each</span> <span class="nt">Element</span><span class="o">*</span>
@@ -47,7 +44,11 @@
 <span class="nc">.image.last</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div>
 
+<<<<<<< Updated upstream
+<h3><span>CSS 3</span></h3>
+=======
 <h3>CSS 3</h3>
+>>>>>>> Stashed changes
 
 <div class="highlight"><pre><code class="css"><span class="c">/* parent of the image element */</span>
 <span class="nc">.parent</span> <span class="nt">div</span><span class="nd">:last-child</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span>
@@ -57,7 +58,11 @@
 
 <p>Unfortunately the bad aspect of this selector is that it does not fail gracefully. Meaning that a user in a none CSS3 compliant browser, <strong>(IE)</strong>, it would fail horribly, this means that everything will be out of line.</p>
 
+<<<<<<< Updated upstream
+<h3><span>Example</span></h3>
+=======
 <h3>Example</h3>
+>>>>>>> Stashed changes
 
 <p>If you look at this in anything but a browser which supports CSS3 the last element won't be red.</p>
 <style type="text/css">
@@ -83,11 +88,8 @@
 <li><a href="http://www.smashingmagazine.com/2009/06/15/take-your-design-to-the-next-level-with-css3/">Take Your Design To The Next Level With CSS3</a></li>
 </ol>
 
-
 </section>
 
-
-	
 	<footer itemscope itemtype="http://data-vocabulary.org/Person">
 		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
 	</footer>
