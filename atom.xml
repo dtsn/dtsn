@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-07-11T12:01:05+01:00</updated>
+ <updated>2013-10-15T09:43:34+01:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -12,11 +12,26 @@
 
  
  <entry>
+   <title>Instagram in Tweetdeck</title>
+   <link href="http://dtsn.me/2013/10/15/Instagram-in-tweetdeck/"/>
+   <updated>2013-10-15T00:00:00+01:00</updated>
+   <id>http://tom.preston-werner.com/2013/10/15/Instagram-in-tweetdeck</id>
+   <content type="html">
+&lt;p&gt;As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL’s.&lt;/p&gt;
+&lt;script src='https://gist.github.com/dtsn/6866575.js'&gt;&lt;![CDATA[]]&gt;&lt;/script&gt;
+&lt;p&gt;All we are doing is searching for instagram URL’s, fetching the media for the URL and inserting it below the link.&lt;/p&gt;
+
+&lt;p&gt;To install first install the &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; extension. Create a new user script and copy/paste the code into it.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Remove Front Matter in Jekyll Includes</title>
    <link href="http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin/"/>
    <updated>2013-07-11T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2013/07/11/remove-front-matter-jekyll-plugin</id>
-   <content type="html">&lt;p&gt;I&amp;#8217;m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn&amp;#8217;t automatically excluded from files in the /_include directory. So I&amp;#8217;ve written a little plugin which will remove it from the file.&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;module&lt;/span&gt; &lt;span class='nn'&gt;Jekyll&lt;/span&gt;
 	&lt;span class='k'&gt;module&lt;/span&gt; &lt;span class='nn'&gt;RemoveFrontMatterFilter&lt;/span&gt;
 		&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;removefrontmatter&lt;/span&gt; &lt;span class='n'&gt;input&lt;/span&gt;
@@ -123,7 +138,9 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
-&lt;img src='/images/posts/election.png' alt='election.datasift.com' class='last' /&gt;</content>
+
+&lt;p&gt;&lt;img alt='election.datasift.com' class='last' src='/images/posts/election.png' /&gt;&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -131,7 +148,9 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/10/04/Arrow/"/>
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
-   <content type="html">&lt;img src='/images/posts/arrow.png' class='last' /&gt;</content>
+   <content type="html">
+&lt;p&gt;&lt;img class='last' src='/images/posts/arrow.png' /&gt;&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -141,7 +160,9 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
-&lt;img src='/images/posts/wikistats.png' alt='wikistats.co' class='last' /&gt;</content>
+
+&lt;p&gt;&lt;img alt='wikistats.co' class='last' src='/images/posts/wikistats.png' /&gt;&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -151,7 +172,9 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
-&lt;img src='/images/posts/coffee.png' alt='http://demo.datasift.com/coffee/m' class='last' /&gt;</content>
+
+&lt;p&gt;&lt;img alt='http://demo.datasift.com/coffee/m' class='last' src='/images/posts/coffee.png' /&gt;&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -159,21 +182,23 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/02/28/sound-of-twitter/"/>
    <updated>2012-02-28T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2012/02/28/sound-of-twitter</id>
-   <content type="html">&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
 
 &lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href='http://twitter.com/maxtillich'&gt;@maxtillich&lt;/a&gt; and &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href='http://datasift.com'&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
 &lt;h3&gt;&lt;span&gt;HTML5 Audio&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;I&amp;#8217;ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it&amp;#8217;s finally gotten support in most of the major browsers. Using &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
+&lt;p&gt;I’ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it’s finally gotten support in most of the major browsers. Using &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
 
 &lt;p&gt;What we get is a slightly surreal experience of how twitter sounds.&lt;/p&gt;
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
 &lt;div class='video'&gt;
-&lt;iframe height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' frameborder='0' width='640'&gt; &lt;/iframe&gt;
+&lt;iframe width='640' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' height='360' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;UPDATE - &lt;a href='http://thelisteningmachine.org/'&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;</content>
+&lt;p&gt;UPDATE - &lt;a href='http://thelisteningmachine.org/'&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -181,12 +206,15 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/01/20/DataSift-Movies/"/>
    <updated>2012-01-20T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2012/01/20/DataSift-Movies</id>
-   <content type="html">&lt;p&gt;Do you remember &lt;a href='http://fflick.com'&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;Do you remember &lt;a href='http://fflick.com'&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
 
-&lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
+&lt;p&gt;We managed to produce a movie review site that crowd source all it’s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
-&lt;img src='/images/posts/dsmovies.png' alt='DataSift Movies' class='last' /&gt;</content>
+
+&lt;p&gt;&lt;img alt='DataSift Movies' class='last' src='/images/posts/dsmovies.png' /&gt;&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -594,18 +622,20 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/"/>
    <updated>2008-05-12T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2008/05/12/javascript-in-css-ugly-but-intresting</id>
-   <content type="html">&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;width&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='nx'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;clientWidth&lt;/span&gt; &lt;span class='o'&gt;&amp;gt;&lt;/span&gt; &lt;span class='mi'&gt;950&lt;/span&gt; &lt;span class='o'&gt;?&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;950px&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class='p'&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Do not use CSS Expression, they are unreliable, slow and are only supported in IE!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href='http://www.dave-woods.co.uk/index.php/css-variables/'&gt;here&lt;/a&gt; and &lt;a href='http://www.css3.info/new-features-proposed-for-css/'&gt;here&lt;/a&gt; of &lt;a href='http://disruptive-innovations.com/zoo/cssvariables/'&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
+&lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href=&quot;http://www.dave-woods.co.uk/index.php/css-variables/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.css3.info/new-features-proposed-for-css/&quot;&gt;here&lt;/a&gt; of &lt;a href=&quot;http://disruptive-innovations.com/zoo/cssvariables/&quot;&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='nx'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
 	&lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
 &lt;span class='p'&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nt'&gt;body&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;());&lt;/span&gt; &lt;span class='p'&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;CSS Expressions are horrible and unsupported, so please don&amp;#8217;t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;</content>
+&lt;p&gt;CSS Expressions are horrible and unsupported, so please don’t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -613,7 +643,8 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/hello,/world/2008/05/01/elementinsert-javascript/"/>
    <updated>2008-05-01T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/hello,/world/2008/05/01/elementinsert-javascript</id>
-   <content type="html">&lt;p&gt;&lt;a href='http://www.prototypejs.org'&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href='http://www.prototypejs.org/api/element/insert'&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;&lt;a href=&quot;http://www.prototypejs.org&quot;&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href=&quot;http://www.prototypejs.org/api/element/insert&quot;&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
 
 &lt;p&gt;If we wanted to insert an element after a element we would use this code:&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;first&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
@@ -630,75 +661,8 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;</content>
- </entry>
- 
- 
-</feed>&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;E:empty – &lt;/strong&gt;You may have a situation where you have an empty paragraph. Paragraphs will always have a margin top and a margin bottom, which could look unsightly. So lets remove it.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:empty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
- </entry>
- 
- <entry>
-   <title>If the web was smaller</title>
-   <link href="http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea/"/>
-   <updated>2008-07-05T00:00:00+01:00</updated>
-   <id>http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea</id>
-   <content type="html">&lt;p&gt;I’ve just had this crazy idea, what would happen if all the &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; tags in the world were converted into &lt;em&gt;&amp;lt;d&amp;gt;&lt;/em&gt; tags. Image how much space it would save, well you don’t need to imagine I have broken out my calculator and worked it all out.&lt;/p&gt;
-
-&lt;p&gt;Taking the top 5 website's from &lt;a href=&quot;http://www.alexa.com/site/ds/top_sites?ts_mode=global&amp;amp;lang=none&quot;&gt;Alexa&lt;/a&gt;:&lt;/p&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;2&quot; width=&quot;492&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;     &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;100&quot;&gt;&lt;strong&gt;Website&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;&lt;strong&gt;Number of &amp;lt;div&amp;gt; Elements&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;&lt;strong&gt;Size&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;&lt;strong&gt;Size when &amp;lt;div&amp;gt; = &amp;lt;d&amp;gt;&lt;/strong&gt;&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Yahoo.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;85&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;153Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;152Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;98&quot;&gt;Google.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;6&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;7.5Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;7.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Youtube.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;377&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;76.8Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;75.3Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Live.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;27&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;18.6Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;18.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;MSN.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;140&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;48.9Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;48.3Kb&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt;&lt;/table&gt; 
- &lt;p&gt;For every element that would be converted to a &lt;em&gt;&amp;lt;d&amp;gt;,&lt;/em&gt; on average 5.93 bytes are saved. Considering that a typically website has 127 &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; elements, taking from the average of the top 5 website's, this will create a saving of 0.753Kb per web page. That might not seem like a lot but added together across all the website's imagine how much time it would save.&lt;/p&gt;  
-
- &lt;p&gt;Of course this is just pie in the sky, but if the W3C thought of shrinking the HTML tags we use, website's would load faster, and every millisecond counts. Hopefully this will cause some debate on why HTML elements are longer than they need to be.&lt;/p&gt;  &lt;p&gt;I am only suggesting the HTML tags div and span since they convey no semantical meaning, unlike elements like p.&lt;/p&gt;
+&lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;
 </content>
- </entry>
- 
- <entry>
-   <title>JavaScript in CSS, Ugly But Interesting</title>
-   <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/"/>
-   <updated>2008-05-12T00:00:00+01:00</updated>
-   <id>http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting</id>
-   <content type="html">&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;width&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='nx'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;clientWidth&lt;/span&gt; &lt;span class='o'&gt;&amp;gt;&lt;/span&gt; &lt;span class='mi'&gt;950&lt;/span&gt; &lt;span class='o'&gt;?&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;950px&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class='p'&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Do not use CSS Expression, they are unreliable, slow and are only supported in IE!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href='http://www.dave-woods.co.uk/index.php/css-variables/'&gt;here&lt;/a&gt; and &lt;a href='http://www.css3.info/new-features-proposed-for-css/'&gt;here&lt;/a&gt; of &lt;a href='http://disruptive-innovations.com/zoo/cssvariables/'&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='nx'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-	&lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-&lt;span class='p'&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nt'&gt;body&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;());&lt;/span&gt; &lt;span class='p'&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;CSS Expressions are horrible and unsupported, so please don&amp;#8217;t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Prototype Element.Insert</title>
-   <link href="http://dtsn.me/2008/05/01/elementinsert-javascript/"/>
-   <updated>2008-05-01T00:00:00+01:00</updated>
-   <id>http://dtsn.me/2008/05/01/elementinsert-javascript</id>
-   <content type="html">&lt;p&gt;&lt;a href='http://www.prototypejs.org'&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href='http://www.prototypejs.org/api/element/insert'&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
-
-&lt;p&gt;If we wanted to insert an element after a element we would use this code:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;first&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-	&lt;span class='nx'&gt;top&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;content&lt;/span&gt;
-&lt;span class='p'&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Expanding this further:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='c1'&gt;// lets create our element&lt;/span&gt;
-&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='k'&gt;new&lt;/span&gt; &lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;update&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-&lt;span class='c1'&gt;// add the element&lt;/span&gt;
-&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;$&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;hook&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-	&lt;span class='nx'&gt;after&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt;
-&lt;span class='p'&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;</content>
  </entry>
  
  
