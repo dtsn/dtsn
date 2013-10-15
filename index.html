@@ -11,10 +11,10 @@ title: dtsn - Daniel Saxil-Nielsen
 </div>
 <div id="bargap"></div>
 
-<h3><span>Recent Posts</span></h3>
+<h3><span>All Posts</span></h3>
 
 <ul class="entries">
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts %}
   <li>
       <span>{{ post.date | date: "%d %b %Y" }}</span>
       <a href="{{ post.url }}">{{ post.title }}</a>

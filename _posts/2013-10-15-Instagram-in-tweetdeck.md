@@ -69,8 +69,6 @@ script.textContent = "(" + func.toString() + ")();";
 document.body.appendChild(script);
 {% endhighlight %}
 
-<h3><span>How the plugin works</span></h3>
-
 This plugin is really simple we are first searching all the links in the page for anything which mentions `instagram`. Once we have a link we are hitting the JSONP API of Instagram to fetch the image and insert it directly into Tweetdeck.
 
 <h3><span>Installation</span></h3>
