@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-10-15T09:43:34+01:00</updated>
+ <updated>2013-10-15T09:58:48+01:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -17,11 +17,72 @@
    <updated>2013-10-15T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2013/10/15/Instagram-in-tweetdeck</id>
    <content type="html">
-&lt;p&gt;As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL’s.&lt;/p&gt;
-&lt;script src='https://gist.github.com/dtsn/6866575.js'&gt;&lt;![CDATA[]]&gt;&lt;/script&gt;
-&lt;p&gt;All we are doing is searching for instagram URL’s, fetching the media for the URL and inserting it below the link.&lt;/p&gt;
+&lt;p&gt;As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL’s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.&lt;/p&gt;
 
-&lt;p&gt;To install first install the &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; extension. Create a new user script and copy/paste the code into it.&lt;/p&gt;
+&lt;p&gt;View the &lt;a href=&quot;https://gist.github.com/dtsn/6866575&quot;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='c1'&gt;// ==UserScript==&lt;/span&gt;
+&lt;span class='c1'&gt;// @name           TweetDeck Instagram&lt;/span&gt;
+&lt;span class='c1'&gt;// @description    Adds instagram to Tweetdeck&lt;/span&gt;
+&lt;span class='c1'&gt;// @include        https://web.tweetdeck.com/*&lt;/span&gt;
+&lt;span class='c1'&gt;// @version        0.1&lt;/span&gt;
+&lt;span class='c1'&gt;// ==/UserScript==&lt;/span&gt;
+
+&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;func&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+
+	&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;Instagram&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+		&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;links&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='p'&gt;[];&lt;/span&gt;
+	&lt;span class='p'&gt;};&lt;/span&gt;
+
+	&lt;span class='nx'&gt;Instagram&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;prototype&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;add&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+
+		&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;links&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;indexOf&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;!==&lt;/span&gt; &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+			&lt;span class='c1'&gt;// already done this link&lt;/span&gt;
+			&lt;span class='k'&gt;return&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+		&lt;span class='p'&gt;}&lt;/span&gt;
+		&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;links&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;push&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+
+		&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;script&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;createElement&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt;
+			&lt;span class='c1'&gt;// create a random callback&lt;/span&gt;
+			&lt;span class='nx'&gt;callback&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;instagram_&amp;#39;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nb'&gt;Math&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;floor&lt;/span&gt;&lt;span class='p'&gt;((&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nb'&gt;Math&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;random&lt;/span&gt;&lt;span class='p'&gt;())&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='mh'&gt;0x10000&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;toString&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;16&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;substring&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+
+		&lt;span class='c1'&gt;// add the url&lt;/span&gt;
+		&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;src&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;https://api.instagram.com/oembed?url=&amp;#39;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;url&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;&amp;amp;callback=&amp;#39;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;callback&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+
+		&lt;span class='c1'&gt;// append the script&lt;/span&gt;
+		&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;head&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;appendChild&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+
+		&lt;span class='c1'&gt;// create the callback on the window object since this is annoyomoused &lt;/span&gt;
+		&lt;span class='nb'&gt;window&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;callback&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+			&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;img&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;createElement&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+			&lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;src&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+			&lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;width&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;230&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+            &lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;style&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;marginTop&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;10px&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+			&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insertBefore&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+		&lt;span class='p'&gt;}.&lt;/span&gt;&lt;span class='nx'&gt;bind&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+	&lt;span class='p'&gt;};&lt;/span&gt;
+
+	
+	&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;instagram&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='k'&gt;new&lt;/span&gt; &lt;span class='nx'&gt;Instagram&lt;/span&gt;&lt;span class='p'&gt;();&lt;/span&gt;
+
+	&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;poll&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+		&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;nodes&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;getElementsByTagName&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+		&lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;i&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt; &lt;span class='nx'&gt;i&lt;/span&gt; &lt;span class='o'&gt;&amp;lt;&lt;/span&gt; &lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;length&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt; &lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='o'&gt;++&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+			&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='p'&gt;].&lt;/span&gt;&lt;span class='nx'&gt;innerHTML&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;indexOf&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;instagram.com&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;!==&lt;/span&gt; &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+				&lt;span class='nx'&gt;instagram&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;add&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='p'&gt;].&lt;/span&gt;&lt;span class='nx'&gt;innerHTML&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]);&lt;/span&gt;
+			&lt;span class='p'&gt;}&lt;/span&gt;
+		&lt;span class='p'&gt;}&lt;/span&gt;
+	&lt;span class='p'&gt;};&lt;/span&gt;
+
+	&lt;span class='nx'&gt;setInterval&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;poll&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;1000&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;span class='p'&gt;};&lt;/span&gt;
+
+&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;script&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;createElement&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;script&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;textContent&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;(&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;func&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;toString&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;)();&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;appendChild&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3&gt;&lt;span&gt;How the plugin works&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;This plugin is really simple we are first searching all the links in the page for anything which mentions &lt;code&gt;instagram&lt;/code&gt;. Once we have a link we are hitting the JSONP API of Instagram to fetch the image and insert it directly into Tweetdeck.&lt;/p&gt;
+&lt;h3&gt;&lt;span&gt;Installation&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;To install first install the browser extension &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt;. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.&lt;/p&gt;
 </content>
  </entry>
  
@@ -139,7 +200,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='election.datasift.com' class='last' src='/images/posts/election.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/posts/election.png' class='last' alt='election.datasift.com' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -149,7 +210,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
    <content type="html">
-&lt;p&gt;&lt;img class='last' src='/images/posts/arrow.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/posts/arrow.png' class='last' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -161,7 +222,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='wikistats.co' class='last' src='/images/posts/wikistats.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/posts/wikistats.png' class='last' alt='wikistats.co' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -173,7 +234,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='http://demo.datasift.com/coffee/m' class='last' src='/images/posts/coffee.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/posts/coffee.png' class='last' alt='http://demo.datasift.com/coffee/m' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -193,7 +254,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
 &lt;div class='video'&gt;
-&lt;iframe width='640' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' height='360' frameborder='0'&gt; &lt;/iframe&gt;
+&lt;iframe height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' frameborder='0' width='640'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
@@ -213,7 +274,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='DataSift Movies' class='last' src='/images/posts/dsmovies.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/posts/dsmovies.png' class='last' alt='DataSift Movies' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
