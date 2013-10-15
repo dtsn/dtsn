@@ -36,6 +36,9 @@
 
 
 <section class="main">
+
+	<h2>JavaScript in CSS, Ugly But Interesting</h2>
+
 	
 <p>There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.</p>
 <div class='highlight'><pre><code class='javascript'><span class='nx'>width</span><span class='o'>:</span><span class='nx'>expression</span><span class='p'>(</span><span class='nb'>document</span><span class='p'>.</span><span class='nx'>body</span><span class='p'>.</span><span class='nx'>clientWidth</span> <span class='o'>&gt;</span> <span class='mi'>950</span> <span class='o'>?</span> <span class='s2'>&quot;950px&quot;</span><span class='o'>:</span> <span class='s2'>&quot;100%&quot;</span> <span class='p'>);</span>
