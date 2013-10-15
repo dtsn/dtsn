@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-10-15T09:58:48+01:00</updated>
+ <updated>2013-10-15T10:09:31+01:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -79,7 +79,7 @@
 &lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;script&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;createElement&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;script&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
 &lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;textContent&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;(&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;func&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;toString&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;)();&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
 &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;appendChild&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3&gt;&lt;span&gt;How the plugin works&lt;/span&gt;&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This plugin is really simple we are first searching all the links in the page for anything which mentions &lt;code&gt;instagram&lt;/code&gt;. Once we have a link we are hitting the JSONP API of Instagram to fetch the image and insert it directly into Tweetdeck.&lt;/p&gt;
 &lt;h3&gt;&lt;span&gt;Installation&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;To install first install the browser extension &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt;. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.&lt;/p&gt;
@@ -200,7 +200,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/images/posts/election.png' class='last' alt='election.datasift.com' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class='last' src='/images/posts/election.png' alt='election.datasift.com' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -210,7 +210,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
    <content type="html">
-&lt;p&gt;&lt;img src='/images/posts/arrow.png' class='last' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class='last' src='/images/posts/arrow.png' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -222,7 +222,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/images/posts/wikistats.png' class='last' alt='wikistats.co' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class='last' src='/images/posts/wikistats.png' alt='wikistats.co' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -234,7 +234,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/images/posts/coffee.png' class='last' alt='http://demo.datasift.com/coffee/m' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class='last' src='/images/posts/coffee.png' alt='http://demo.datasift.com/coffee/m' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -254,7 +254,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
 &lt;div class='video'&gt;
-&lt;iframe height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' frameborder='0' width='640'&gt; &lt;/iframe&gt;
+&lt;iframe frameborder='0' height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
 
@@ -274,7 +274,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/images/posts/dsmovies.png' class='last' alt='DataSift Movies' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class='last' src='/images/posts/dsmovies.png' alt='DataSift Movies' /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -723,6 +723,11 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;p&gt;&lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>iv with the id of hook.&lt;/p&gt;
 </content>
  </entry>
  
