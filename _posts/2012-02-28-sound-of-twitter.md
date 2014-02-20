@@ -7,9 +7,7 @@ Twitter is based solely around sending text based messages to each other. Howeve
 
 This thought inspired our latest hack-a-thon project. Alongside <a href="http://twitter.com/maxtillich">@maxtillich</a> and <a href="http://twitter.com/aguming">@aguming</a>. We decided to use <a href="http://datasift.com">DataSift</a> to measure the sentiment of users and assign sounds based on how happy or sad a user is.
 
-
 <h3><span>HTML5 Audio</span></h3>
-
 
 I've been itching to use the new <code>&lt;audio&gt;</code> tag in HTML5 and it's finally gotten support in most of the major browsers. Using <a href="http://twitter.com/aguming">@aguming</a> music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.
 
