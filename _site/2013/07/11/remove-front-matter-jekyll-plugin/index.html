@@ -39,8 +39,7 @@
 
 	<h2>Remove Front Matter in Jekyll Includes</h2>
 
-	
-<p>I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.</p>
+	<p>I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.</p>
 <div class='highlight'><pre><code class='ruby'><span class='k'>module</span> <span class='nn'>Jekyll</span>
 	<span class='k'>module</span> <span class='nn'>RemoveFrontMatterFilter</span>
 		<span class='k'>def</span> <span class='nf'>removefrontmatter</span> <span class='n'>input</span>
@@ -65,7 +64,7 @@
 		<span class='k'>end</span>
 	<span class='k'>end</span>
 <span class='k'>end</span>
-<span class='ss'>Liquid</span><span class='p'>:</span><span class='ss'>:Template</span><span class='o'>.</span><span class='n'>register_filter</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:RemoveFrontMatterFilter</span>
+<span class='no'>Liquid</span><span class='o'>::</span><span class='no'>Template</span><span class='o'>.</span><span class='n'>register_filter</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>RemoveFrontMatterFilter</span>
 </code></pre></div>
 <p>Use use it as follows:</p>
 <div class='highlight'><pre><code class='html'>{% capture includedfile %}

@@ -3,7 +3,11 @@ title: Instagram in Tweetdeck
 layout: post
 ---
 
+**Update** - Just released a new version which supports Instagram videos.
+
 As Instagram increases in popularity I've been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i've decided to finally put an end to it and write a little JavaScript plugin using [tampermonkey](http://tampermonkey.net/) to automatically show a thumbnail for instagram URL's. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.
+
+<img src="/images/posts/instagram.png" />
 
 View the [Gist](https://gist.github.com/dtsn/6866575).
 

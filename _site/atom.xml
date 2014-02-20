@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-10-15T10:09:31+01:00</updated>
+ <updated>2014-02-20T11:48:25+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -16,74 +16,76 @@
    <link href="http://dtsn.me/2013/10/15/Instagram-in-tweetdeck/"/>
    <updated>2013-10-15T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2013/10/15/Instagram-in-tweetdeck</id>
-   <content type="html">
+   <content type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; - Just released a new version which supports Instagram videos.&lt;/p&gt;
+
 &lt;p&gt;As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL’s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#39;/images/posts/instagram.png&#39; /&gt;&lt;/p&gt;
+
 &lt;p&gt;View the &lt;a href=&quot;https://gist.github.com/dtsn/6866575&quot;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='c1'&gt;// ==UserScript==&lt;/span&gt;
-&lt;span class='c1'&gt;// @name           TweetDeck Instagram&lt;/span&gt;
-&lt;span class='c1'&gt;// @description    Adds instagram to Tweetdeck&lt;/span&gt;
-&lt;span class='c1'&gt;// @include        https://web.tweetdeck.com/*&lt;/span&gt;
-&lt;span class='c1'&gt;// @version        0.1&lt;/span&gt;
-&lt;span class='c1'&gt;// ==/UserScript==&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;c1&#39;&gt;// ==UserScript==&lt;/span&gt;
+&lt;span class=&#39;c1&#39;&gt;// @name           TweetDeck Instagram&lt;/span&gt;
+&lt;span class=&#39;c1&#39;&gt;// @description    Adds instagram to Tweetdeck&lt;/span&gt;
+&lt;span class=&#39;c1&#39;&gt;// @include        https://web.tweetdeck.com/*&lt;/span&gt;
+&lt;span class=&#39;c1&#39;&gt;// @version        0.1&lt;/span&gt;
+&lt;span class=&#39;c1&#39;&gt;// ==/UserScript==&lt;/span&gt;
 
-&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;func&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;func&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;()&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
 
-	&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;Instagram&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-		&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;links&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='p'&gt;[];&lt;/span&gt;
-	&lt;span class='p'&gt;};&lt;/span&gt;
+	&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;Instagram&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;()&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+		&lt;span class=&#39;k&#39;&gt;this&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;links&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;[];&lt;/span&gt;
+	&lt;span class=&#39;p&#39;&gt;};&lt;/span&gt;
 
-	&lt;span class='nx'&gt;Instagram&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;prototype&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;add&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class=&#39;nx&#39;&gt;Instagram&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;prototype&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;add&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;url&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
 
-		&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;links&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;indexOf&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;!==&lt;/span&gt; &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-			&lt;span class='c1'&gt;// already done this link&lt;/span&gt;
-			&lt;span class='k'&gt;return&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-		&lt;span class='p'&gt;}&lt;/span&gt;
-		&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;links&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;push&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+		&lt;span class=&#39;k&#39;&gt;if&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;k&#39;&gt;this&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;links&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;indexOf&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;url&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;!==&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;-&lt;/span&gt;&lt;span class=&#39;mi&#39;&gt;1&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+			&lt;span class=&#39;c1&#39;&gt;// already done this link&lt;/span&gt;
+			&lt;span class=&#39;k&#39;&gt;return&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		&lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
+		&lt;span class=&#39;k&#39;&gt;this&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;links&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;push&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;url&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 
-		&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;script&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;createElement&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt;
-			&lt;span class='c1'&gt;// create a random callback&lt;/span&gt;
-			&lt;span class='nx'&gt;callback&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;instagram_&amp;#39;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nb'&gt;Math&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;floor&lt;/span&gt;&lt;span class='p'&gt;((&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nb'&gt;Math&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;random&lt;/span&gt;&lt;span class='p'&gt;())&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='mh'&gt;0x10000&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;toString&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;16&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;substring&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+		&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;script&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;createElement&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;),&lt;/span&gt;
+			&lt;span class=&#39;c1&#39;&gt;// create a random callback&lt;/span&gt;
+			&lt;span class=&#39;nx&#39;&gt;callback&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;s1&#39;&gt;&amp;#39;instagram_&amp;#39;&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;nb&#39;&gt;Math&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;floor&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;((&lt;/span&gt;&lt;span class=&#39;mi&#39;&gt;1&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;nb&#39;&gt;Math&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;random&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;())&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;*&lt;/span&gt; &lt;span class=&#39;mh&#39;&gt;0x10000&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;).&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;toString&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;mi&#39;&gt;16&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;).&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;substring&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;mi&#39;&gt;1&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 
-		&lt;span class='c1'&gt;// add the url&lt;/span&gt;
-		&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;src&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;https://api.instagram.com/oembed?url=&amp;#39;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;url&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;&amp;amp;callback=&amp;#39;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;callback&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+		&lt;span class=&#39;c1&#39;&gt;// add the url&lt;/span&gt;
+		&lt;span class=&#39;nx&#39;&gt;script&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;src&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;s1&#39;&gt;&amp;#39;https://api.instagram.com/oembed?url=&amp;#39;&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;url&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;s1&#39;&gt;&amp;#39;&amp;amp;callback=&amp;#39;&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;callback&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
 
-		&lt;span class='c1'&gt;// append the script&lt;/span&gt;
-		&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;head&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;appendChild&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+		&lt;span class=&#39;c1&#39;&gt;// append the script&lt;/span&gt;
+		&lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;head&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;appendChild&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;script&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 
-		&lt;span class='c1'&gt;// create the callback on the window object since this is annoyomoused &lt;/span&gt;
-		&lt;span class='nb'&gt;window&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;callback&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-			&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;img&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;createElement&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-			&lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;src&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-			&lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;width&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;230&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-            &lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;style&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;marginTop&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;10px&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-			&lt;span class='k'&gt;this&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insertBefore&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;img&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-		&lt;span class='p'&gt;}.&lt;/span&gt;&lt;span class='nx'&gt;bind&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-	&lt;span class='p'&gt;};&lt;/span&gt;
+		&lt;span class=&#39;c1&#39;&gt;// create the callback on the window object since this is annoyomoused &lt;/span&gt;
+		&lt;span class=&#39;nb&#39;&gt;window&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;[&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;callback&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;]&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;res&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+			&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;img&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;createElement&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+			&lt;span class=&#39;nx&#39;&gt;img&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;src&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;res&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;url&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+			&lt;span class=&#39;nx&#39;&gt;img&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;width&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;230&amp;quot;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+            &lt;span class=&#39;nx&#39;&gt;img&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;style&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;marginTop&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;10px&amp;quot;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+			&lt;span class=&#39;k&#39;&gt;this&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;insertBefore&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;img&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+		&lt;span class=&#39;p&#39;&gt;}.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;bind&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+	&lt;span class=&#39;p&#39;&gt;};&lt;/span&gt;
 
 	
-	&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;instagram&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='k'&gt;new&lt;/span&gt; &lt;span class='nx'&gt;Instagram&lt;/span&gt;&lt;span class='p'&gt;();&lt;/span&gt;
+	&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;instagram&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;k&#39;&gt;new&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;Instagram&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;();&lt;/span&gt;
 
-	&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;poll&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-		&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;nodes&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;getElementsByTagName&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-		&lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;i&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt; &lt;span class='nx'&gt;i&lt;/span&gt; &lt;span class='o'&gt;&amp;lt;&lt;/span&gt; &lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;length&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt; &lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='o'&gt;++&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-			&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='p'&gt;].&lt;/span&gt;&lt;span class='nx'&gt;innerHTML&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;indexOf&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;instagram.com&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;!==&lt;/span&gt; &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-				&lt;span class='nx'&gt;instagram&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;add&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='p'&gt;].&lt;/span&gt;&lt;span class='nx'&gt;innerHTML&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;nodes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='nx'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]);&lt;/span&gt;
-			&lt;span class='p'&gt;}&lt;/span&gt;
-		&lt;span class='p'&gt;}&lt;/span&gt;
-	&lt;span class='p'&gt;};&lt;/span&gt;
+	&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;poll&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;()&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+		&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;nodes&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+		&lt;span class=&#39;k&#39;&gt;for&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;i&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;mi&#39;&gt;0&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;i&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;nodes&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;length&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;i&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;++&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+			&lt;span class=&#39;k&#39;&gt;if&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;nodes&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;[&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;i&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;].&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;innerHTML&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;indexOf&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;instagram.com&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;!==&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;-&lt;/span&gt;&lt;span class=&#39;mi&#39;&gt;1&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+				&lt;span class=&#39;nx&#39;&gt;instagram&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;add&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;nodes&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;[&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;i&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;].&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;innerHTML&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;nodes&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;[&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;i&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;]);&lt;/span&gt;
+			&lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
+		&lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
+	&lt;span class=&#39;p&#39;&gt;};&lt;/span&gt;
 
-	&lt;span class='nx'&gt;setInterval&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;poll&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;1000&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-&lt;span class='p'&gt;};&lt;/span&gt;
+	&lt;span class=&#39;nx&#39;&gt;setInterval&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;poll&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;mi&#39;&gt;1000&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+&lt;span class=&#39;p&#39;&gt;};&lt;/span&gt;
 
-&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;script&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;createElement&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;script&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;textContent&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;(&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;func&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;toString&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;)();&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;appendChild&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;script&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;script&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;createElement&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s2&#39;&gt;&amp;quot;script&amp;quot;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+&lt;span class=&#39;nx&#39;&gt;script&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;textContent&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;(&amp;quot;&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;func&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;toString&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;()&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;)();&amp;quot;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+&lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;body&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;appendChild&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;script&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This plugin is really simple we are first searching all the links in the page for anything which mentions &lt;code&gt;instagram&lt;/code&gt;. Once we have a link we are hitting the JSONP API of Instagram to fetch the image and insert it directly into Tweetdeck.&lt;/p&gt;
 &lt;h3&gt;&lt;span&gt;Installation&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;To install first install the browser extension &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt;. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.&lt;/p&gt;
-</content>
+&lt;p&gt;To install first install the browser extension &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt;. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -91,36 +93,35 @@
    <link href="http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin/"/>
    <updated>2013-07-11T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2013/07/11/remove-front-matter-jekyll-plugin</id>
-   <content type="html">
-&lt;p&gt;I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;module&lt;/span&gt; &lt;span class='nn'&gt;Jekyll&lt;/span&gt;
-	&lt;span class='k'&gt;module&lt;/span&gt; &lt;span class='nn'&gt;RemoveFrontMatterFilter&lt;/span&gt;
-		&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;removefrontmatter&lt;/span&gt; &lt;span class='n'&gt;input&lt;/span&gt;
-			&lt;span class='c1'&gt;# find the first&lt;/span&gt;
-			&lt;span class='n'&gt;first&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;input&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;index&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;---&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-			&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;first&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='kp'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; 
-				&lt;span class='n'&gt;input&lt;/span&gt;
-			&lt;span class='k'&gt;end&lt;/span&gt;
+   <content type="html">&lt;p&gt;I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;ruby&#39;&gt;&lt;span class=&#39;k&#39;&gt;module&lt;/span&gt; &lt;span class=&#39;nn&#39;&gt;Jekyll&lt;/span&gt;
+	&lt;span class=&#39;k&#39;&gt;module&lt;/span&gt; &lt;span class=&#39;nn&#39;&gt;RemoveFrontMatterFilter&lt;/span&gt;
+		&lt;span class=&#39;k&#39;&gt;def&lt;/span&gt; &lt;span class=&#39;nf&#39;&gt;removefrontmatter&lt;/span&gt; &lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;
+			&lt;span class=&#39;c1&#39;&gt;# find the first&lt;/span&gt;
+			&lt;span class=&#39;n&#39;&gt;first&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;n&#39;&gt;index&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s2&#39;&gt;&amp;quot;---&amp;quot;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
+			&lt;span class=&#39;k&#39;&gt;if&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;n&#39;&gt;first&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;==&lt;/span&gt; &lt;span class=&#39;kp&#39;&gt;nil&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; 
+				&lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;
+			&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
 
-			&lt;span class='c1'&gt;# find the second&lt;/span&gt;
-			&lt;span class='n'&gt;second&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;input&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;index&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;---&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;first&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-			&lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;second&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='kp'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-				&lt;span class='n'&gt;input&lt;/span&gt;
-			&lt;span class='k'&gt;end&lt;/span&gt;
+			&lt;span class=&#39;c1&#39;&gt;# find the second&lt;/span&gt;
+			&lt;span class=&#39;n&#39;&gt;second&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;n&#39;&gt;index&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s2&#39;&gt;&amp;quot;---&amp;quot;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;n&#39;&gt;first&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;mi&#39;&gt;1&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
+			&lt;span class=&#39;k&#39;&gt;if&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;n&#39;&gt;second&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;==&lt;/span&gt; &lt;span class=&#39;kp&#39;&gt;nil&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
+				&lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;
+			&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
 
-			&lt;span class='c1'&gt;#{}&amp;quot;First: #{first} Second: #{second}&amp;quot;&lt;/span&gt;
+			&lt;span class=&#39;c1&#39;&gt;#{}&amp;quot;First: #{first} Second: #{second}&amp;quot;&lt;/span&gt;
 
-			&lt;span class='c1'&gt;#strip the string&lt;/span&gt;
-			&lt;span class='n'&gt;input&lt;/span&gt;&lt;span class='o'&gt;[&lt;/span&gt;&lt;span class='n'&gt;first&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;.second&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='mi'&gt;2&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;&amp;#39;&lt;/span&gt;
-			&lt;span class='c1'&gt;#return input&lt;/span&gt;
-			&lt;span class='n'&gt;input&lt;/span&gt;
-		&lt;span class='k'&gt;end&lt;/span&gt;
-	&lt;span class='k'&gt;end&lt;/span&gt;
-&lt;span class='k'&gt;end&lt;/span&gt;
-&lt;span class='ss'&gt;Liquid&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;&lt;span class='ss'&gt;:Template&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;register_filter&lt;/span&gt; &lt;span class='ss'&gt;Jekyll&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;&lt;span class='ss'&gt;:RemoveFrontMatterFilter&lt;/span&gt;
+			&lt;span class=&#39;c1&#39;&gt;#strip the string&lt;/span&gt;
+			&lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;[&lt;/span&gt;&lt;span class=&#39;n&#39;&gt;first&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;n&#39;&gt;.second&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+&lt;/span&gt; &lt;span class=&#39;mi&#39;&gt;2&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;]&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;s1&#39;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+			&lt;span class=&#39;c1&#39;&gt;#return input&lt;/span&gt;
+			&lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;
+		&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
+	&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
+&lt;span class=&#39;k&#39;&gt;end&lt;/span&gt;
+&lt;span class=&#39;no&#39;&gt;Liquid&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;::&lt;/span&gt;&lt;span class=&#39;no&#39;&gt;Template&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;n&#39;&gt;register_filter&lt;/span&gt; &lt;span class=&#39;no&#39;&gt;Jekyll&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;::&lt;/span&gt;&lt;span class=&#39;no&#39;&gt;RemoveFrontMatterFilter&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Use use it as follows:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;{% capture includedfile %}
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;html&#39;&gt;{% capture includedfile %}
 	{% include includedfile.html %}
 {% endcapture %}
 {{ includedfile | removefrontmatter }}
@@ -132,11 +133,11 @@
    <link href="http://dtsn.me/2013/03/12/downloading-data-from-localstorage/"/>
    <updated>2013-03-12T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2013/03/12/downloading-data-from-localstorage</id>
-   <content type="html">&lt;p&gt;Lately i've been working extensively on a project which includes &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/Storage&quot;&gt;&lt;code&gt;localStorage&lt;/code&gt;&lt;/a&gt;. I hit a small problem regarding how an end user can recover
+   <content type="html">&lt;p&gt;Lately i&#39;ve been working extensively on a project which includes &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/Storage&quot;&gt;&lt;code&gt;localStorage&lt;/code&gt;&lt;/a&gt;. I hit a small problem regarding how an end user can recover
 thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if the user ever wanted to transfer their data to a new computer or browser.&lt;/p&gt;
 
-&lt;h3&gt;&lt;span&gt;Data URI's&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;I stumbled on a &lt;del&gt;very hackey&lt;/del&gt; elegant way to download the data through the use of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/data_URIs&quot;&gt;data URI's&lt;/a&gt;. These allow you to embed small files inline in documents. Give it a go below.&lt;/p&gt;
+&lt;h3&gt;&lt;span&gt;Data URI&#39;s&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;I stumbled on a &lt;del&gt;very hackey&lt;/del&gt; elegant way to download the data through the use of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/data_URIs&quot;&gt;data URI&#39;s&lt;/a&gt;. These allow you to embed small files inline in documents. Give it a go below.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// create a fake object&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -169,17 +170,17 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var myData = {
-		'a': 'a',
-		'b': 'b',
-		'c': 'c'
+		&#39;a&#39;: &#39;a&#39;,
+		&#39;b&#39;: &#39;b&#39;,
+		&#39;c&#39;: &#39;c&#39;
 	};
 
-	localStorage.setItem('data', JSON.stringify(myData));
+	localStorage.setItem(&#39;data&#39;, JSON.stringify(myData));
 
-	base64 = window.btoa(localStorage.getItem('data'));
+	base64 = window.btoa(localStorage.getItem(&#39;data&#39;));
 
-	var a = document.getElementById('demobutton');
-	a.href = 'data:application/octet-stream;base64,' + base64;
+	var a = document.getElementById(&#39;demobutton&#39;);
+	a.href = &#39;data:application/octet-stream;base64,&#39; + base64;
 &lt;/script&gt;
 </content>
  </entry>
@@ -189,7 +190,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/10/25/US-presidental-election/"/>
    <updated>2012-10-25T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/25/US-presidental-election</id>
-   <content type="html">&lt;p style='font-size: 14px; text-align: center;'&gt;&lt;em&gt;&lt;a href='http://election.datasift.com'&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+   <content type="html">&lt;p style=&#39;font-size: 14px; text-align: center;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://election.datasift.com&#39;&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The us presidential election is just around the corner. in the run up to the election there is a great deal of focus on the live debates. two debates based upon a different range of topics. this is very unfamiar to us in the uk we have only recently adopted televised live debates in the 2010 election.The past three years have just flown by but it looks like its another U.S. presential election.&lt;/p&gt;
 
 &lt;p&gt;To prove how versatile datasift can be the marketing &amp;amp; data science teams commissioned me to create something users can see the impact of the live debates on the general population through the use of Twitter.&lt;/p&gt;
@@ -200,8 +201,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='last' src='/images/posts/election.png' alt='election.datasift.com' /&gt;&lt;/p&gt;
-</content>
+&lt;p&gt;&lt;img alt=&#39;election.datasift.com&#39; class=&#39;last&#39; src=&#39;/images/posts/election.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -209,9 +209,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/10/04/Arrow/"/>
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
-   <content type="html">
-&lt;p&gt;&lt;img class='last' src='/images/posts/arrow.png' /&gt;&lt;/p&gt;
-</content>
+   <content type="html">&lt;p&gt;&lt;img class=&#39;last&#39; src=&#39;/images/posts/arrow.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -219,11 +217,10 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/08/28/Wikistats/"/>
    <updated>2012-08-28T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
-   <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://wikistats.co'&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+   <content type="html">&lt;p style=&#39;font-size: 14px;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://wikistats.co&#39;&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='last' src='/images/posts/wikistats.png' alt='wikistats.co' /&gt;&lt;/p&gt;
-</content>
+&lt;p&gt;&lt;img alt=&#39;wikistats.co&#39; class=&#39;last&#39; src=&#39;/images/posts/wikistats.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -231,11 +228,10 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/07/17/Like-Coffee/"/>
    <updated>2012-07-17T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
-   <content type="html">&lt;p style='font-size: 14px;'&gt;&lt;em&gt;&lt;a href='http://demo.datasift.com/coffee/'&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+   <content type="html">&lt;p style=&#39;font-size: 14px;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://demo.datasift.com/coffee/&#39;&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='last' src='/images/posts/coffee.png' alt='http://demo.datasift.com/coffee/m' /&gt;&lt;/p&gt;
-</content>
+&lt;p&gt;&lt;img alt=&#39;http://demo.datasift.com/coffee/m&#39; class=&#39;last&#39; src=&#39;/images/posts/coffee.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -243,23 +239,21 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/02/28/sound-of-twitter/"/>
    <updated>2012-02-28T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2012/02/28/sound-of-twitter</id>
-   <content type="html">
-&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
+   <content type="html">&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
 
-&lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href='http://twitter.com/maxtillich'&gt;@maxtillich&lt;/a&gt; and &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href='http://datasift.com'&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
+&lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href=&#39;http://twitter.com/maxtillich&#39;&gt;@maxtillich&lt;/a&gt; and &lt;a href=&#39;http://twitter.com/aguming&#39;&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href=&#39;http://datasift.com&#39;&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
 &lt;h3&gt;&lt;span&gt;HTML5 Audio&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;I’ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it’s finally gotten support in most of the major browsers. Using &lt;a href='http://twitter.com/aguming'&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
+&lt;p&gt;I’ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it’s finally gotten support in most of the major browsers. Using &lt;a href=&#39;http://twitter.com/aguming&#39;&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
 
 &lt;p&gt;What we get is a slightly surreal experience of how twitter sounds.&lt;/p&gt;
 
 &lt;p&gt;What we have produced was about 24 hours of work, and made a brief introduction to the sound of Twitter.&lt;/p&gt;
-&lt;div class='video'&gt;
-&lt;iframe frameborder='0' height='360' src='https://www.youtube.com/embed/z1glJZZCEUQ?rel=0' width='640'&gt; &lt;/iframe&gt;
+&lt;div class=&#39;video&#39;&gt;
+&lt;iframe frameborder=&#39;0&#39; height=&#39;360&#39; src=&#39;https://www.youtube.com/embed/z1glJZZCEUQ?rel=0&#39; width=&#39;640&#39;&gt; &lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p&gt;This project is available on &lt;a href='https://github.com/datasift/Sound-of-Twitter'&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This project is available on &lt;a href=&#39;https://github.com/datasift/Sound-of-Twitter&#39;&gt;Github&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;UPDATE - &lt;a href='http://thelisteningmachine.org/'&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;
-</content>
+&lt;p&gt;UPDATE - &lt;a href=&#39;http://thelisteningmachine.org/&#39;&gt;The Listening Machine&lt;/a&gt; explores this idea more fully but is not associated with this project.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -267,15 +261,13 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/01/20/DataSift-Movies/"/>
    <updated>2012-01-20T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2012/01/20/DataSift-Movies</id>
-   <content type="html">
-&lt;p&gt;Do you remember &lt;a href='http://fflick.com'&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Do you remember &lt;a href=&#39;http://fflick.com&#39;&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
 
 &lt;p&gt;We managed to produce a movie review site that crowd source all it’s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='last' src='/images/posts/dsmovies.png' alt='DataSift Movies' /&gt;&lt;/p&gt;
-</content>
+&lt;p&gt;&lt;img alt=&#39;DataSift Movies&#39; class=&#39;last&#39; src=&#39;/images/posts/dsmovies.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -311,7 +303,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;h3&gt;Example&lt;/h3&gt;
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
 
-&lt;p&gt;If you look at this in anything but a browser which supports CSS3 the last element won't be red.&lt;/p&gt;
+&lt;p&gt;If you look at this in anything but a browser which supports CSS3 the last element won&#39;t be red.&lt;/p&gt;
 &lt;style type=&quot;text/css&quot;&gt;
 .example { margin-right: 6px; height: 20px; width: 75px; float:left; background-color: #317b9e; }
 .example-block { overflow: hidden; margin-bottom: 10px; }
@@ -389,7 +381,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;Basically what we are doing here is to create a normal JSONP request by creating a script tag and loading it into the body. However we are overriding the standard callback function with our own one, &lt;em&gt;callback. &lt;/em&gt;When the request succeeds this will call that function with the data and in turn we call our success function. If 5 seconds have past the timeout will trigger, see if the success flag has been set if not it will remove the element from the DOM thereby stopping the request.&lt;/p&gt;
 
-&lt;p&gt;That's it, it is a really simple principle but will hopefully stop your site from hanging on long request, such as for the Twitter widget. It will also make your widgets that you build a lot more stable and won't overload your site.&lt;/p&gt;
+&lt;p&gt;That&#39;s it, it is a really simple principle but will hopefully stop your site from hanging on long request, such as for the Twitter widget. It will also make your widgets that you build a lot more stable and won&#39;t overload your site.&lt;/p&gt;
 </content>
  </entry>
  
@@ -441,11 +433,8 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <content type="html">&lt;p&gt;Little pieces of JavaScript you embed onto your website are getting more popular. Every major provider of a service on the web also gives you a little widget that you can put on your blog or webpage to promote what you are doing, for example &lt;a href=&quot;http://twitter.com/widgets&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.last.fm/widgets&quot; target=&quot;_blank&quot;&gt;Last FM&lt;/a&gt; and &lt;a href=&quot;http://digg.com/add-digg&quot; target=&quot;_blank&quot;&gt;Digg&lt;/a&gt; all provide widgets which are great for you and great for the service.&lt;/p&gt;
 &lt;p&gt;I am going to talk you through the development and pitfalls associated with the design and development of widgets. &lt;/p&gt;
 &lt;p&gt;First and foremost, you need to decide what you want to show with your widget. Knowing this you can make an educated choice about which method you want to use to create a widget, there are basically two methods associated with widget development.&lt;/p&gt;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
+
 &lt;h3&gt;&lt;span&gt;IFrame’s&lt;/span&gt;&lt;/h3&gt;
-=======
-&lt;h3&gt;IFrame’s&lt;/h3&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
 &lt;p&gt;No, iframe’s aren’t dead. They are a major part of widget development. Using a &lt;code&gt;iframe&lt;/code&gt; is the easiest way to generate a widget - you host a small file on your web site which contains the information you want to show, like the &lt;a href=&quot;http://digg.com/tools/diggthis.php?u=http%3A//hehe2.net/linux-general/linuxcom-to-bring-social-web-to-linux-geeks/&amp;amp;t=Linux.com%20to%20Bring%20%u201CSocial%20Web%u201D%20To%20Linux%20Geeks%3F&quot; target=&quot;_blank&quot;&gt;Digg button&lt;/a&gt; for example, and get the JavaScript on the client side to build the URL to it. In the case of Digg the client side JavaScript builds a URL based on the current posts URL.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;iframe src=&amp;quot;http://yoururl&amp;quot; width=&amp;quot;50&amp;quot; height=&amp;quot;50&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -465,12 +454,9 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;If you want your widget to be able to appear multiple times on the same webpage, you need to remember to set all the variables to &lt;code&gt;null&lt;/code&gt; at the end of your JavaScript file.&lt;/p&gt;
-&lt;p&gt;That's it! &lt;code&gt;iframe&lt;/code&gt; based widgets are very easy to build and to use, however they do come with their downsides. The biggest of these is that the user can't customise the widget at all - it lives within an &lt;code&gt;iframe&lt;/code&gt; and therefore is untouchable by CSS. That's why certain widgets, like the twitter widget, which are made entirely on the client side in JavaScript.&lt;/p&gt;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
+&lt;p&gt;That&#39;s it! &lt;code&gt;iframe&lt;/code&gt; based widgets are very easy to build and to use, however they do come with their downsides. The biggest of these is that the user can&#39;t customise the widget at all - it lives within an &lt;code&gt;iframe&lt;/code&gt; and therefore is untouchable by CSS. That&#39;s why certain widgets, like the twitter widget, which are made entirely on the client side in JavaScript.&lt;/p&gt;
+
 &lt;h3&gt;&lt;span&gt;Client Side&lt;/span&gt;&lt;/h3&gt;
-=======
-&lt;h3&gt;Client Side&lt;/h3&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
 &lt;p&gt;A widget that is built in JavaScript on the client side is definitely the harder option. For this you have to make the JavaScript file create all the HTML, write out a basic style to apply to the HTML and load in the data. When building this try to avoid using frameworks to build the HTML, this only creates more request for your web servers and make the widget slower to load. Instead resort to using the classical JavaScript methods for creating elements.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;div id=&amp;quot;your_id&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -480,7 +466,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You will have to load your data in from another source, and for this I recommend extending your API to give you a JavaScript variable followed by the JSON encoded data. Here's an example from &lt;a href=&quot;http://api.tweetmeme.com/popular.js?count=5&amp;amp;category=all&quot; target=&quot;_blank&quot;&gt;tweetmeme&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You will have to load your data in from another source, and for this I recommend extending your API to give you a JavaScript variable followed by the JSON encoded data. Here&#39;s an example from &lt;a href=&quot;http://api.tweetmeme.com/popular.js?count=5&amp;amp;category=all&quot; target=&quot;_blank&quot;&gt;tweetmeme&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Pitfalls&lt;/h3&gt;
 &lt;p&gt;There are a lot of difficulties involved in creating widgets and here are just a few of them:&lt;/p&gt;
 &lt;ul&gt;
@@ -671,10 +657,10 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <id>http://tom.preston-werner.com/2008/07/05/if-the-web-was-smaller-idea</id>
    <content type="html">&lt;p&gt;I’ve just had this crazy idea, what would happen if all the &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; tags in the world were converted into &lt;em&gt;&amp;lt;d&amp;gt;&lt;/em&gt; tags. Image how much space it would save, well you don’t need to imagine I have broken out my calculator and worked it all out.&lt;/p&gt;
 
-&lt;p&gt;Taking the top 5 website's from &lt;a href=&quot;http://www.alexa.com/site/ds/top_sites?ts_mode=global&amp;amp;lang=none&quot;&gt;Alexa&lt;/a&gt;:&lt;/p&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;2&quot; width=&quot;492&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;     &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;100&quot;&gt;&lt;strong&gt;Website&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;&lt;strong&gt;Number of &amp;lt;div&amp;gt; Elements&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;&lt;strong&gt;Size&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;&lt;strong&gt;Size when &amp;lt;div&amp;gt; = &amp;lt;d&amp;gt;&lt;/strong&gt;&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Yahoo.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;85&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;153Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;152Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;98&quot;&gt;Google.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;6&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;7.5Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;7.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Youtube.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;377&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;76.8Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;75.3Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Live.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;27&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;18.6Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;18.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;MSN.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;140&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;48.9Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;48.3Kb&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt;&lt;/table&gt; 
- &lt;p&gt;For every element that would be converted to a &lt;em&gt;&amp;lt;d&amp;gt;,&lt;/em&gt; on average 5.93 bytes are saved. Considering that a typically website has 127 &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; elements, taking from the average of the top 5 website's, this will create a saving of 0.753Kb per web page. That might not seem like a lot but added together across all the website's imagine how much time it would save.&lt;/p&gt;  
+&lt;p&gt;Taking the top 5 website&#39;s from &lt;a href=&quot;http://www.alexa.com/site/ds/top_sites?ts_mode=global&amp;amp;lang=none&quot;&gt;Alexa&lt;/a&gt;:&lt;/p&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;2&quot; width=&quot;492&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;     &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;100&quot;&gt;&lt;strong&gt;Website&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;&lt;strong&gt;Number of &amp;lt;div&amp;gt; Elements&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;&lt;strong&gt;Size&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;&lt;strong&gt;Size when &amp;lt;div&amp;gt; = &amp;lt;d&amp;gt;&lt;/strong&gt;&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Yahoo.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;85&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;153Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;152Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;98&quot;&gt;Google.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;6&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;7.5Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;7.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Youtube.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;377&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;76.8Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;75.3Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Live.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;27&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;18.6Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;18.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;MSN.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;140&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;48.9Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;48.3Kb&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt;&lt;/table&gt; 
+ &lt;p&gt;For every element that would be converted to a &lt;em&gt;&amp;lt;d&amp;gt;,&lt;/em&gt; on average 5.93 bytes are saved. Considering that a typically website has 127 &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; elements, taking from the average of the top 5 website&#39;s, this will create a saving of 0.753Kb per web page. That might not seem like a lot but added together across all the website&#39;s imagine how much time it would save.&lt;/p&gt;  
 
- &lt;p&gt;Of course this is just pie in the sky, but if the W3C thought of shrinking the HTML tags we use, website's would load faster, and every millisecond counts. Hopefully this will cause some debate on why HTML elements are longer than they need to be.&lt;/p&gt;  &lt;p&gt;I am only suggesting the HTML tags div and span since they convey no semantical meaning, unlike elements like p.&lt;/p&gt;
+ &lt;p&gt;Of course this is just pie in the sky, but if the W3C thought of shrinking the HTML tags we use, website&#39;s would load faster, and every millisecond counts. Hopefully this will cause some debate on why HTML elements are longer than they need to be.&lt;/p&gt;  &lt;p&gt;I am only suggesting the HTML tags div and span since they convey no semantical meaning, unlike elements like p.&lt;/p&gt;
 </content>
  </entry>
  
@@ -683,20 +669,18 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/"/>
    <updated>2008-05-12T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2008/05/12/javascript-in-css-ugly-but-intresting</id>
-   <content type="html">
-&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;width&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='nx'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;document&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;body&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;clientWidth&lt;/span&gt; &lt;span class='o'&gt;&amp;gt;&lt;/span&gt; &lt;span class='mi'&gt;950&lt;/span&gt; &lt;span class='o'&gt;?&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;950px&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class='p'&gt;);&lt;/span&gt;
+   <content type="html">&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;nx&#39;&gt;width&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;expression&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;body&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;clientWidth&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#39;mi&#39;&gt;950&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;?&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;950px&amp;quot;&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Do not use CSS Expression, they are unreliable, slow and are only supported in IE!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href=&quot;http://www.dave-woods.co.uk/index.php/css-variables/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.css3.info/new-features-proposed-for-css/&quot;&gt;here&lt;/a&gt; of &lt;a href=&quot;http://disruptive-innovations.com/zoo/cssvariables/&quot;&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='kd'&gt;function&lt;/span&gt; &lt;span class='nx'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;()&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-	&lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-&lt;span class='p'&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nt'&gt;body&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;expression&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;blue&lt;/span&gt;&lt;span class='p'&gt;());&lt;/span&gt; &lt;span class='p'&gt;}&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;blue&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;()&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+	&lt;span class=&#39;k&#39;&gt;return&lt;/span&gt; &lt;span class=&#39;s1&#39;&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+&lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;css&#39;&gt;&lt;span class=&#39;nt&#39;&gt;body&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt; &lt;span class=&#39;k&#39;&gt;background&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;n&#39;&gt;expression&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;blue&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;());&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;CSS Expressions are horrible and unsupported, so please don’t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;
-</content>
+&lt;p&gt;CSS Expressions are horrible and unsupported, so please don’t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -704,26 +688,24 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/hello,/world/2008/05/01/elementinsert-javascript/"/>
    <updated>2008-05-01T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/hello,/world/2008/05/01/elementinsert-javascript</id>
-   <content type="html">
-&lt;p&gt;&lt;a href=&quot;http://www.prototypejs.org&quot;&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href=&quot;http://www.prototypejs.org/api/element/insert&quot;&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.prototypejs.org&quot;&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href=&quot;http://www.prototypejs.org/api/element/insert&quot;&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
 
 &lt;p&gt;If we wanted to insert an element after a element we would use this code:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;first&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='nx'&gt;element&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-	&lt;span class='nx'&gt;top&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;content&lt;/span&gt;
-&lt;span class='p'&gt;});&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;nx&#39;&gt;Element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;insert&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;first&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;-&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+	&lt;span class=&#39;nx&#39;&gt;top&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;content&lt;/span&gt;
+&lt;span class=&#39;p&#39;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Expanding this further:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='javascript'&gt;&lt;span class='c1'&gt;// lets create our element&lt;/span&gt;
-&lt;span class='kd'&gt;var&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='k'&gt;new&lt;/span&gt; &lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;update&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-&lt;span class='c1'&gt;// add the element&lt;/span&gt;
-&lt;span class='nx'&gt;Element&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;insert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;$&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;hook&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-	&lt;span class='nx'&gt;after&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='nx'&gt;dummy&lt;/span&gt;
-&lt;span class='p'&gt;});&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;c1&#39;&gt;// lets create our element&lt;/span&gt;
+&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;dummy&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;k&#39;&gt;new&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;Element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;).&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;update&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+&lt;span class=&#39;c1&#39;&gt;// add the element&lt;/span&gt;
+&lt;span class=&#39;nx&#39;&gt;Element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;insert&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;$&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;hook&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;),&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+	&lt;span class=&#39;nx&#39;&gt;after&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;dummy&lt;/span&gt;
+&lt;span class=&#39;p&#39;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;Where hook is the element we want before our created element&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;
-</content>
+&lt;p&gt;This code will add our Hello World text after the div with the id of hook.&lt;/p&gt;</content>
  </entry>
  
  
