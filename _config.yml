@@ -4,6 +4,7 @@ server:      false
 server_port: 4000
 baseurl:    /
 url: http://localhost:4000
+domain: dtsn.me
 
 source:      .
 destination: ../dtsn

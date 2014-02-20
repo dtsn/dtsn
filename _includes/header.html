@@ -5,27 +5,37 @@
         <title>{{ page.title }} - dtsn</title>
 
         <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="canonical" href="{{ page.url }}"/>
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
         <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
-         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
 
+        <!-- twitter card -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="http://dtsn.me{{ page.url }}">
         <meta name="twitter:title" content="{{ page.title }}">
         <meta name="twitter:site" content="dtsn">
         <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 25 }} ">
 
-        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+        <!-- SEO stuff -->
+        {% if page.description %}
+            <meta name="description" content="{{ page.description }}">
+        {% else %}
+            <meta name="description" content="{{ page.content | strip_html | truncatewords: 25 }}">
+        {% endif %}
 
+        {% if page.keywords %}
+            <meta name="keywords" content="{{ page.keywords }}">
+        {% else if page.categories %}
+            <meta name="keywords" content="{{ page.categories | join: ',' }}">
+        {% else %}
+            <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+        {% endif %}
 
-        <!-- D3 -->
+        <!-- scripts -->
         <script type="text/javascript" src="/scripts/d3.v3.js"></script>
-
-
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
