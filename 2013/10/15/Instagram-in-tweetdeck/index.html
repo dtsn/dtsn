@@ -13,7 +13,7 @@
         <meta name="twitter:url" content="http://dtsn.me/2013/10/15/Instagram-in-tweetdeck/">
         <meta name="twitter:title" content="Instagram in Tweetdeck">
         <meta name="twitter:site" content="dtsn">
-        <meta name="twitter:description" content="As Instagram increases in popularity I've been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i've decided to... ">
+        <meta name="twitter:description" content="**Update** - Just released a new version which supports Instagram videos. As Instagram increases in popularity I've been getting more and more annoyed with the... ">
 
         <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
 
@@ -39,9 +39,13 @@
 
 	<h2>Instagram in Tweetdeck</h2>
 
-	<p>As Instagram increases in popularity I&#8217;ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i&#8217;ve decided to finally put an end to it and write a little JavaScript plugin using <a href='http://tampermonkey.net/'>tampermonkey</a> to automatically show a thumbnail for instagram URL&#8217;s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.</p>
+	<p><strong>Update</strong> - Just released a new version which supports Instagram videos.</p>
 
-<p>View the <a href='https://gist.github.com/dtsn/6866575'>Gist</a>.</p>
+<p>As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using <a href="http://tampermonkey.net/">tampermonkey</a> to automatically show a thumbnail for instagram URL’s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.</p>
+
+<p><img src='/images/posts/instagram.png' /></p>
+
+<p>View the <a href="https://gist.github.com/dtsn/6866575">Gist</a>.</p>
 <div class='highlight'><pre><code class='javascript'><span class='c1'>// ==UserScript==</span>
 <span class='c1'>// @name           TweetDeck Instagram</span>
 <span class='c1'>// @description    Adds instagram to Tweetdeck</span>
@@ -104,7 +108,7 @@
 </code></pre></div>
 <p>This plugin is really simple we are first searching all the links in the page for anything which mentions <code>instagram</code>. Once we have a link we are hitting the JSONP API of Instagram to fetch the image and insert it directly into Tweetdeck.</p>
 <h3><span>Installation</span></h3>
-<p>To install first install the browser extension <a href='http://tampermonkey.net/'>tampermonkey</a>. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.</p>
+<p>To install first install the browser extension <a href="http://tampermonkey.net/">tampermonkey</a>. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.</p>
 </section>
 
 	<footer itemscope itemtype="http://data-vocabulary.org/Person">

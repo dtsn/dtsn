@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2013-12-06T08:53:56+00:00</updated>
+ <updated>2014-02-20T11:53:35+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -16,9 +16,13 @@
    <link href="http://dtsn.me/2013/10/15/Instagram-in-tweetdeck/"/>
    <updated>2013-10-15T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2013/10/15/Instagram-in-tweetdeck</id>
-   <content type="html">&lt;p&gt;As Instagram increases in popularity I&amp;#8217;ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i&amp;#8217;ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&#39;http://tampermonkey.net/&#39;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL&amp;#8217;s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; - Just released a new version which supports Instagram videos.&lt;/p&gt;
 
-&lt;p&gt;View the &lt;a href=&#39;https://gist.github.com/dtsn/6866575&#39;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL’s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;/images/posts/instagram.png&#39; /&gt;&lt;/p&gt;
+
+&lt;p&gt;View the &lt;a href=&quot;https://gist.github.com/dtsn/6866575&quot;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;c1&#39;&gt;// ==UserScript==&lt;/span&gt;
 &lt;span class=&#39;c1&#39;&gt;// @name           TweetDeck Instagram&lt;/span&gt;
 &lt;span class=&#39;c1&#39;&gt;// @description    Adds instagram to Tweetdeck&lt;/span&gt;
@@ -81,7 +85,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This plugin is really simple we are first searching all the links in the page for anything which mentions &lt;code&gt;instagram&lt;/code&gt;. Once we have a link we are hitting the JSONP API of Instagram to fetch the image and insert it directly into Tweetdeck.&lt;/p&gt;
 &lt;h3&gt;&lt;span&gt;Installation&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;To install first install the browser extension &lt;a href=&#39;http://tampermonkey.net/&#39;&gt;tampermonkey&lt;/a&gt;. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.&lt;/p&gt;</content>
+&lt;p&gt;To install first install the browser extension &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt;. Once installed create a new script, copy and paste the code in above. Make sure you enable the script and there you go.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -89,7 +93,7 @@
    <link href="http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin/"/>
    <updated>2013-07-11T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2013/07/11/remove-front-matter-jekyll-plugin</id>
-   <content type="html">&lt;p&gt;I&amp;#8217;m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn&amp;#8217;t automatically excluded from files in the /_include directory. So I&amp;#8217;ve written a little plugin which will remove it from the file.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;ruby&#39;&gt;&lt;span class=&#39;k&#39;&gt;module&lt;/span&gt; &lt;span class=&#39;nn&#39;&gt;Jekyll&lt;/span&gt;
 	&lt;span class=&#39;k&#39;&gt;module&lt;/span&gt; &lt;span class=&#39;nn&#39;&gt;RemoveFrontMatterFilter&lt;/span&gt;
 		&lt;span class=&#39;k&#39;&gt;def&lt;/span&gt; &lt;span class=&#39;nf&#39;&gt;removefrontmatter&lt;/span&gt; &lt;span class=&#39;n&#39;&gt;input&lt;/span&gt;
@@ -196,7 +200,8 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;p&gt;The major requirement of the site was to display the information we gather live to the user as the debates are happening. We are able to do this using Node.js and a client based websocket connection. This is the first time I have used node.js in production, it worked very well and managed to stay up dispite both a large number of requests and a large amount of data to be processed from DataSift.&lt;/p&gt;
 
 &lt;p&gt;The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.&lt;/p&gt;
-&lt;img alt=&#39;election.datasift.com&#39; class=&#39;last&#39; src=&#39;/images/posts/election.png&#39; /&gt;</content>
+
+&lt;p&gt;&lt;img alt=&#39;election.datasift.com&#39; class=&#39;last&#39; src=&#39;/images/posts/election.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -204,7 +209,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2012/10/04/Arrow/"/>
    <updated>2012-10-04T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
-   <content type="html">&lt;img class=&#39;last&#39; src=&#39;/images/posts/arrow.png&#39; /&gt;</content>
+   <content type="html">&lt;p&gt;&lt;img class=&#39;last&#39; src=&#39;/images/posts/arrow.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -214,7 +219,8 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
    <content type="html">&lt;p style=&#39;font-size: 14px;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://wikistats.co&#39;&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
-&lt;img alt=&#39;wikistats.co&#39; class=&#39;last&#39; src=&#39;/images/posts/wikistats.png&#39; /&gt;</content>
+
+&lt;p&gt;&lt;img alt=&#39;wikistats.co&#39; class=&#39;last&#39; src=&#39;/images/posts/wikistats.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -224,7 +230,8 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
    <content type="html">&lt;p style=&#39;font-size: 14px;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://demo.datasift.com/coffee/&#39;&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
-&lt;img alt=&#39;http://demo.datasift.com/coffee/m&#39; class=&#39;last&#39; src=&#39;/images/posts/coffee.png&#39; /&gt;</content>
+
+&lt;p&gt;&lt;img alt=&#39;http://demo.datasift.com/coffee/m&#39; class=&#39;last&#39; src=&#39;/images/posts/coffee.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -236,7 +243,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 
 &lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href=&#39;http://twitter.com/maxtillich&#39;&gt;@maxtillich&lt;/a&gt; and &lt;a href=&#39;http://twitter.com/aguming&#39;&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href=&#39;http://datasift.com&#39;&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
 &lt;h3&gt;&lt;span&gt;HTML5 Audio&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;I&amp;#8217;ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it&amp;#8217;s finally gotten support in most of the major browsers. Using &lt;a href=&#39;http://twitter.com/aguming&#39;&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
+&lt;p&gt;I’ve been itching to use the new &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; tag in HTML5 and it’s finally gotten support in most of the major browsers. Using &lt;a href=&#39;http://twitter.com/aguming&#39;&gt;@aguming&lt;/a&gt; music skills we created 12 different sounds to reflect each of the different moods we can determine. We then listen into DataSift and measure the average sentiment every 500 milliseconds and play the correct sound.&lt;/p&gt;
 
 &lt;p&gt;What we get is a slightly surreal experience of how twitter sounds.&lt;/p&gt;
 
@@ -256,10 +263,11 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <id>http://tom.preston-werner.com/2012/01/20/DataSift-Movies</id>
    <content type="html">&lt;p&gt;Do you remember &lt;a href=&#39;http://fflick.com&#39;&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
 
-&lt;p&gt;We managed to produce a movie review site that crowd source all it&amp;#8217;s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
+&lt;p&gt;We managed to produce a movie review site that crowd source all it’s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately DataSift Movies was never made available to the public.&lt;/p&gt;
-&lt;img alt=&#39;DataSift Movies&#39; class=&#39;last&#39; src=&#39;/images/posts/dsmovies.png&#39; /&gt;</content>
+
+&lt;p&gt;&lt;img alt=&#39;DataSift Movies&#39; class=&#39;last&#39; src=&#39;/images/posts/dsmovies.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -666,21 +674,21 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Do not use CSS Expression, they are unreliable, slow and are only supported in IE!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href=&#39;http://www.dave-woods.co.uk/index.php/css-variables/&#39;&gt;here&lt;/a&gt; and &lt;a href=&#39;http://www.css3.info/new-features-proposed-for-css/&#39;&gt;here&lt;/a&gt; of &lt;a href=&#39;http://disruptive-innovations.com/zoo/cssvariables/&#39;&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
+&lt;p&gt;CSS Expression suddenly came to me as a solution for the currently much debated feature &lt;a href=&quot;http://www.dave-woods.co.uk/index.php/css-variables/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.css3.info/new-features-proposed-for-css/&quot;&gt;here&lt;/a&gt; of &lt;a href=&quot;http://disruptive-innovations.com/zoo/cssvariables/&quot;&gt;variables&lt;/a&gt; in CSS3. This could theoretically be currently achieved through the use of CSS Expressions.&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;blue&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;()&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
 	&lt;span class=&#39;k&#39;&gt;return&lt;/span&gt; &lt;span class=&#39;s1&#39;&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
 &lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;css&#39;&gt;&lt;span class=&#39;nt&#39;&gt;body&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt; &lt;span class=&#39;k&#39;&gt;background&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;n&#39;&gt;expression&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;blue&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;());&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;CSS Expressions are horrible and unsupported, so please don&amp;#8217;t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;</content>
+&lt;p&gt;CSS Expressions are horrible and unsupported, so please don’t use them in development. They do, however, highlight a interesting and little known feature of CSS.&lt;/p&gt;</content>
  </entry>
  
  <entry>
    <title>Prototype Element.Insert</title>
-   <link href="http://dtsn.me/hello,/world/2008/05/01/elementinsert-javascript/"/>
+   <link href="http://dtsn.me/2008/05/01/elementinsert-javascript/"/>
    <updated>2008-05-01T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/hello,/world/2008/05/01/elementinsert-javascript</id>
-   <content type="html">&lt;p&gt;&lt;a href=&#39;http://www.prototypejs.org&#39;&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href=&#39;http://www.prototypejs.org/api/element/insert&#39;&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
+   <id>http://tom.preston-werner.com/2008/05/01/elementinsert-javascript</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.prototypejs.org&quot;&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href=&quot;http://www.prototypejs.org/api/element/insert&quot;&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
 
 &lt;p&gt;If we wanted to insert an element after a element we would use this code:&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;nx&#39;&gt;Element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;insert&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;first&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;-&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;element&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
