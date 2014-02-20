@@ -6,7 +6,7 @@ baseurl:    /
 url: http://localhost:4000
 
 source:      .
-destination: ./_site
+destination: ../dtsn
 plugins:     ./_plugins
 
 future:      true
