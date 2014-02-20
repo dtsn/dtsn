@@ -2,7 +2,7 @@
 body { color: #434343; font: 14px proxima-nova, sans-serif; font-weight: 300; }
 
 h1, h2, h3 { font-family: proxima-nova; font-weight: 300; }
-h1 { color: #666666; font-size: 36px; text-transform: uppercase; }
+h1 { color: #666666; font-size: 30px; }
 h2 { color: #666666; font-size: 30px; }
 h3 { color: #666666; font-size: 24px; }
 
@@ -26,13 +26,13 @@ section { margin: 110px auto 0 auto; width: 800px; padding-bottom: 100px; }
 section.post { width: 600px; }
 
 /* header */
-header { background: #F4F4F4; height: 100px; }
-header h1 { background: url('images/bg.png') no-repeat; height: 135px; line-height: 135px; margin: 0 auto; position: relative; text-align: center; top: 33px; z-index: 1; width: 156px; }
-header h1 a { color: #FFFFFF; }
-header h1 a:hover { text-decoration: none; }
+header { background: #F4F4F4; height: 100px; font-family: proxima-nova; font-weight: 300; font-size: 36px; text-transform: uppercase; }
+header a { background: url('images/bg.png') no-repeat; height: 135px; line-height: 135px; margin: 0 auto; position: relative; text-align: center; top: 33px; z-index: 1; width: 156px; display: block; }
+header a { color: #FFFFFF; }
+header a:hover { text-decoration: none; }
 
 /* front page */
-h2 { margin: 40px 0; text-align: center; }
+h1, h2 { margin: 40px 0; text-align: center; }
 .main h3 { margin: 0 auto; position: relative; text-transform: uppercase; text-align: center; width: 600px; }
 .main h3:before, .main h3:after {
     border-top: 1px solid #DCDCDC; 

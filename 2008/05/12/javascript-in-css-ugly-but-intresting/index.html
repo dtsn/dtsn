@@ -5,39 +5,43 @@
         <title>JavaScript in CSS, Ugly But Interesting - dtsn</title>
 
         <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="canonical" href="/2008/05/12/javascript-in-css-ugly-but-intresting/"/>
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
         <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
-         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
 
+        <!-- twitter card -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/">
         <meta name="twitter:title" content="JavaScript in CSS, Ugly But Interesting">
         <meta name="twitter:site" content="dtsn">
         <meta name="twitter:description" content="There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you... ">
 
-        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+        <!-- SEO stuff -->
+        
+            <meta name="description" content="There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you...">
+        
 
+        
+            <meta name="keywords" content="">
+        
 
-        <!-- D3 -->
+        <!-- scripts -->
         <script type="text/javascript" src="/scripts/d3.v3.js"></script>
-
-
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
     	<header>
-    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    		<a href="/" title="Home" data-title="home">dtsn</a>
     	</header>
 
 
 
 <section class="main">
 
-	<h2>JavaScript in CSS, Ugly But Interesting</h2>
+	<h1>JavaScript in CSS, Ugly But Interesting</h1>
 
 	<p>There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.</p>
 <div class='highlight'><pre><code class='javascript'><span class='nx'>width</span><span class='o'>:</span><span class='nx'>expression</span><span class='p'>(</span><span class='nb'>document</span><span class='p'>.</span><span class='nx'>body</span><span class='p'>.</span><span class='nx'>clientWidth</span> <span class='o'>&gt;</span> <span class='mi'>950</span> <span class='o'>?</span> <span class='s2'>&quot;950px&quot;</span><span class='o'>:</span> <span class='s2'>&quot;100%&quot;</span> <span class='p'>);</span>

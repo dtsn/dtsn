@@ -5,45 +5,49 @@
         <title>Instagram in Tweetdeck - dtsn</title>
 
         <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="canonical" href="/javascript/2013/10/15/Instagram-in-tweetdeck/"/>
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
         <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
-         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
 
+        <!-- twitter card -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:url" content="http://dtsn.me/2013/10/15/Instagram-in-tweetdeck/">
+        <meta name="twitter:url" content="http://dtsn.me/javascript/2013/10/15/Instagram-in-tweetdeck/">
         <meta name="twitter:title" content="Instagram in Tweetdeck">
         <meta name="twitter:site" content="dtsn">
         <meta name="twitter:description" content="**Update** - Just released a new version which supports Instagram videos. As Instagram increases in popularity I've been getting more and more annoyed with the... ">
 
-        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+        <!-- SEO stuff -->
+        
+            <meta name="description" content="**Update** - Just released a new version which supports Instagram videos. As Instagram increases in popularity I've been getting more and more annoyed with the...">
+        
 
+        
+            <meta name="keywords" content="javascript">
+        
 
-        <!-- D3 -->
+        <!-- scripts -->
         <script type="text/javascript" src="/scripts/d3.v3.js"></script>
-
-
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
     	<header>
-    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    		<a href="/" title="Home" data-title="home">dtsn</a>
     	</header>
 
 
 
 <section class="main">
 
-	<h2>Instagram in Tweetdeck</h2>
+	<h1>Instagram in Tweetdeck</h1>
 
 	<p><strong>Update</strong> - Just released a new version which supports Instagram videos.</p>
 
 <p>As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using <a href="http://tampermonkey.net/">tampermonkey</a> to automatically show a thumbnail for instagram URL’s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.</p>
 
-<p><img src='/images/posts/instagram.png' /></p>
+<p><img alt='Instagram videos in Tweetdeck' src='/images/posts/instagram.png' /></p>
 
 <p>View the <a href="https://gist.github.com/dtsn/6866575">Gist</a>.</p>
 <div class='highlight'><pre><code class='javascript'><span class='c1'>// ==UserScript==</span>

@@ -5,39 +5,43 @@
         <title>JavaScript Weather - dtsn</title>
 
         <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="canonical" href="/2009/11/26/javascript-weather/"/>
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
         <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
-         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
 
+        <!-- twitter card -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="http://dtsn.me/2009/11/26/javascript-weather/">
         <meta name="twitter:title" content="JavaScript Weather">
         <meta name="twitter:site" content="dtsn">
         <meta name="twitter:description" content="<<<<<<< Updated upstream Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches... ">
 
-        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+        <!-- SEO stuff -->
+        
+            <meta name="description" content="<<<<<<< Updated upstream Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches...">
+        
 
+        
+            <meta name="keywords" content="">
+        
 
-        <!-- D3 -->
+        <!-- scripts -->
         <script type="text/javascript" src="/scripts/d3.v3.js"></script>
-
-
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
     	<header>
-    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    		<a href="/" title="Home" data-title="home">dtsn</a>
     	</header>
 
 
 
 <section class="main">
 
-	<h2>JavaScript Weather</h2>
+	<h1>JavaScript Weather</h1>
 
 	<<<<<<< Updated upstream
 <p>Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.</p>  <p><em>UPDATE - Chris Heilmann over at the </em><a href="http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html"><em>Yahoo! Developer Network Blog</em></a><em> has made this even simpler through the use of YQL.</em></p>  <h3><span>The Data</span></h3>  <p>First of all we need a data source which will provide the weather for a particular location, we can grab this from the <a href="http://developer.yahoo.com/weather/">Yahoo Weather API</a>. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here <a title="http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;u=c" href="http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;u=c">http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;u=c</a>. Great but how can we process this RSS feed? That’s where <a href="http://pipes.yahoo.com">Yahoo Pipes</a> comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.</p> <p>Now we can access the JSON data for the weather in Reading <a href="http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;_render=json">here</a>.</p>  <h3><span>JavaScript</span></h3>  <p>The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at <a href="http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/">from__future__import</a>. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.</p>  

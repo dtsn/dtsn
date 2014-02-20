@@ -5,39 +5,43 @@
         <title>Remove Front Matter in Jekyll Includes - dtsn</title>
 
         <link rel="icon" type="image/ico" href="/favicon.ico">
+        <link rel="canonical" href="/2013/07/11/remove-front-matter-jekyll-plugin/"/>
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
         <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
-         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
 
+        <!-- twitter card -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin/">
         <meta name="twitter:title" content="Remove Front Matter in Jekyll Includes">
         <meta name="twitter:site" content="dtsn">
         <meta name="twitter:description" content="I'm working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn't... ">
 
-        <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
+        <!-- SEO stuff -->
+        
+            <meta name="description" content="I'm working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn't...">
+        
 
+        
+            <meta name="keywords" content="">
+        
 
-        <!-- D3 -->
+        <!-- scripts -->
         <script type="text/javascript" src="/scripts/d3.v3.js"></script>
-
-
         <script type="text/javascript" src="//use.typekit.net/fjk3dnb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
     </head>
     <body>
 
     	<header>
-    		<h1><a href="/" title="Home" data-title="home">dtsn</a></h1>
+    		<a href="/" title="Home" data-title="home">dtsn</a>
     	</header>
 
 
 
 <section class="main">
 
-	<h2>Remove Front Matter in Jekyll Includes</h2>
+	<h1>Remove Front Matter in Jekyll Includes</h1>
 
 	<p>I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.</p>
 <div class='highlight'><pre><code class='ruby'><span class='k'>module</span> <span class='nn'>Jekyll</span>
