@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2014-02-20T14:43:08+00:00</updated>
+ <updated>2014-02-20T15:02:55+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -283,25 +283,17 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
 &lt;span class=&quot;nc&quot;&gt;.image.last&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
 &lt;h3&gt;&lt;span&gt;CSS 3&lt;/span&gt;&lt;/h3&gt;
-=======
-&lt;h3&gt;CSS 3&lt;/h3&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* parent of the image element */&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.parent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:last-child&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;The Downside&lt;/h3&gt;
+&lt;h3&gt;&lt;span&gt;The Downside&lt;/span&gt;&lt;/h3&gt;
 
 &lt;p&gt;Unfortunately the bad aspect of this selector is that it does not fail gracefully. Meaning that a user in a none CSS3 compliant browser, &lt;strong&gt;(IE)&lt;/strong&gt;, it would fail horribly, this means that everything will be out of line.&lt;/p&gt;
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
 &lt;h3&gt;&lt;span&gt;Example&lt;/span&gt;&lt;/h3&gt;
-=======
-&lt;h3&gt;Example&lt;/h3&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
 
 &lt;p&gt;If you look at this in anything but a browser which supports CSS3 the last element won&#39;t be red.&lt;/p&gt;
 &lt;style type=&quot;text/css&quot;&gt;
@@ -318,7 +310,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
   &lt;div class=&quot;example&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;h3&gt;More Resources&lt;/h3&gt;
+&lt;h3&gt;&lt;span&gt;More Resources&lt;/span&gt;&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/css3-selectors/&quot;&gt;W3C Selectors Level 3&lt;/a&gt;&lt;/li&gt;
@@ -390,11 +382,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <link href="http://dtsn.me/2009/11/26/javascript-weather/"/>
    <updated>2009-11-26T00:00:00+00:00</updated>
    <id>http://tom.preston-werner.com/2009/11/26/javascript-weather</id>
-   <content type="html">&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
-&lt;p&gt;Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;UPDATE - Chris Heilmann over at the &lt;/em&gt;&lt;a href=&quot;http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html&quot;&gt;&lt;em&gt;Yahoo! Developer Network Blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt; has made this even simpler through the use of YQL.&lt;/em&gt;&lt;/p&gt;  &lt;h3&gt;&lt;span&gt;The Data&lt;/span&gt;&lt;/h3&gt;  &lt;p&gt;First of all we need a data source which will provide the weather for a particular location, we can grab this from the &lt;a href=&quot;http://developer.yahoo.com/weather/&quot;&gt;Yahoo Weather API&lt;/a&gt;. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here &lt;a title=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot; href=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot;&gt;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&lt;/a&gt;. Great but how can we process this RSS feed? That’s where &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.&lt;/p&gt; &lt;p&gt;Now we can access the JSON data for the weather in Reading &lt;a href=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;  &lt;h3&gt;&lt;span&gt;JavaScript&lt;/span&gt;&lt;/h3&gt;  &lt;p&gt;The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at &lt;a href=&quot;http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/&quot;&gt;from__future__import&lt;/a&gt;. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.&lt;/p&gt;  
-=======
-&lt;p&gt;Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;UPDATE - Chris Heilmann over at the &lt;/em&gt;&lt;a href=&quot;http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html&quot;&gt;&lt;em&gt;Yahoo! Developer Network Blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt; has made this even simpler through the use of YQL.&lt;/em&gt;&lt;/p&gt;  &lt;h2&gt;The Data&lt;/h2&gt;  &lt;p&gt;First of all we need a data source which will provide the weather for a particular location, we can grab this from the &lt;a href=&quot;http://developer.yahoo.com/weather/&quot;&gt;Yahoo Weather API&lt;/a&gt;. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here &lt;a title=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot; href=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot;&gt;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&lt;/a&gt;. Great but how can we process this RSS feed? That’s where &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.&lt;/p&gt; &lt;p&gt;Now we can access the JSON data for the weather in Reading &lt;a href=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;  &lt;h2&gt;JavaScript&lt;/h2&gt;  &lt;p&gt;The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at &lt;a href=&quot;http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/&quot;&gt;from__future__import&lt;/a&gt;. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.&lt;/p&gt;  
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
+   <content type="html">&lt;p&gt;Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;UPDATE - Chris Heilmann over at the &lt;/em&gt;&lt;a href=&quot;http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html&quot;&gt;&lt;em&gt;Yahoo! Developer Network Blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt; has made this even simpler through the use of YQL.&lt;/em&gt;&lt;/p&gt;  &lt;h3&gt;&lt;span&gt;The Data&lt;/span&gt;&lt;/h3&gt;  &lt;p&gt;First of all we need a data source which will provide the weather for a particular location, we can grab this from the &lt;a href=&quot;http://developer.yahoo.com/weather/&quot;&gt;Yahoo Weather API&lt;/a&gt;. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here &lt;a title=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot; href=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot;&gt;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&lt;/a&gt;. Great but how can we process this RSS feed? That’s where &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.&lt;/p&gt; &lt;p&gt;Now we can access the JSON data for the weather in Reading &lt;a href=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;  &lt;h3&gt;&lt;span&gt;JavaScript&lt;/span&gt;&lt;/h3&gt;  &lt;p&gt;The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at &lt;a href=&quot;http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/&quot;&gt;from__future__import&lt;/a&gt;. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.&lt;/p&gt;  
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&amp;amp;_callback=weather&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
