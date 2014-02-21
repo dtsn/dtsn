@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2014-02-20T15:05:48+00:00</updated>
+ <updated>2014-02-21T10:05:54+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -12,10 +12,29 @@
 
  
  <entry>
+   <title>Keeping gh-pages in sync with your master branch</title>
+   <link href="http://dtsn.me/2014/02/21/Keeping-gh-pages-in-sync-with-master/"/>
+   <updated>2014-02-21T00:00:00+00:00</updated>
+   <id>http://tom.preston-werner.com/2014/02/21/Keeping-gh-pages-in-sync-with-master</id>
+   <content type="html">&lt;p&gt;I always find it frustrating to constintly do a pull request between my &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches. However now thanks to a &lt;a href=&quot;http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481&quot;&gt;StackOverflow&lt;/a&gt; post from denbuzze there is a really simple tool.&lt;/p&gt;
+
+&lt;p&gt;Typically you would do the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout gh-pages
+git merge master
+git push origin gh-pages&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;However if you add the following to the end of your &lt;code&gt;.git/config&lt;/code&gt; file in your local repository. This will happen automatically.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;push = +refs/heads/master:refs/heads/gh-pages
+push = +refs/heads/master:refs/heads/master&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>Instagram in Tweetdeck</title>
-   <link href="http://dtsn.me/javascript/2013/10/15/Instagram-in-tweetdeck/"/>
+   <link href="http://dtsn.me/2013/10/15/Instagram-in-tweetdeck/"/>
    <updated>2013-10-15T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/javascript/2013/10/15/Instagram-in-tweetdeck</id>
+   <id>http://tom.preston-werner.com/2013/10/15/Instagram-in-tweetdeck</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; - Just released a new version which supports Instagram videos.&lt;/p&gt;
 
 &lt;p&gt;As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL’s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.&lt;/p&gt;
@@ -498,11 +517,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <id>http://tom.preston-werner.com/2008/10/15/super-css-the-power-of-the-selector</id>
    <content type="html">&lt;p&gt;We all love CSS it’s fundamental to the web. However most of us do not use the full power of CSS. A quick rummage around the W3C specification and you will see how powerful CSS can really be. I’m talking about the CSS selector, sure we all use the basic selectors, but what about the more complicated ones.&lt;/p&gt;
 &lt;p&gt;Well here’s my guide to the most useful not very used CSS selectors (as well as what they are currently supported in).&lt;/p&gt;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
 &lt;h3&gt;&lt;span&gt;CSS2&lt;/span&gt;&lt;/h3&gt;
-=======
-&lt;h3&gt;CSS2&lt;/h3&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
 &lt;table class=&quot;table&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
