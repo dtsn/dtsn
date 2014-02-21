@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://tdtsn.me/"/>
- <updated>2014-02-21T10:05:54+00:00</updated>
+ <updated>2014-02-21T10:35:40+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -27,7 +27,9 @@ git push origin gh-pages&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;However if you add the following to the end of your &lt;code&gt;.git/config&lt;/code&gt; file in your local repository. This will happen automatically.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;push = +refs/heads/master:refs/heads/gh-pages
-push = +refs/heads/master:refs/heads/master&lt;/code&gt;&lt;/pre&gt;</content>
+push = +refs/heads/master:refs/heads/master&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: This will only work if you use &lt;code&gt;git push&lt;/code&gt; not &lt;code&gt;git push origin branchname&lt;/code&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
