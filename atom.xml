@@ -3,8 +3,8 @@
  
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
- <link href="http://tdtsn.me/"/>
- <updated>2014-02-25T09:28:59+00:00</updated>
+ <link href="http://dtsn.me/"/>
+ <updated>2014-02-25T11:04:36+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -15,7 +15,7 @@
    <title>JavaScript Custom Events</title>
    <link href="http://dtsn.me/2014/02/25/JavaScript-Custom-Events/"/>
    <updated>2014-02-25T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2014/02/25/JavaScript-Custom-Events</id>
+   <id>http://dtsn.me/2014/02/25/JavaScript-Custom-Events</id>
    <content type="html">&lt;p&gt;I have been googling around for how to pass custom event data into a JavaScript &lt;code&gt;Event&lt;/code&gt; object. Turns out you can’t what you need to do is to use the realtively new object called &lt;code&gt;CustomEvent&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;myCustomEvent&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;k&#39;&gt;new&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;CustomEvent&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;dtsn&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;customParam&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 
@@ -31,7 +31,7 @@
    <title>Keeping gh-pages in sync with your master branch</title>
    <link href="http://dtsn.me/2014/02/21/Keeping-gh-pages-in-sync-with-master/"/>
    <updated>2014-02-21T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2014/02/21/Keeping-gh-pages-in-sync-with-master</id>
+   <id>http://dtsn.me/2014/02/21/Keeping-gh-pages-in-sync-with-master</id>
    <content type="html">&lt;p&gt;I always find it frustrating to constintly do a pull request between my &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches. However now thanks to a &lt;a href=&quot;http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481&quot;&gt;StackOverflow&lt;/a&gt; post from denbuzze there is a really simple tool.&lt;/p&gt;
 
 &lt;p&gt;Typically you would do the following:&lt;/p&gt;
@@ -52,7 +52,7 @@ push = +refs/heads/master:refs/heads/master&lt;/code&gt;&lt;/pre&gt;
    <title>Instagram in Tweetdeck</title>
    <link href="http://dtsn.me/2013/10/15/Instagram-in-tweetdeck/"/>
    <updated>2013-10-15T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2013/10/15/Instagram-in-tweetdeck</id>
+   <id>http://dtsn.me/2013/10/15/Instagram-in-tweetdeck</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; - Just released a new version which supports Instagram videos.&lt;/p&gt;
 
 &lt;p&gt;As Instagram increases in popularity I’ve been getting more and more annoyed with the lack of support for Instagram within Tweetdeck. So i’ve decided to finally put an end to it and write a little JavaScript plugin using &lt;a href=&quot;http://tampermonkey.net/&quot;&gt;tampermonkey&lt;/a&gt; to automatically show a thumbnail for instagram URL’s. This will only currently work on web.tweetdeck.com but please feel free to modify and edit the plugin.&lt;/p&gt;
@@ -129,7 +129,7 @@ push = +refs/heads/master:refs/heads/master&lt;/code&gt;&lt;/pre&gt;
    <title>Remove Front Matter in Jekyll Includes</title>
    <link href="http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin/"/>
    <updated>2013-07-11T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2013/07/11/remove-front-matter-jekyll-plugin</id>
+   <id>http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin</id>
    <content type="html">&lt;p&gt;I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;ruby&#39;&gt;&lt;span class=&#39;k&#39;&gt;module&lt;/span&gt; &lt;span class=&#39;nn&#39;&gt;Jekyll&lt;/span&gt;
 	&lt;span class=&#39;k&#39;&gt;module&lt;/span&gt; &lt;span class=&#39;nn&#39;&gt;RemoveFrontMatterFilter&lt;/span&gt;
@@ -169,7 +169,7 @@ push = +refs/heads/master:refs/heads/master&lt;/code&gt;&lt;/pre&gt;
    <title>Downloading Data From localStorage</title>
    <link href="http://dtsn.me/2013/03/12/downloading-data-from-localstorage/"/>
    <updated>2013-03-12T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2013/03/12/downloading-data-from-localstorage</id>
+   <id>http://dtsn.me/2013/03/12/downloading-data-from-localstorage</id>
    <content type="html">&lt;p&gt;Lately i&#39;ve been working extensively on a project which includes &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/Storage&quot;&gt;&lt;code&gt;localStorage&lt;/code&gt;&lt;/a&gt;. I hit a small problem regarding how an end user can recover
 thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if the user ever wanted to transfer their data to a new computer or browser.&lt;/p&gt;
 
@@ -226,7 +226,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>U.S. Presidental Debates</title>
    <link href="http://dtsn.me/2012/10/25/US-presidental-election/"/>
    <updated>2012-10-25T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2012/10/25/US-presidental-election</id>
+   <id>http://dtsn.me/2012/10/25/US-presidental-election</id>
    <content type="html">&lt;p style=&#39;font-size: 14px; text-align: center;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://election.datasift.com&#39;&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The us presidential election is just around the corner. in the run up to the election there is a great deal of focus on the live debates. two debates based upon a different range of topics. this is very unfamiar to us in the uk we have only recently adopted televised live debates in the 2010 election.The past three years have just flown by but it looks like its another U.S. presential election.&lt;/p&gt;
 
@@ -245,7 +245,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Arrow - Data Visualisation</title>
    <link href="http://dtsn.me/2012/10/04/Arrow/"/>
    <updated>2012-10-04T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2012/10/04/Arrow</id>
+   <id>http://dtsn.me/2012/10/04/Arrow</id>
    <content type="html">&lt;p&gt;&lt;img class=&#39;last&#39; src=&#39;/images/posts/arrow.png&#39; /&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -253,7 +253,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Wikistats</title>
    <link href="http://dtsn.me/2012/08/28/Wikistats/"/>
    <updated>2012-08-28T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2012/08/28/Wikistats</id>
+   <id>http://dtsn.me/2012/08/28/Wikistats</id>
    <content type="html">&lt;p style=&#39;font-size: 14px;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://wikistats.co&#39;&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Wikistats was an orignal concept first created by @lorenzoalberton to track the number of Wikipedia edits which are happening, from this you are able to deduce the most edited item in a day and therefore be able to work out the most popular. It works really well for breaking news stories.&lt;/p&gt;
 
@@ -264,7 +264,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Like Coffee?</title>
    <link href="http://dtsn.me/2012/07/17/Like-Coffee/"/>
    <updated>2012-07-17T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2012/07/17/Like-Coffee</id>
+   <id>http://dtsn.me/2012/07/17/Like-Coffee</id>
    <content type="html">&lt;p style=&#39;font-size: 14px;&#39;&gt;&lt;em&gt;&lt;a href=&#39;http://demo.datasift.com/coffee/&#39;&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.&lt;/p&gt;
 
@@ -275,7 +275,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>The Sound of Twitter</title>
    <link href="http://dtsn.me/2012/02/28/sound-of-twitter/"/>
    <updated>2012-02-28T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2012/02/28/sound-of-twitter</id>
+   <id>http://dtsn.me/2012/02/28/sound-of-twitter</id>
    <content type="html">&lt;p&gt;Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?&lt;/p&gt;
 
 &lt;p&gt;This thought inspired our latest hack-a-thon project. Alongside &lt;a href=&#39;http://twitter.com/maxtillich&#39;&gt;@maxtillich&lt;/a&gt; and &lt;a href=&#39;http://twitter.com/aguming&#39;&gt;@aguming&lt;/a&gt;. We decided to use &lt;a href=&#39;http://datasift.com&#39;&gt;DataSift&lt;/a&gt; to measure the sentiment of users and assign sounds based on how happy or sad a user is.&lt;/p&gt;
@@ -297,7 +297,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>DataSift Movies</title>
    <link href="http://dtsn.me/2012/01/20/DataSift-Movies/"/>
    <updated>2012-01-20T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2012/01/20/DataSift-Movies</id>
+   <id>http://dtsn.me/2012/01/20/DataSift-Movies</id>
    <content type="html">&lt;p&gt;Do you remember &lt;a href=&#39;http://fflick.com&#39;&gt;fflick&lt;/a&gt;? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.&lt;/p&gt;
 
 &lt;p&gt;We managed to produce a movie review site that crowd source all it’s reviews and gave each movie a score based upon user sentiment to films and the split between male and female.&lt;/p&gt;
@@ -311,7 +311,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>CSS3 Selectors :last-child</title>
    <link href="http://dtsn.me/2009/12/15/css3-selectors-last-child/"/>
    <updated>2009-12-15T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/12/15/css3-selectors-last-child</id>
+   <id>http://dtsn.me/2009/12/15/css3-selectors-last-child</id>
    <content type="html">&lt;p&gt;Of all the &lt;a href=&quot;http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/&quot;&gt;CSS3 selectors&lt;/a&gt; the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.&lt;/p&gt;  &lt;h3&gt;CSS 2.1&lt;/h3&gt;  
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;/*&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;Each&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Element&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
@@ -362,7 +362,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>JSON(P) Stacking</title>
    <link href="http://dtsn.me/2009/12/06/jsonp-stacking/"/>
    <updated>2009-12-06T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/12/06/jsonp-stacking</id>
+   <id>http://dtsn.me/2009/12/06/jsonp-stacking</id>
    <content type="html">&lt;p&gt;JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this &lt;a href=&quot;http://ajaxian.com/archives/jsonp-json-with-padding&quot;&gt;Ajaxian article&lt;/a&gt; for more information). It requires a call to an external API where you specificy the a callback function, you do this through the use of script tag. For example:&lt;/p&gt;  
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://yourdomain.com/api?callback=myfunction&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
@@ -418,7 +418,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>JavaScript Weather</title>
    <link href="http://dtsn.me/2009/11/26/javascript-weather/"/>
    <updated>2009-11-26T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/11/26/javascript-weather</id>
+   <id>http://dtsn.me/2009/11/26/javascript-weather</id>
    <content type="html">&lt;p&gt;Here’s a crazy idea, what would you do if you wanted to change the background picture of your website so it matches the weather. Luckily Its really easy, and I figured out all the hard bits for you.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;UPDATE - Chris Heilmann over at the &lt;/em&gt;&lt;a href=&quot;http://developer.yahoo.net/blog/archives/2009/12/extending_the_weather_api_with_yql.html&quot;&gt;&lt;em&gt;Yahoo! Developer Network Blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt; has made this even simpler through the use of YQL.&lt;/em&gt;&lt;/p&gt;  &lt;h3&gt;&lt;span&gt;The Data&lt;/span&gt;&lt;/h3&gt;  &lt;p&gt;First of all we need a data source which will provide the weather for a particular location, we can grab this from the &lt;a href=&quot;http://developer.yahoo.com/weather/&quot;&gt;Yahoo Weather API&lt;/a&gt;. Using the code UKXX0117 which is for Reading, UK I can create the an RSS feed which you can see here &lt;a title=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot; href=&quot;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&quot;&gt;http://weather.yahooapis.com/forecastrss?p=UKXX0117&amp;amp;u=c&lt;/a&gt;. Great but how can we process this RSS feed? That’s where &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; comes in, we can take in the RSS feed extract the data we need (item.yweather.condition) and export it as JSON.&lt;/p&gt; &lt;p&gt;Now we can access the JSON data for the weather in Reading &lt;a href=&quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;  &lt;h3&gt;&lt;span&gt;JavaScript&lt;/span&gt;&lt;/h3&gt;  &lt;p&gt;The JavaScript cannot directly call the JSON script via AJAX due to cross site scripting limitations imposed by the browser. This is where JSONP comes in, JSONP is a way to retrieve data from external domains through wrapping the JSON in a function, you can read more on JSONP at &lt;a href=&quot;http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/&quot;&gt;from__future__import&lt;/a&gt;. Yahoo Pipes fully supports the JSONP format using the parameter callback, therefore in our webpage we load up the following.&lt;/p&gt;  
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://pipes.yahoo.com/pipes/pipe.run?_id=b13966505cb6b00dd1d18ec4aafc14b4&amp;amp;_render=json&amp;amp;_callback=weather&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
@@ -443,7 +443,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Feature in Wired (UK)</title>
    <link href="http://dtsn.me/2009/11/04/im-in-wired/"/>
    <updated>2009-11-04T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/11/04/im-in-wired</id>
+   <id>http://dtsn.me/2009/11/04/im-in-wired</id>
    <content type="html">&lt;p&gt;At the end of September I was invited to a shoot for the UK edition of Wired. It was a shoot based around the twitterati of the UK and included some big names like Iain Dodsworth. The shoot was based at the old BT museum, which became defunct when their archive went online. You can see me and the other 24 people in Wired’s December Issue, on sale from today.&lt;/p&gt; 
 
 &lt;img class=&quot;last&quot; src=&quot;http://img.wired.co.uk.s3.amazonaws.com/674x281/s_v/twitter674.jpg&quot; width=&quot;480&quot; height=&quot;200&quot; /&gt;
@@ -454,7 +454,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Building JavaScript Widgets</title>
    <link href="http://dtsn.me/2009/03/15/building-javascript-widgets/"/>
    <updated>2009-03-15T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/03/15/building-javascript-widgets</id>
+   <id>http://dtsn.me/2009/03/15/building-javascript-widgets</id>
    <content type="html">&lt;p&gt;Little pieces of JavaScript you embed onto your website are getting more popular. Every major provider of a service on the web also gives you a little widget that you can put on your blog or webpage to promote what you are doing, for example &lt;a href=&quot;http://twitter.com/widgets&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.last.fm/widgets&quot; target=&quot;_blank&quot;&gt;Last FM&lt;/a&gt; and &lt;a href=&quot;http://digg.com/add-digg&quot; target=&quot;_blank&quot;&gt;Digg&lt;/a&gt; all provide widgets which are great for you and great for the service.&lt;/p&gt;
 &lt;p&gt;I am going to talk you through the development and pitfalls associated with the design and development of widgets. &lt;/p&gt;
 &lt;p&gt;First and foremost, you need to decide what you want to show with your widget. Knowing this you can make an educated choice about which method you want to use to create a widget, there are basically two methods associated with widget development.&lt;/p&gt;
@@ -507,7 +507,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Script.aculo.us Transitions</title>
    <link href="http://dtsn.me/2009/03/08/script.aculo.us-transitions/"/>
    <updated>2009-03-08T00:00:00+00:00</updated>
-   <id>http://tom.preston-werner.com/2009/03/08/script.aculo.us-transitions</id>
+   <id>http://dtsn.me/2009/03/08/script.aculo.us-transitions</id>
    <content type="html">&lt;p&gt;I’ve been digging through the &lt;a href=&quot;http://script.aculo.us/&quot;&gt;Script.aculo.us&lt;/a&gt; code a lot recently and have stumbled upon a number of very effective transitions which aren’t used widely. There are 9 effects in total comprising of:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -532,7 +532,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Super CSS, the power of the selector</title>
    <link href="http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector/"/>
    <updated>2008-10-15T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2008/10/15/super-css-the-power-of-the-selector</id>
+   <id>http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector</id>
    <content type="html">&lt;p&gt;We all love CSS it’s fundamental to the web. However most of us do not use the full power of CSS. A quick rummage around the W3C specification and you will see how powerful CSS can really be. I’m talking about the CSS selector, sure we all use the basic selectors, but what about the more complicated ones.&lt;/p&gt;
 &lt;p&gt;Well here’s my guide to the most useful not very used CSS selectors (as well as what they are currently supported in).&lt;/p&gt;
 &lt;h3&gt;&lt;span&gt;CSS2&lt;/span&gt;&lt;/h3&gt;
@@ -675,7 +675,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>If the web was smaller</title>
    <link href="http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea/"/>
    <updated>2008-07-05T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2008/07/05/if-the-web-was-smaller-idea</id>
+   <id>http://dtsn.me/2008/07/05/if-the-web-was-smaller-idea</id>
    <content type="html">&lt;p&gt;I’ve just had this crazy idea, what would happen if all the &lt;em&gt;&amp;lt;div&amp;gt;&lt;/em&gt; tags in the world were converted into &lt;em&gt;&amp;lt;d&amp;gt;&lt;/em&gt; tags. Image how much space it would save, well you don’t need to imagine I have broken out my calculator and worked it all out.&lt;/p&gt;
 
 &lt;p&gt;Taking the top 5 website&#39;s from &lt;a href=&quot;http://www.alexa.com/site/ds/top_sites?ts_mode=global&amp;amp;lang=none&quot;&gt;Alexa&lt;/a&gt;:&lt;/p&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;2&quot; width=&quot;492&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;     &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;100&quot;&gt;&lt;strong&gt;Website&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;&lt;strong&gt;Number of &amp;lt;div&amp;gt; Elements&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;&lt;strong&gt;Size&lt;/strong&gt;&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;&lt;strong&gt;Size when &amp;lt;div&amp;gt; = &amp;lt;d&amp;gt;&lt;/strong&gt;&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Yahoo.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;85&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;153Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;152Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;98&quot;&gt;Google.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;6&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;7.5Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;7.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Youtube.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;377&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;76.8Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;75.3Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;Live.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;27&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;18.6Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;18.5Kb&lt;/td&gt;     &lt;/tr&gt;      &lt;tr&gt;       &lt;td valign=&quot;top&quot; width=&quot;99&quot;&gt;MSN.com&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;180&quot;&gt;140&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;44&quot;&gt;48.9Kb&lt;/td&gt;        &lt;td valign=&quot;top&quot; width=&quot;166&quot;&gt;48.3Kb&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt;&lt;/table&gt; 
@@ -689,7 +689,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>JavaScript in CSS, Ugly But Interesting</title>
    <link href="http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting/"/>
    <updated>2008-05-12T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2008/05/12/javascript-in-css-ugly-but-intresting</id>
+   <id>http://dtsn.me/2008/05/12/javascript-in-css-ugly-but-intresting</id>
    <content type="html">&lt;p&gt;There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;nx&#39;&gt;width&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;expression&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;document&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;body&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;clientWidth&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#39;mi&#39;&gt;950&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;?&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;950px&amp;quot;&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -708,7 +708,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
    <title>Prototype Element.Insert</title>
    <link href="http://dtsn.me/2008/05/01/elementinsert-javascript/"/>
    <updated>2008-05-01T00:00:00+01:00</updated>
-   <id>http://tom.preston-werner.com/2008/05/01/elementinsert-javascript</id>
+   <id>http://dtsn.me/2008/05/01/elementinsert-javascript</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.prototypejs.org&quot;&gt;Prototype&lt;/a&gt; has a very useful function which is not well documented, &lt;a href=&quot;http://www.prototypejs.org/api/element/insert&quot;&gt;Element.inset&lt;/a&gt;. Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, &lt;em&gt;before, after, top, bottom&lt;/em&gt; of an element.&lt;/p&gt;
 
 &lt;p&gt;If we wanted to insert an element after a element we would use this code:&lt;/p&gt;
