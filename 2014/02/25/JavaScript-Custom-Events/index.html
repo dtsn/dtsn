@@ -68,11 +68,13 @@
 	<h1>JavaScript Custom Events</h1>
 
 	<p>I have been googling around for how to pass custom event data into a JavaScript <code>Event</code> object. Turns out you can’t what you need to do is to use the realtively new object called <code>CustomEvent</code>.</p>
-<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>myCustomEvent</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>CustomEvent</span><span class='p'>(</span><span class='s1'>&#39;dtsn&#39;</span><span class='p'>,</span> <span class='nx'>customParam</span><span class='p'>);</span>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>myCustomEvent</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>CustomEvent</span><span class='p'>(</span><span class='s1'>&#39;dtsn&#39;</span><span class='p'>,</span> <span class='p'>{</span>
+	<span class='nx'>customParam</span><span class='o'>:</span> <span class='kc'>true</span>
+<span class='p'>});</span>
 
 <span class='kd'>function</span> <span class='nx'>eventHandler</span><span class='p'>(</span><span class='nx'>e</span><span class='p'>)</span> <span class='p'>{</span>
 	<span class='c1'>// will log out our customParam object</span>
-	<span class='nx'>console</span><span class='p'>.</span><span class='nx'>log</span><span class='p'>(</span><span class='nx'>e</span><span class='p'>);</span>
+	<span class='nx'>console</span><span class='p'>.</span><span class='nx'>log</span><span class='p'>(</span><span class='nx'>e</span><span class='p'>.</span><span class='nx'>customParam</span><span class='p'>);</span>
 <span class='p'>};</span>
 </code></pre></div>
 <p>You can find out more information on the excellent <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">MDN custom event page</a>.</p>
