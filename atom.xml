@@ -6,7 +6,7 @@ layout: nil
  
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
- <link href="http://tdtsn.me/"/>
+ <link href="http://dtsn.me/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://dtsn.me/</id>
  <author>
@@ -18,7 +18,7 @@ layout: nil
    <title>{{ post.title }}</title>
    <link href="http://dtsn.me{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://tom.preston-werner.com{{ post.id }}</id>
+   <id>http://dtsn.me{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

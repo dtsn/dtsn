@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Like Coffee?
+tags:
+  - Data Art
+  - Visulisation
+  - PHP
+  - DataSift
 ---
 
 <p style="font-size: 14px;"><em><a href="http://demo.datasift.com/coffee/">http://demo.datasift.com/coffee/</a></em></p>

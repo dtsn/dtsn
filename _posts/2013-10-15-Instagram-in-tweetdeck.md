@@ -1,7 +1,10 @@
 --- 
 title: Instagram in Tweetdeck
 layout: post
-categories: JavaScript
+tags:
+  - Plugins
+  - Tweetdeck
+  - Instagram
 ---
 
 **Update** - Just released a new version which supports Instagram videos.

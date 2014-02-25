@@ -50,8 +50,8 @@
 
         {% if page.keywords %}
             <meta name="keywords" content="{{ page.keywords }}">
-        {% else if page.categories %}
-            <meta name="keywords" content="{{ page.categories | join: ',' }}">
+        {% else if page.tags %}
+            <meta name="keywords" content="{{ page.tags | join: ',' }}">
         {% else %}
             <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
         {% endif %}

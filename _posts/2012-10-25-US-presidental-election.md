@@ -1,6 +1,14 @@
 ---
 layout: post
 title: U.S. Presidental Debates
+tags:
+  - Data Art
+  - Visulisation
+  - JavaScript
+  - DataSift
+  - Presidents
+  - Obama
+  - Romney
 ---
 
 <p style="font-size: 14px; text-align: center;"><em><a href="http://election.datasift.com">http://election.datasift.com</a></em></p>

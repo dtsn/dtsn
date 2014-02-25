@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Wikistats
+tags:
+  - Data Art
+  - Visulisation
+  - PHP
+  - DataSift
 ---
 
 <p style="font-size: 14px;"><em><a href="http://wikistats.co">http://wikistats.co</a></em></p>

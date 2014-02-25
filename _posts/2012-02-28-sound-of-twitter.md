@@ -1,6 +1,11 @@
 ---
 layout: post
 title: The Sound of Twitter
+tags:
+  - Experiments
+  - JavaScript
+  - Twitter
+  - Music
 ---
 
 Twitter is based solely around sending text based messages to each other. However what if we could change this and interpret the text as sound?

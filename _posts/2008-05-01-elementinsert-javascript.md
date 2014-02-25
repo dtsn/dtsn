@@ -1,6 +1,10 @@
 --- 
 title: Prototype Element.Insert
 layout: post
+tags:
+  - prototypejs
+  - javascript
+  - element.insert
 ---
 
 [Prototype](http://www.prototypejs.org) has a very useful function which is not well documented, [Element.inset](http://www.prototypejs.org/api/element/insert). Element.insert is a very powerful prototype function which lets you insert a element in one of 4 positions, <em>before, after, top, bottom</em> of an element.

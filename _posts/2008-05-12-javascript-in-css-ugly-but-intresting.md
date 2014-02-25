@@ -1,6 +1,9 @@
 --- 
 title: JavaScript in CSS, Ugly But Interesting
 layout: post
+tags:
+  - CSS
+  - JavaScript
 ---
 
 There is a very little used and unknown method which allows you to utilise JavaScript within a CSS file. The CSS Expression property allows you to assign a JavaScript expression to a CSS property. For example, this allows you to set the position of an element according to the browser size.
