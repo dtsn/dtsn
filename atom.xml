@@ -4,7 +4,7 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://dtsn.me/"/>
- <updated>2014-02-25T11:17:18+00:00</updated>
+ <updated>2014-02-25T11:20:07+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
@@ -18,12 +18,12 @@
    <id>http://dtsn.me/2014/02/25/JavaScript-Custom-Events</id>
    <content type="html">&lt;p&gt;I have been googling around for how to pass custom event data into a JavaScript &lt;code&gt;Event&lt;/code&gt; object. Turns out you can’t what you need to do is to use the realtively new object called &lt;code&gt;CustomEvent&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;&lt;span class=&#39;kd&#39;&gt;var&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;myCustomEvent&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; &lt;span class=&#39;k&#39;&gt;new&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;CustomEvent&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;dtsn&amp;#39;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;,&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
-	&lt;span class=&#39;nx&#39;&gt;customParam&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;kc&#39;&gt;true&lt;/span&gt;
+	&lt;span class=&#39;nx&#39;&gt;detail&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;:&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;customParam&lt;/span&gt;
 &lt;span class=&#39;p&#39;&gt;});&lt;/span&gt;
 
 &lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;eventHandler&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;e&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt; &lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
 	&lt;span class=&#39;c1&#39;&gt;// will log out our customParam object&lt;/span&gt;
-	&lt;span class=&#39;nx&#39;&gt;console&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;log&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;e&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;customParam&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
+	&lt;span class=&#39;nx&#39;&gt;console&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;log&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;e&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;.&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;detail&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;);&lt;/span&gt;
 &lt;span class=&#39;p&#39;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can find out more information on the excellent &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events&quot;&gt;MDN custom event page&lt;/a&gt;.&lt;/p&gt;</content>
