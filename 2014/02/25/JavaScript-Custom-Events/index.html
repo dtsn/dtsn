@@ -26,66 +26,28 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Archive: “2-2014” - dtsn</title>
+        <title>JavaScript Custom Events - dtsn</title>
 
         <link rel="icon" type="image/ico" href="/favicon.ico">
-        <link rel="canonical" href="/2014/02/"/>
+        <link rel="canonical" href="/2014/02/25/JavaScript-Custom-Events/"/>
         <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="main screen css" charset="utf-8">
         <link rel="stylesheet" href="/highlight.css" type="text/css" charset="utf-8">
         <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml">
 
         <!-- twitter card -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:url" content="http://dtsn.me/2014/02/">
-        <meta name="twitter:title" content="Archive: “2-2014”">
+        <meta name="twitter:url" content="http://dtsn.me/2014/02/25/JavaScript-Custom-Events/">
+        <meta name="twitter:title" content="JavaScript Custom Events">
         <meta name="twitter:site" content="dtsn">
-        <meta name="twitter:description" content="
-
- Posts archive &middot; 2/2014
-
-
-
-
-  
-      21 Feb 2014
-      Keeping gh-pages in sync with your master branch
-  
-
-  
-      25 Feb 2014
-      JavaScript Custom Events
-  
-
-
-
- ">
+        <meta name="twitter:description" content="I have been googling around for how to pass custom event data into a JavaScript `Event` object. Turns out you can't what you need to... ">
 
         <!-- SEO stuff -->
         
-            <meta name="description" content="
-
- Posts archive &middot; 2/2014
-
-
-
-
-  
-      21 Feb 2014
-      Keeping gh-pages in sync with your master branch
-  
-
-  
-      25 Feb 2014
-      JavaScript Custom Events
-  
-
-
-
-">
+            <meta name="description" content="I have been googling around for how to pass custom event data into a JavaScript `Event` object. Turns out you can't what you need to...">
         
 
         
-            <meta name="keywords" content="">
+            <meta name="keywords" content="JavaScript,Events,Event,CustomEvent,dispatchEvent">
         
 
         <!-- scripts -->
@@ -102,28 +64,20 @@
 
 
 <section class="main">
-	<section class="main">
 
-<h2> Posts archive &middot; 2/2014</h2>
+	<h1>JavaScript Custom Events</h1>
 
-<hr />
-<ul class="entries">
+	<p>I have been googling around for how to pass custom event data into a JavaScript <code>Event</code> object. Turns out you can’t what you need to do is to use the realtively new object called <code>CustomEvent</code>.</p>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>myCustomEvent</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>CustomEvent</span><span class='p'>(</span><span class='s1'>&#39;dtsn&#39;</span><span class='p'>,</span> <span class='nx'>customParam</span><span class='p'>);</span>
 
-  <li>
-      <span>21 Feb 2014</span>
-      <a href="/2014/02/21/Keeping-gh-pages-in-sync-with-master/">Keeping gh-pages in sync with your master branch</a>
-  </li>
-
-  <li>
-      <span>25 Feb 2014</span>
-      <a href="/2014/02/25/JavaScript-Custom-Events/">JavaScript Custom Events</a>
-  </li>
-
-</ul>
-
+<span class='kd'>function</span> <span class='nx'>eventHandler</span><span class='p'>(</span><span class='nx'>e</span><span class='p'>)</span> <span class='p'>{</span>
+	<span class='c1'>// will log out our customParam object</span>
+	<span class='nx'>console</span><span class='p'>.</span><span class='nx'>log</span><span class='p'>(</span><span class='nx'>e</span><span class='p'>);</span>
+<span class='p'>};</span>
+</code></pre></div>
+<p>You can find out more information on the excellent <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">MDN custom event page</a>.</p>
 </section>
-</section>
-	
+
 	<footer itemscope itemtype="http://data-vocabulary.org/Person">
 		DTSN is the portfolio of <span itemprop="name">Daniel Saxil-Nielsen</span>, it's built using the wonderful <a href="https://github.com/mojombo/jekyll">Jekyll</a> :)
 	</footer>
