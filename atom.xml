@@ -4,12 +4,22 @@
  <title>dtsn</title>
  <link href="http://dtsn.me/atom.xml" rel="self"/>
  <link href="http://dtsn.me/"/>
- <updated>2014-02-25T11:20:07+00:00</updated>
+ <updated>2014-03-14T10:48:31+00:00</updated>
  <id>http://dtsn.me/</id>
  <author>
    <name>Daniel Saxil-Nielsen</name>
  </author>
 
+ 
+ <entry>
+   <title>Creating a Patch File from Github</title>
+   <link href="http://dtsn.me/2014/03/14/creating-a-patch-file-from-github/"/>
+   <updated>2014-03-14T00:00:00+00:00</updated>
+   <id>http://dtsn.me/2014/03/14/creating-a-patch-file-from-github</id>
+   <content type="html">&lt;p&gt;Did you know you can easily create a &lt;code&gt;patch&lt;/code&gt; file from a Github pull request? You just need to add the &lt;code&gt;.patch&lt;/code&gt; extension to the end of the URL.&lt;/p&gt;
+
+&lt;p&gt;Amazing!&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>JavaScript Custom Events</title>
