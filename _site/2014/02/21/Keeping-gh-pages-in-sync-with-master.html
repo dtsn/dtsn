@@ -35,22 +35,24 @@
         <h2 class="headline">February 21, 2014</h2>
     </header>
     <section id="post-body">
-        <p>I always find it frustrating to constintly do a pull request between my <code>master</code> and <code>gh-pages</code> branches. However now thanks to a <a href="http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481">StackOverflow</a> post from denbuzze there is a really simple tool.</p>
+        <p>I always find it frustrating to constintly do a pull request between my <code class="highlighter-rouge">master</code> and <code class="highlighter-rouge">gh-pages</code> branches. However now thanks to a <a href="http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481">StackOverflow</a> post from denbuzze there is a really simple tool.</p>
 
 <p>Typically you would do the following:</p>
 
-<pre><code>git checkout gh-pages
+<div class="highlighter-rouge"><pre class="highlight"><code>git checkout gh-pages
 git merge master
 git push origin gh-pages
 </code></pre>
+</div>
 
-<p>However if you add the following to the end of your <code>.git/config</code> file in your local repository. This will happen automatically.</p>
+<p>However if you add the following to the end of your <code class="highlighter-rouge">.git/config</code> file in your local repository. This will happen automatically.</p>
 
-<pre><code>push = +refs/heads/master:refs/heads/gh-pages
+<div class="highlighter-rouge"><pre class="highlight"><code>push = +refs/heads/master:refs/heads/gh-pages
 push = +refs/heads/master:refs/heads/master
 </code></pre>
+</div>
 
-<p>Note: This will only work if you use <code>git push</code> not <code>git push origin branchname</code></p>
+<p>Note: This will only work if you use <code class="highlighter-rouge">git push</code> not <code class="highlighter-rouge">git push origin branchname</code></p>
 
     </section>
 </article>

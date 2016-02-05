@@ -23,7 +23,7 @@
         <title>JavaScript Custom Events</title>
         
         
-          <description>&lt;p&gt;I have been googling around for how to pass custom event data into a JavaScript &lt;code&gt;Event&lt;/code&gt; object. Turns out you can’t what you need to do is to use the realtively new object called &lt;code&gt;CustomEvent&lt;/code&gt;.&lt;/p&gt;
+          <description>&lt;p&gt;I have been googling around for how to pass custom event data into a JavaScript &lt;code class=&quot;highlighter-rouge&quot;&gt;Event&lt;/code&gt; object. Turns out you can’t what you need to do is to use the realtively new object called &lt;code class=&quot;highlighter-rouge&quot;&gt;CustomEvent&lt;/code&gt;.&lt;/p&gt;
 
 </description>
         
@@ -36,7 +36,7 @@
         <title>Keeping gh-pages in sync with your master branch</title>
         
         
-          <description>&lt;p&gt;I always find it frustrating to constintly do a pull request between my &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches. However now thanks to a &lt;a href=&quot;http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481&quot;&gt;StackOverflow&lt;/a&gt; post from denbuzze there is a really simple tool.&lt;/p&gt;
+          <description>&lt;p&gt;I always find it frustrating to constintly do a pull request between my &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branches. However now thanks to a &lt;a href=&quot;http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481&quot;&gt;StackOverflow&lt;/a&gt; post from denbuzze there is a really simple tool.&lt;/p&gt;
 
 </description>
         

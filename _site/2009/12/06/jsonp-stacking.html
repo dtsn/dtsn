@@ -37,11 +37,11 @@
     <section id="post-body">
         <p>JSONP was proposed as grabbing data from external domains avoiding the cross script scripting limitations (see this <a href="http://ajaxian.com/archives/jsonp-json-with-padding">Ajaxian article</a> for more information). It requires a call to an external API where you specificy the a callback function, you do this through the use of script tag. For example:</p>  
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://yourdomain.com/api?callback=myfunction&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://yourdomain.com/api?callback=myfunction"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <p>When the script tag has been loaded your function would be called with the JSON data, like so.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">myfunction</span><span class="p">(</span><span class="s1">&#39;some JSON data&#39;</span><span class="p">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">myfunction</span><span class="p">(</span><span class="s1">'some JSON data'</span><span class="p">);</span></code></pre></figure>
 
 <p>However you become reliant on that external service to always be available, if for any reason that service goes down you wouldn’t get any data and your page would be likely to hang.</p>
 
@@ -56,9 +56,9 @@
 
 <span class="kd">function</span> <span class="nx">JSONPStacking</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">// create the element</span>
-	<span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
 	<span class="c1">// set the source</span>
-	<span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span> <span class="o">+</span> <span class="s1">&#39;&amp;amp;callback=callback&#39;</span><span class="p">;</span>
+	<span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span> <span class="o">+</span> <span class="s1">'&amp;amp;callback=callback'</span><span class="p">;</span>
 	<span class="c1">// render the element</span>
 	<span class="nb">document</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
 	<span class="c1">// start the counter, this one last for 5 seconds</span>

@@ -38,14 +38,14 @@
         <p>Of all the <a href="http://web.archive.org/web/20080503011837/http://www.w3.org/TR/css3-selectors/">CSS3 selectors</a> the structural pseudo-classes have to be my favourite. In particular I love :last-child selector, the :last-child CSS selector is incredibly powerful especially when positioning elements in a row, I am currently finding it incredibly useful when doing menus. Instead of providing a last class on the very last element in the row, you can now use pure CSS to achieve the same effect.</p>  <h3>CSS 2.1</h3>  
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">/*</span><span class="nt">Each</span> <span class="nt">Element</span><span class="o">*</span>
-<span class="nc">.image</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span> <span class="k">height</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span> <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span> <span class="k">background-color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.image</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span> <span class="nl">height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="nl">width</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="nl">float</span><span class="p">:</span><span class="nb">left</span><span class="p">;</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
 <span class="o">/*</span> <span class="nt">remove</span> <span class="nt">the</span> <span class="nt">margin</span> <span class="nt">on</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">element</span> <span class="nt">so</span> <span class="nt">it</span> <span class="nt">lines</span> <span class="nt">up</span>
-<span class="nc">.image.last</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+<span class="nc">.image.last</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
 
 <h3><span>CSS 3</span></h3>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* parent of the image element */</span>
-<span class="nc">.parent</span> <span class="nt">div</span><span class="nd">:last-child</span> <span class="p">{</span> <span class="k">margin-right</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+<span class="nc">.parent</span> <span class="nt">div</span><span class="nd">:last-child</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
 
 <h3><span>The Downside</span></h3>
 

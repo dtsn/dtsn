@@ -43,20 +43,20 @@ thier data from <code>localStorage</code>. This would be useful if the user ever
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// create a fake object</span>
 <span class="kd">var</span> <span class="nx">myData</span> <span class="o">=</span> <span class="p">{</span>
-	<span class="s1">&#39;a&#39;</span><span class="o">:</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;b&#39;</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;c&#39;</span><span class="o">:</span> <span class="s1">&#39;c&#39;</span>
+	<span class="s1">'a'</span><span class="p">:</span> <span class="s1">'a'</span><span class="p">,</span>
+	<span class="s1">'b'</span><span class="p">:</span> <span class="s1">'b'</span><span class="p">,</span>
+	<span class="s1">'c'</span><span class="p">:</span> <span class="s1">'c'</span>
 <span class="p">};</span>
 <span class="c1">// add it to our localstorage</span>
-<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">myData</span><span class="p">));</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">myData</span><span class="p">));</span>
 
 <span class="c1">// encode the data into base64</span>
-<span class="nx">base64</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">btoa</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">));</span>
+<span class="nx">base64</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">btoa</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'data'</span><span class="p">));</span>
 
 <span class="c1">// create an a tag</span>
-<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>
-<span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;data:application/octet-stream;base64,&#39;</span> <span class="o">+</span> <span class="nx">base64</span><span class="p">;</span>
-<span class="nx">a</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;Download&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'a'</span><span class="p">);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">'data:application/octet-stream;base64,'</span> <span class="o">+</span> <span class="nx">base64</span><span class="p">;</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'Download'</span><span class="p">;</span>
 
 <span class="c1">// add to the body</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span></code></pre></figure>

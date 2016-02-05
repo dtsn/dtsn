@@ -37,19 +37,19 @@
     <section id="post-body">
         <p>I was recently given the request to improve the tooltips within <a href="http://datasift.github.io/trace">Trace</a>. In particular have a tooltip when a user hovers at any point in a in line chart.</p>
 
-<p>The problem requires us to interpolate the value at any given point of the graph. The idea about how to do this is to find the current mouse position and covert it into a scale the domain functions will understand. For this talk through I will be focusing on the <code>x</code> domain.</p>
+<p>The problem requires us to interpolate the value at any given point of the graph. The idea about how to do this is to find the current mouse position and covert it into a scale the domain functions will understand. For this talk through I will be focusing on the <code class="highlighter-rouge">x</code> domain.</p>
 
-<p>We need to calculate 2 values <code>offsetLeft</code> of the SVG element, <code>clientX</code> of the mouse pointer. This will lead us to the 3rd value of the position of the pointer within the chart.</p>
+<p>We need to calculate 2 values <code class="highlighter-rouge">offsetLeft</code> of the SVG element, <code class="highlighter-rouge">clientX</code> of the mouse pointer. This will lead us to the 3rd value of the position of the pointer within the chart.</p>
 
 <p><img src="/assets/images/posts/tooltips-trace.png" /></p>
 
 <p>I can work out the position of the SVG by working out the position of the DIV which wraps the element. Subtracting this from the mouse position results in the following:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">offsetLeft</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;your_id&#39;</span><span class="p">).</span><span class="nx">offsetLeft</span><span class="p">,</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">offsetLeft</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'your_id'</span><span class="p">).</span><span class="nx">offsetLeft</span><span class="p">,</span>
     <span class="nx">clientX</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">clientX</span><span class="p">,</span>
     <span class="nx">leftValue</span> <span class="o">=</span> <span class="nx">clientX</span> <span class="o">-</span> <span class="nx">offsetLeft</span><span class="p">;</span></code></pre></figure>
 
-<p>D3 has recently introduced a <code>domain.invert</code> function which will take the opposite of the domain and convert it back into a value. This will lead to the following.</p>
+<p>D3 has recently introduced a <code class="highlighter-rouge">domain.invert</code> function which will take the opposite of the domain and convert it back into a value. This will lead to the following.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">leftValue</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">xfunc</span><span class="p">.</span><span class="nx">invert</span><span class="p">(</span><span class="nx">leftValue</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollLeft</span><span class="p">);</span></code></pre></figure>
 

@@ -35,9 +35,9 @@
         <h2 class="headline">February 25, 2014</h2>
     </header>
     <section id="post-body">
-        <p>I have been googling around for how to pass custom event data into a JavaScript <code>Event</code> object. Turns out you can’t what you need to do is to use the realtively new object called <code>CustomEvent</code>.</p>
+        <p>I have been googling around for how to pass custom event data into a JavaScript <code class="highlighter-rouge">Event</code> object. Turns out you can’t what you need to do is to use the realtively new object called <code class="highlighter-rouge">CustomEvent</code>.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myCustomEvent</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CustomEvent</span><span class="p">(</span><span class="s1">&#39;dtsn&#39;</span><span class="p">,</span> <span class="nx">customParam</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myCustomEvent</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CustomEvent</span><span class="p">(</span><span class="s1">'dtsn'</span><span class="p">,</span> <span class="nx">customParam</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">eventHandler</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">// will log out our customParam object</span>
