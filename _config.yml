@@ -1,45 +1,43 @@
-safe:        false
-auto:        false
-server:      false
-server_port: 4000
-baseurl:    /
-url: http://localhost:4000
-domain: dtsn.me
+name: dtsn
+description: "JavaScript Developer &amp; Data Artist"
 
-source:      .
-destination: ../dtsn
-plugins:     ./_plugins
+author: Daniel Saxil-Nielsen
 
-future:      true
-lsi:         false
-pygments:    true
-markdown:    maruku
-permalink:   pretty
+aboutPage: true
 
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
+markdown: redcarpet
+highlighter: pygments
 
-rdiscount:
-  extensions: []
+paginate: 20
+baseurl: /
+domain_name: 'http://dtsn.me'
+google_analytics: 'UA-37892446-1'
+disqus: true
+disqus_shortname: 'dtsn'
 
-redcarpet:
-  extensions: []
+gems: [jekyll-paginate]
 
-kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
+# Details for the RSS feed generator
+url:            'http://dtsn.me'
+author:         'Daniel Saxil-Nielsen'
+authorTwitter:  'dtsn'
 
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post

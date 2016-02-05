@@ -25,4 +25,4 @@ The major requirement of the site was to display the information we gather live 
 
 The graphs and visualisations where written with the help of D3.js a fantastic framework which helps with the manipulation of SVG elements which in turn allows us to customise the design.
 
-<img class="last" src="/images/posts/election.png" alt="election.datasift.com" />
+<img class="last" src="/assets/images/posts/election.png" alt="election.datasift.com" />

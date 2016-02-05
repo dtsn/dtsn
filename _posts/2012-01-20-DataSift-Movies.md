@@ -9,4 +9,4 @@ We managed to produce a movie review site that crowd source all it's reviews and
 
 Unfortunately DataSift Movies was never made available to the public.
 
-<img class="last" src="/images/posts/dsmovies.png" alt="DataSift Movies" />
+<img class="last" src="/assets/images/posts/dsmovies.png" alt="DataSift Movies" />

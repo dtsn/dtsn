@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>dtsn - Building JavaScript Widgets</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href="/about">About </a>
+        
+    
+    <a class="cta" href="/feed.xml">Subscribe</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Building JavaScript Widgets</h1>
+        <h2 class="headline">March 15, 2009</h2>
+    </header>
+    <section id="post-body">
+        <p>Little pieces of JavaScript you embed onto your website are getting more popular. Every major provider of a service on the web also gives you a little widget that you can put on your blog or webpage to promote what you are doing, for example <a href="http://twitter.com/widgets" target="_blank">Twitter</a>, <a href="http://www.last.fm/widgets" target="_blank">Last FM</a> and <a href="http://digg.com/add-digg" target="_blank">Digg</a> all provide widgets which are great for you and great for the service.</p>
+<p>I am going to talk you through the development and pitfalls associated with the design and development of widgets. </p>
+<p>First and foremost, you need to decide what you want to show with your widget. Knowing this you can make an educated choice about which method you want to use to create a widget, there are basically two methods associated with widget development.</p>
+
+<h3><span>IFrame’s</span></h3>
+<p>No, iframe’s aren’t dead. They are a major part of widget development. Using a <code>iframe</code> is the easiest way to generate a widget - you host a small file on your web site which contains the information you want to show, like the <a href="http://digg.com/tools/diggthis.php?u=http%3A//hehe2.net/linux-general/linuxcom-to-bring-social-web-to-linux-geeks/&amp;t=Linux.com%20to%20Bring%20%u201CSocial%20Web%u201D%20To%20Linux%20Geeks%3F" target="_blank">Digg button</a> for example, and get the JavaScript on the client side to build the URL to it. In the case of Digg the client side JavaScript builds a URL based on the current posts URL.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;iframe src=&quot;http://yoururl&quot; width=&quot;50&quot; height=&quot;50&quot;&gt;&lt;/iframe&gt;&#39;</span><span class="p">);</span></code></pre></figure>
+
+<p>To install the widget all you have to do is to point the user at your bit of JavaScript:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://yoururl/script.js&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>You can pass any variables you want through to the user at this point by simply making them JavaScript variables, and using the JavaScript to build up the <code>iframe</code> URL based on these variables.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+	<span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://yoururl/script.js&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>If you want your widget to be able to appear multiple times on the same webpage, you need to remember to set all the variables to <code>null</code> at the end of your JavaScript file.</p>
+<p>That's it! <code>iframe</code> based widgets are very easy to build and to use, however they do come with their downsides. The biggest of these is that the user can't customise the widget at all - it lives within an <code>iframe</code> and therefore is untouchable by CSS. That's why certain widgets, like the twitter widget, which are made entirely on the client side in JavaScript.</p>
+
+<h3><span>Client Side</span></h3>
+<p>A widget that is built in JavaScript on the client side is definitely the harder option. For this you have to make the JavaScript file create all the HTML, write out a basic style to apply to the HTML and load in the data. When building this try to avoid using frameworks to build the HTML, this only creates more request for your web servers and make the widget slower to load. Instead resort to using the classical JavaScript methods for creating elements.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;div id=&quot;your_id&quot;&gt;&lt;/div&gt;&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;you_id&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;Hello World&#39;</span><span class="p">;</span>
+<span class="nx">widget</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">div</span><span class="p">);</span></code></pre></figure>
+
+<p>You will have to load your data in from another source, and for this I recommend extending your API to give you a JavaScript variable followed by the JSON encoded data. Here's an example from <a href="http://api.tweetmeme.com/popular.js?count=5&amp;category=all" target="_blank">tweetmeme</a>.</p>
+<h3>Pitfalls</h3>
+<p>There are a lot of difficulties involved in creating widgets and here are just a few of them:</p>
+<ul>
+	<li>AJAX won’t work! You cannot post information between domains. </li>
+	<li>Don’t use a JavaScript framework - for a simple widget it’s is over kill. </li>
+	<li>Try to keep the requests down. These widgets are coming from your servers. </li>
+	<li>Anonymise the JavaScript, you don’t want it conflicting with other JavaScript. </li>
+	<li>Minimize your JavaScript. This will save on bandwidth for you, and make the widget faster to load.&#160; </li>
+</ul>
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/dtsn">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Daniel Saxil-Nielsen</span>
+            <span>JavaScript Developer &amp; Data Artist</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://dtsn.me/2009/03/15/building-javascript-widgets.html - Building JavaScript Widgets by @dtsn"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dtsn';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37892446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+

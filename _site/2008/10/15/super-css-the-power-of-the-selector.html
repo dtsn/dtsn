@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>dtsn - Super CSS, the power of the selector</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href="/about">About </a>
+        
+    
+    <a class="cta" href="/feed.xml">Subscribe</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Super CSS, the power of the selector</h1>
+        <h2 class="headline">October 15, 2008</h2>
+    </header>
+    <section id="post-body">
+        <p>We all love CSS it’s fundamental to the web. However most of us do not use the full power of CSS. A quick rummage around the W3C specification and you will see how powerful CSS can really be. I’m talking about the CSS selector, sure we all use the basic selectors, but what about the more complicated ones.</p>
+<p>Well here’s my guide to the most useful not very used CSS selectors (as well as what they are currently supported in).</p>
+<h3><span>CSS2</span></h3>
+<table class="table" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<th width="140">Pattern</th>
+<th width="360">Meaning</th>
+<th width="10">IE6</th>
+<th width="10">IE7</th>
+<th width="10">FF</th>
+<th width="10">SF</th>
+<th width="10">OP</th>
+</tr>
+<tr>
+<td>E &gt; F</td>
+<td>Matches any F element that is a child of an element E.</td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+</tr>
+<tr>
+<td>E:first-child</td>
+<td>Matches element E when E is the first child of its parent. </td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+</tr>
+<tr>
+<td>E:link          <br />E:visited </td>
+<td>Matches element E if E is the source anchor of a hyperlink of which the target is not yet visited (:link) or already visited (:visited). </td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+</tr>
+<tr>
+<td>E:active          <br />E:hover           <br />E:focus </td>
+<td>Matches E during certain user actions. </td>
+<td class="center">&nbsp;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&nbsp;</td>
+</tr>
+<tr>
+<td>E + F</td>
+<td>Matches any F element immediately preceded by an element E.</td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+</tr>
+<tr>
+<td>E[foo]</td>
+<td>Matches any E element with the "foo" attribute set (whatever the value). </td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+</tr>
+<tr>
+<td>E[foo="warning"]</td>
+<td>Matches any E element whose "foo" attribute value is exactly equal to "warning". </td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+</tr>
+<tr class="last">
+<td>E[foo~="warning"]</td>
+<td>Matches any E element whose "foo" attribute value is a list of space-separated values, one of which is exactly equal to "warning". </td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+</tr>
+</tbody>
+</table>
+<h3><span>CSS3</span></h3>
+<table class="table" width="480" border="0">
+<tbody>
+<tr>
+<th width="140">Pattern</th>
+<th width="360">Meaning</th>
+<th width="10">IE6</th>
+<th width="10">IE7</th>
+<th width="10">FF</th>
+<th width="10">SF</th>
+<th width="10">OP</th>
+</tr>
+<tr>
+<td>E ~ F</td>
+<td>Matches any F element preceded by an element E.</td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+</tr>
+<tr>
+<td>E:empty</td>
+<td>Matches element E where E has no children, including text nodes</td>
+<td class="center">&#10007;</td>
+<td class="center">&#10003;</td>
+<td class="center">&#10003;</td>
+<td class="center">&nbsp;</td>
+<td class="center">&#10007;</td>
+</tr>
+</tbody>
+</table>
+
+<p>If you need a detailed walkthrough on how these selectors work, please refer to the <a href="http://www.w3.org/TR/css3-selectors/">W3C Specification on CSS3 Selectors</a> (which includes all the CSS2 selectors).</p>
+<h3>A Couple of Examples</h3>
+<p>I couldn’t just give all these CSS selectors without giving you some great examples of how they can be used.</p>
+<p><strong>E:first-child/E:last-child – </strong>You have a <em>ul</em> list of elements which you float horizontally. With first child and last child you can easily set the margins for the first and last child different from the remaining items:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span> <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span> <span class="k">margin</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span> <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span> <span class="k">margin</span><span class="o">:</span> <span class="m">0px</span> <span class="m">10px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">ul</span> <span class="nt">li</span><span class="nd">:first-child</span> <span class="p">{</span> <span class="k">margin</span><span class="o">:</span> <span class="m">0px</span> <span class="m">10px</span> <span class="m">0px</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">ul</span> <span class="nt">li</span><span class="nd">:last-child</span> <span class="p">{</span> <span class="k">margin</span><span class="o">:</span> <span class="m">0px</span> <span class="m">0px</span> <span class="m">0px</span> <span class="m">10px</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<p><strong>E:empty – </strong>You may have a situation where you have an empty paragraph. Paragraphs will always have a margin top and a margin bottom, which could look unsightly. So lets remove it.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span><span class="nd">:empty</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span><span class="k">none</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/dtsn">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Daniel Saxil-Nielsen</span>
+            <span>JavaScript Developer &amp; Data Artist</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://dtsn.me/2008/10/15/super-css-the-power-of-the-selector.html - Super CSS, the power of the selector by @dtsn"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dtsn';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37892446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+

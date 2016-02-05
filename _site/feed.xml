@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>dtsn</title>
+    <description>JavaScript Developer &amp;amp; Data Artist</description>
+    <link>http://dtsn.me</link>
+    <atom:link href="http://dtsn.me/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Advanced Tooltips in Trace</title>
+        
+        
+          <description>&lt;p&gt;I was recently given the request to improve the tooltips within &lt;a href=&quot;http://datasift.github.io/trace&quot;&gt;Trace&lt;/a&gt;. In particular have a tooltip when a user hovers at any point in a in line chart.&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 16 Oct 2015 00:00:00 +0100</pubDate>
+        <link>http://dtsn.me/2015/10/16/Advanced-tooltips-in-trace.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2015/10/16/Advanced-tooltips-in-trace.html</guid>
+      </item>
+    
+      <item>
+        <title>JavaScript Custom Events</title>
+        
+        
+          <description>&lt;p&gt;I have been googling around for how to pass custom event data into a JavaScript &lt;code&gt;Event&lt;/code&gt; object. Turns out you can&amp;#39;t what you need to do is to use the realtively new object called &lt;code&gt;CustomEvent&lt;/code&gt;.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 25 Feb 2014 00:00:00 +0000</pubDate>
+        <link>http://dtsn.me/2014/02/25/JavaScript-Custom-Events.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2014/02/25/JavaScript-Custom-Events.html</guid>
+      </item>
+    
+      <item>
+        <title>Keeping gh-pages in sync with your master branch</title>
+        
+        
+          <description>&lt;p&gt;I always find it frustrating to constintly do a pull request between my &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches. However now thanks to a &lt;a href=&quot;http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481&quot;&gt;StackOverflow&lt;/a&gt; post from denbuzze there is a really simple tool.&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 21 Feb 2014 00:00:00 +0000</pubDate>
+        <link>http://dtsn.me/2014/02/21/Keeping-gh-pages-in-sync-with-master.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2014/02/21/Keeping-gh-pages-in-sync-with-master.html</guid>
+      </item>
+    
+      <item>
+        <title>Instagram in Tweetdeck</title>
+        
+        
+          <description>&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; - Just released a new version which supports Instagram videos.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 15 Oct 2013 00:00:00 +0100</pubDate>
+        <link>http://dtsn.me/2013/10/15/Instagram-in-tweetdeck.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2013/10/15/Instagram-in-tweetdeck.html</guid>
+      </item>
+    
+      <item>
+        <title>Remove Front Matter in Jekyll Includes</title>
+        
+        
+          <description>&lt;p&gt;I&amp;#39;m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn&amp;#39;t automatically excluded from files in the /_include directory. So I&amp;#39;ve written a little plugin which will remove it from the file.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 11 Jul 2013 00:00:00 +0100</pubDate>
+        <link>http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2013/07/11/remove-front-matter-jekyll-plugin.html</guid>
+      </item>
+    
+      <item>
+        <title>Downloading Data From localStorage</title>
+        
+        
+          <description>&lt;p&gt;Lately i&#39;ve been working extensively on a project which includes &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM/Storage&quot;&gt;&lt;code&gt;localStorage&lt;/code&gt;&lt;/a&gt;. I hit a small problem regarding how an end user can recover
+thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if the user ever wanted to transfer their data to a new computer or browser.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 12 Mar 2013 00:00:00 +0000</pubDate>
+        <link>http://dtsn.me/2013/03/12/downloading-data-from-localstorage.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2013/03/12/downloading-data-from-localstorage.html</guid>
+      </item>
+    
+      <item>
+        <title>U.S. Presidental Debates</title>
+        
+        
+          <description>&lt;p style=&quot;font-size: 14px; text-align: center;&quot;&gt;&lt;em&gt;&lt;a href=&quot;http://election.datasift.com&quot;&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 25 Oct 2012 00:00:00 +0100</pubDate>
+        <link>http://dtsn.me/2012/10/25/US-presidental-election.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2012/10/25/US-presidental-election.html</guid>
+      </item>
+    
+      <item>
+        <title>Arrow - Data Visualisation</title>
+        
+        
+          <description>&lt;p&gt;&lt;img src=&quot;/assets/images/posts/arrow.png&quot; class=&quot;last&quot; /&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 04 Oct 2012 00:00:00 +0100</pubDate>
+        <link>http://dtsn.me/2012/10/04/Arrow.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2012/10/04/Arrow.html</guid>
+      </item>
+    
+      <item>
+        <title>Wikistats</title>
+        
+        
+          <description>&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;em&gt;&lt;a href=&quot;http://wikistats.co&quot;&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 28 Aug 2012 00:00:00 +0100</pubDate>
+        <link>http://dtsn.me/2012/08/28/Wikistats.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2012/08/28/Wikistats.html</guid>
+      </item>
+    
+      <item>
+        <title>Like Coffee?</title>
+        
+        
+          <description>&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;em&gt;&lt;a href=&quot;http://demo.datasift.com/coffee/&quot;&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 17 Jul 2012 00:00:00 +0100</pubDate>
+        <link>http://dtsn.me/2012/07/17/Like-Coffee.html</link>
+        <guid isPermaLink="true">http://dtsn.me/2012/07/17/Like-Coffee.html</guid>
+      </item>
+    
+  </channel>
+</rss>

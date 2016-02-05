@@ -12,4 +12,4 @@ tags:
 
 This must be a worlds first, a live infographic giving you realtime updates of the demographics of people who like coffee. Created using PHP and JavaScript.
 
-<img class="last" src="/images/posts/coffee.png" alt="http://demo.datasift.com/coffee/m" />
+<img class="last" src="/assets/images/posts/coffee.png" alt="http://demo.datasift.com/coffee/m" />
