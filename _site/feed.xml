@@ -11,6 +11,7 @@
         
         
           <description>&lt;p&gt;I was recently given the request to improve the tooltips within &lt;a href=&quot;http://datasift.github.io/trace&quot;&gt;Trace&lt;/a&gt;. In particular have a tooltip when a user hovers at any point in a in line chart.&lt;/p&gt;
+
 </description>
         
         <pubDate>Fri, 16 Oct 2015 00:00:00 +0100</pubDate>
@@ -22,7 +23,8 @@
         <title>JavaScript Custom Events</title>
         
         
-          <description>&lt;p&gt;I have been googling around for how to pass custom event data into a JavaScript &lt;code&gt;Event&lt;/code&gt; object. Turns out you can&amp;#39;t what you need to do is to use the realtively new object called &lt;code&gt;CustomEvent&lt;/code&gt;.&lt;/p&gt;
+          <description>&lt;p&gt;I have been googling around for how to pass custom event data into a JavaScript &lt;code&gt;Event&lt;/code&gt; object. Turns out you can’t what you need to do is to use the realtively new object called &lt;code&gt;CustomEvent&lt;/code&gt;.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 25 Feb 2014 00:00:00 +0000</pubDate>
@@ -35,6 +37,7 @@
         
         
           <description>&lt;p&gt;I always find it frustrating to constintly do a pull request between my &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches. However now thanks to a &lt;a href=&quot;http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481&quot;&gt;StackOverflow&lt;/a&gt; post from denbuzze there is a really simple tool.&lt;/p&gt;
+
 </description>
         
         <pubDate>Fri, 21 Feb 2014 00:00:00 +0000</pubDate>
@@ -47,6 +50,7 @@
         
         
           <description>&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; - Just released a new version which supports Instagram videos.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 15 Oct 2013 00:00:00 +0100</pubDate>
@@ -58,7 +62,8 @@
         <title>Remove Front Matter in Jekyll Includes</title>
         
         
-          <description>&lt;p&gt;I&amp;#39;m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn&amp;#39;t automatically excluded from files in the /_include directory. So I&amp;#39;ve written a little plugin which will remove it from the file.&lt;/p&gt;
+          <description>&lt;p&gt;I’m working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn’t automatically excluded from files in the /_include directory. So I’ve written a little plugin which will remove it from the file.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 11 Jul 2013 00:00:00 +0100</pubDate>
@@ -85,6 +90,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
         
         
           <description>&lt;p style=&quot;font-size: 14px; text-align: center;&quot;&gt;&lt;em&gt;&lt;a href=&quot;http://election.datasift.com&quot;&gt;http://election.datasift.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 25 Oct 2012 00:00:00 +0100</pubDate>
@@ -109,6 +115,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
         
         
           <description>&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;em&gt;&lt;a href=&quot;http://wikistats.co&quot;&gt;http://wikistats.co&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 28 Aug 2012 00:00:00 +0100</pubDate>
@@ -121,6 +128,7 @@ thier data from &lt;code&gt;localStorage&lt;/code&gt;. This would be useful if t
         
         
           <description>&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;em&gt;&lt;a href=&quot;http://demo.datasift.com/coffee/&quot;&gt;http://demo.datasift.com/coffee/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 17 Jul 2012 00:00:00 +0100</pubDate>

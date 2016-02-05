@@ -38,14 +38,18 @@
         <p>I always find it frustrating to constintly do a pull request between my <code>master</code> and <code>gh-pages</code> branches. However now thanks to a <a href="http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481">StackOverflow</a> post from denbuzze there is a really simple tool.</p>
 
 <p>Typically you would do the following:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git checkout gh-pages
+
+<pre><code>git checkout gh-pages
 git merge master
 git push origin gh-pages
-</code></pre></div>
+</code></pre>
+
 <p>However if you add the following to the end of your <code>.git/config</code> file in your local repository. This will happen automatically.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">push = +refs/heads/master:refs/heads/gh-pages
+
+<pre><code>push = +refs/heads/master:refs/heads/gh-pages
 push = +refs/heads/master:refs/heads/master
-</code></pre></div>
+</code></pre>
+
 <p>Note: This will only work if you use <code>git push</code> not <code>git push origin branchname</code></p>
 
     </section>
