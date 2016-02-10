@@ -36,12 +36,6 @@ prose:
         field:
           element: "hidden"
           value: "post"
-      - name: "categories"
-        field:
-          element: "multiselect"
-          label: "Add Categories"
-          placeholder: "Add Categories"
-          alterable: true
       - name: "title"
         field:
           element: "text"
@@ -53,6 +47,18 @@ prose:
           element: "text"
           label: "Description"
           placeholder: "Description"
+          alterable: true
+      - name: "keywords"
+        field:
+          element: "text"
+          label: "Meta Keywords"
+          placeholder: "Comma seperated"
+          alterable: true
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add Categories"
+          placeholder: "Add Categories"
           alterable: true
 
 defaults:
