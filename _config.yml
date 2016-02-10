@@ -48,6 +48,12 @@ prose:
           label: "Post title"
           placeholder: "Title"
           alterable: true
+      - name: "description"
+        field:
+          element: "text"
+          label: "Description"
+          placeholder: "Description"
+          alterable: true
 
 defaults:
     -
