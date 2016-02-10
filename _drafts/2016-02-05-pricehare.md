@@ -8,7 +8,9 @@ categories:
   - "price-watching"
 published: false
 title: Pricehare
+description: Pricehare is a tool which will track price changes in products
 ---
+
 
 
 **Pricehare is a tool which will track price changes in products.**
@@ -22,5 +24,3 @@ All you need to get started is a URL and an email address.
 ![Pricehare.com]({{site.baseurl}}/_drafts/pricehare.png)
 
 **Pro Tip** - It quickly proved way to complicated to add everything I was looking at via URL so I also created a small [bookmarklet](https://blog.pricehare.com/2015/10/13/bookmarklet/) a tiny JS bookmarket which will automatically add a watch for the page your on.
-
-
