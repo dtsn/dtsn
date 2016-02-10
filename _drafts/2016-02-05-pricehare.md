@@ -2,14 +2,12 @@
 layout: post
 categories: 
   - pricehare
-  - development
-  - money
-  - saving
-  - "price-watching"
 published: false
 title: Pricehare
 description: Pricehare is a tool which will track price changes in products
+keywords: "pricehare, saving money, watch, money, cheap"
 ---
+
 
 
 
