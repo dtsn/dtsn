@@ -3,7 +3,7 @@ layout: post
 categories: 
   - "null"
 published: false
-title: Launching Pricehare
+title: Pricehare
 ---
 
 
