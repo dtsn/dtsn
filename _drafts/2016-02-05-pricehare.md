@@ -1,7 +1,11 @@
 ---
 layout: post
 categories: 
-  - "null"
+  - pricehare
+  - development
+  - money
+  - saving
+  - "price-watching"
 published: false
 title: Pricehare
 ---
