@@ -1,8 +1,9 @@
 ---
 layout: post
-categories: null
+categories: 
+  - "null"
 published: false
 title: Pricehare
 ---
 
-Something about pricehare
+Something about **pricehare**
