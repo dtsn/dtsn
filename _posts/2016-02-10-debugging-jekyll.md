@@ -8,7 +8,7 @@ published: false
 title: Debugging Jekyll
 ---
 
-**tldr;**
+**tldr;** - Use `inspect` as a filter, like below;
 {% highlight javascript %}
 <%= <variable> | inspect %>
 {% endhighlight %}
