@@ -7,6 +7,11 @@
   {% if page.description %}
     <meta name="description" content="{{ page.description}}" />
   {% endif %}
+  {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />  
+  {% else %}
+    <meta name="keywords" content="freelance, designer, Reading, javascript, data, artist" />
+  {% endif %}
 
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
