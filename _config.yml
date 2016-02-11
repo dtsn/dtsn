@@ -25,7 +25,7 @@ authorTwitter:  'dtsn'
 prose:
   rooturl: '_posts'
   siteurl: 'http://dtsn.me'
-  media: 'assets/images'
+  media: 'media'
   ignore:
     - index.md
     - _config.yml
