@@ -4,7 +4,7 @@ description: Debugging jekyll using inspect
 keywords: "jekyll, jekyllrb, debug, debugging"
 categories: 
   - jekyll
-published: false
+published: true
 title: Debugging Jekyll
 ---
 
