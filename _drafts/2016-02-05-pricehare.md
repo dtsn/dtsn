@@ -8,9 +8,6 @@ description: Pricehare is a tool which will track price changes in products
 keywords: "pricehare, saving money, watch, money, cheap"
 ---
 
-
-
-
 **Pricehare is a tool which will track price changes in products.**
 
 A few months ago I released [Pricehare](http://pricehare.com), a simple tool which will email you when the price drops on a product you are watching.
@@ -19,6 +16,6 @@ I came up with the idea after repeatively visiting a website to check the price 
 
 All you need to get started is a URL and an email address.
 
-![Pricehare.com]({{site.baseurl}}/_drafts/pricehare.png)
+![Pricehare.com](/media/pricehare.png)
 
 **Pro Tip** - It quickly proved way to complicated to add everything I was looking at via URL so I also created a small [bookmarklet](https://blog.pricehare.com/2015/10/13/bookmarklet/) a tiny JS bookmarket which will automatically add a watch for the page your on.
