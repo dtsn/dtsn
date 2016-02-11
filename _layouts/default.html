@@ -1,23 +1,64 @@
+<!--
+              _____                _____                    _____                    _____          
+         /\    \              /\    \                  /\    \                  /\    \         
+        /::\    \            /::\    \                /::\    \                /::\____\        
+       /::::\    \           \:::\    \              /::::\    \              /::::|   |        
+      /::::::\    \           \:::\    \            /::::::\    \            /:::::|   |        
+     /:::/\:::\    \           \:::\    \          /:::/\:::\    \          /::::::|   |        
+    /:::/  \:::\    \           \:::\    \        /:::/__\:::\    \        /:::/|::|   |        
+   /:::/    \:::\    \          /::::\    \       \:::\   \:::\    \      /:::/ |::|   |        
+  /:::/    / \:::\    \        /::::::\    \    ___\:::\   \:::\    \    /:::/  |::|   | _____  
+ /:::/    /   \:::\ ___\      /:::/\:::\    \  /\   \:::\   \:::\    \  /:::/   |::|   |/\    \ 
+/:::/____/     \:::|    |    /:::/  \:::\____\/::\   \:::\   \:::\____\/:: /    |::|   /::\____\
+\:::\    \     /:::|____|   /:::/    \::/    /\:::\   \:::\   \::/    /\::/    /|::|  /:::/    /
+ \:::\    \   /:::/    /   /:::/    / \/____/  \:::\   \:::\   \/____/  \/____/ |::| /:::/    / 
+  \:::\    \ /:::/    /   /:::/    /            \:::\   \:::\    \              |::|/:::/    /  
+   \:::\    /:::/    /   /:::/    /              \:::\   \:::\____\             |::::::/    /   
+    \:::\  /:::/    /    \::/    /                \:::\  /:::/    /             |:::::/    /    
+     \:::\/:::/    /      \/____/                  \:::\/:::/    /              |::::/    /     
+      \::::::/    /                                 \::::::/    /               /:::/    /      
+       \::::/    /                                   \::::/    /               /:::/    /       
+        \::/____/                                     \::/    /                \::/    /        
+         ~~                                            \/____/                  \/____/         
+                                                                                                
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO stuff -->
   {% if page.description %}
-    <meta name="description" content="{{ page.description}}" />
-  {% endif %}
-  {% if page.keywords %}
-    <meta name="keywords" content="{{ page.keywords }}" />  
+      <meta name="description" content="{{ page.description }}">
   {% else %}
-    <meta name="keywords" content="freelance, designer, Reading, javascript, data, artist" />
+      <meta name="description" content="{{ page.content | strip_html | truncatewords: 25 }}">
+  {% endif %}
+  
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://dtsn.me{{ page.url }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:site" content="dtsn">
+  <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 25 }} ">
+
+  {% if page.keywords %}
+      <meta name="keywords" content="{{ page.keywords }}">
+  {% else if page.tags %}
+      <meta name="keywords" content="{{ page.tags | join: ',' }}">
+  {% else %}
+      <meta name="keywords" content="Daniel Saxil-Nielsen, dtsn, DataSift, Data Artist, Front End Developer, JavaScript, JS"> 
   {% endif %}
 
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+  
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
   <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
-  <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ site.baseurl }}rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="DTSN" href="{{ site.baseurl }}rss.xml">
   <link rel="stylesheet" href="{{ site.baseurl }}assets/css/highlight.css">
+  <link rel="canonical" href="{{ page.url }}">
 </head>
 <body>
 
