@@ -4,7 +4,7 @@ description: A tank themed cake which was brought to life using lego
 keywords: "Lego, tank, cake, NXT, baking, kids"
 categories: 
   - lego
-published: false
+published: true
 title: Lego Tank Cake
 ---
 
