@@ -6,7 +6,9 @@ categories:
   - lego
 published: true
 title: Lego Tank Cake
+twitterimage: "https://media.giphy.com/media/1kBe0c8gRN0ly/giphy.gif"
 ---
+
 
 
 **Using Lego Mindstorms to bring a cake to life**
