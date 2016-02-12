@@ -1,5 +1,5 @@
 <!--
-              _____                _____                    _____                    _____          
+          _____                _____                    _____                    _____          
          /\    \              /\    \                  /\    \                  /\    \         
         /::\    \            /::\    \                /::\    \                /::\____\        
        /::::\    \           \:::\    \              /::::\    \              /::::|   |        
@@ -43,6 +43,9 @@
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:site" content="dtsn">
   <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 25 }} ">
+  {% if page.twitterimage %}
+  <meta name="twitter:image" content="{{page.twitterimage}}">
+  {% endif %}
 
   {% if page.keywords %}
       <meta name="keywords" content="{{ page.keywords }}">
