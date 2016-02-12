@@ -8,9 +8,10 @@ published: true
 title: Lego Tank Cake
 ---
 
+
 **Using Lego Mindstorms to bring a cake to life**
 
-![tank-cake.JPG](/media/tank-cake.JPG)
+![tank-cake.JPG](https://media.giphy.com/media/1kBe0c8gRN0ly/giphy.gif)
 
 I was recently asked to bring a cake shaped like a tank to life for my newphew. Luckily I had an old version of the [Lego NXT](http://www.amazon.co.uk/gp/product/B00BMKLVJ6/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00BMKLVJ6&linkCode=as2&tag=dtsn-21) which I wasn't using. The Lego NXT system is pretty awesome, it comes with a basic set of servos and sensors and you can then use a very simple drag and drop interface to program it.
 
