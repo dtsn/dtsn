@@ -61,6 +61,12 @@ prose:
           label: "Add Categories"
           placeholder: "Add Categories"
           alterable: true
+      - name: "twitterimage"
+        field:
+          element: "text"
+          label: "Twitter Card Image"
+          placeholder: "URL to image"
+          alterable: true
 
 defaults:
     -
