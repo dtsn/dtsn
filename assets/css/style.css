@@ -239,7 +239,7 @@ em, i { font-style: italic; }
 	  color: #111;
 }
 
-.post-body img {
+#post-body img {
 	width: 140%;
 	max-width: 140%;
 	margin: 0 -20%;
