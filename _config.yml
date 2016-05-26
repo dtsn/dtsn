@@ -18,6 +18,7 @@ disqus_shortname: 'dtsn'
 gems:
   - jemoji
   - jekyll-paginate
+  - jekyll-seo-tag
 
 # Details for the RSS feed generator
 url:            'http://dtsn.me'
