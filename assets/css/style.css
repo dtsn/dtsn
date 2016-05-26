@@ -239,6 +239,12 @@ em, i { font-style: italic; }
 	  color: #111;
 }
 
+.post-body img {
+	width: 140%;
+	max-width: 140%;
+	margin: 0 -20%;
+	border-radius: 3px;
+}
 
 .post h2.headline {
 	/*font: italic 22px/1.3em Georgia,serif;*/
@@ -354,9 +360,8 @@ thead th,th {
 }
 
 img {
-	width: 140%;
-	max-width: 140%;
-	margin: 0 -20%;
+	width: 100%;
+	max-width: 100%;
 	border-radius: 3px;
 }
 
