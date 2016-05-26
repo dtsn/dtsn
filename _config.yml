@@ -15,7 +15,9 @@ google_analytics: 'UA-37892446-1'
 disqus: true
 disqus_shortname: 'dtsn'
 
-gems: [jekyll-paginate]
+gems:
+  - jemoji
+  - jekyll-paginate
 
 # Details for the RSS feed generator
 url:            'http://dtsn.me'
