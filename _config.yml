@@ -9,7 +9,7 @@ markdown: kramdown
 highlighter: rouge
 
 paginate: 20
-baseurl: '/'
+baseurl: 'http://dtsn.me/'
 domain_name: 'http://dtsn.me'
 google_analytics: 'UA-37892446-1'
 disqus: true
