@@ -1,7 +1,6 @@
 ---
 title: 'New Project: Jungle Skipper'
 date: 2017-09-15 10:50:00 Z
-published: false
 ---
 
 My name is Daniel and I'm addicted to Disney theme parks! 
