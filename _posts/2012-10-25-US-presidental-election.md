@@ -1,14 +1,15 @@
 ---
-layout: post
 title: U.S. Presidental Debates
+date: 2012-10-25 00:00:00 Z
 tags:
-  - Data Art
-  - Visulisation
-  - JavaScript
-  - DataSift
-  - Presidents
-  - Obama
-  - Romney
+- Data Art
+- Visulisation
+- JavaScript
+- DataSift
+- Presidents
+- Obama
+- Romney
+layout: post
 ---
 
 <p style="font-size: 14px; text-align: center;"><em><a href="http://election.datasift.com">http://election.datasift.com</a></em></p>

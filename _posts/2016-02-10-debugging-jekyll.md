@@ -1,11 +1,11 @@
 ---
+title: Debugging Jekyll
+date: 2016-02-10 00:00:00 Z
+categories:
+- jekyll
 layout: post
 description: Debugging jekyll using inspect
-keywords: "jekyll, jekyllrb, debug, debugging"
-categories: 
-  - jekyll
-published: true
-title: Debugging Jekyll
+keywords: jekyll, jekyllrb, debug, debugging
 ---
 
 **tldr;** - Use `inspect` as a filter, like below;

@@ -1,5 +1,6 @@
 ---
 title: Advanced Tooltips in Trace
+date: 2015-10-16 00:00:00 Z
 ---
 
 I was recently given the request to improve the tooltips within [Trace](http://datasift.github.io/trace). In particular have a tooltip when a user hovers at any point in a in line chart.

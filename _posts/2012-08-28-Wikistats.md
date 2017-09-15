@@ -1,11 +1,12 @@
 ---
-layout: post
 title: Wikistats
+date: 2012-08-28 00:00:00 Z
 tags:
-  - Data Art
-  - Visulisation
-  - PHP
-  - DataSift
+- Data Art
+- Visulisation
+- PHP
+- DataSift
+layout: post
 ---
 
 <p style="font-size: 14px;"><em><a href="http://wikistats.co">http://wikistats.co</a></em></p>

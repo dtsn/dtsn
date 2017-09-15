@@ -1,11 +1,12 @@
 ---
-layout: post
 title: Like Coffee?
+date: 2012-07-17 00:00:00 Z
 tags:
-  - Data Art
-  - Visulisation
-  - PHP
-  - DataSift
+- Data Art
+- Visulisation
+- PHP
+- DataSift
+layout: post
 ---
 
 <p style="font-size: 14px;"><em><a href="http://demo.datasift.com/coffee/">http://demo.datasift.com/coffee/</a></em></p>

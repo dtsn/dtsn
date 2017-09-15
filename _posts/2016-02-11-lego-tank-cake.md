@@ -1,15 +1,13 @@
 ---
+title: Lego Tank Cake
+date: 2016-02-11 00:00:00 Z
+categories:
+- lego
 layout: post
 description: A tank themed cake which was brought to life using lego
-keywords: "Lego, tank, cake, NXT, baking, kids"
-categories: 
-  - lego
-published: true
-title: Lego Tank Cake
-twitterimage: "https://media.giphy.com/media/1kBe0c8gRN0ly/giphy.gif"
+keywords: Lego, tank, cake, NXT, baking, kids
+twitterimage: https://media.giphy.com/media/1kBe0c8gRN0ly/giphy.gif
 ---
-
-
 
 **Using Lego Mindstorms to bring a cake to life**
 

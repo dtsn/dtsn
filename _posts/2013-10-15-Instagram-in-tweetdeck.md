@@ -1,10 +1,11 @@
---- 
+---
 title: Instagram in Tweetdeck
-layout: post
+date: 2013-10-15 00:00:00 Z
 tags:
-  - Plugins
-  - Tweetdeck
-  - Instagram
+- Plugins
+- Tweetdeck
+- Instagram
+layout: post
 ---
 
 **Update** - Just released a new version which supports Instagram videos.

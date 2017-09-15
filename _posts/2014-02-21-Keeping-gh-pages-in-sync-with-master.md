@@ -1,9 +1,10 @@
---- 
+---
 title: Keeping gh-pages in sync with your master branch
+date: 2014-02-21 00:00:00 Z
+tags:
+- Jekyll
+- Github
 layout: post
-tags: 
-  - Jekyll
-  - Github
 ---
 
 I always find it frustrating to constintly do a pull request between my `master` and `gh-pages` branches. However now thanks to a [StackOverflow](http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master#answer-7472481) post from denbuzze there is a really simple tool.

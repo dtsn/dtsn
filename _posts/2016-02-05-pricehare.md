@@ -1,14 +1,13 @@
 ---
-layout: post
-categories: 
-  - pricehare
-published: true
 title: Pricehare
+date: 2016-02-05 00:00:00 Z
+categories:
+- pricehare
+layout: post
 description: Pricehare is a tool which will track price changes in products
-keywords: "pricehare, saving money, watch, money, cheap"
-twitterimage: ""
+keywords: pricehare, saving money, watch, money, cheap
+twitterimage: ''
 ---
-
 
 **Pricehare is a tool which will track price changes in products.**
 

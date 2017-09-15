@@ -1,8 +1,9 @@
---- 
+---
 title: Remove Front Matter in Jekyll Includes
-layout: post
+date: 2013-07-11 00:00:00 Z
 tags:
-  - Jekyll
+- Jekyll
+layout: post
 ---
 
 I'm working on a few Jekyll plugins which use front matter in include files to define template options. The problem is that front matter isn't automatically excluded from files in the /_include directory. So I've written a little plugin which will remove it from the file.

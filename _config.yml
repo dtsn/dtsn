@@ -1,92 +1,89 @@
+---
+title: dtsn
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: default
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
+    type: drafts
+  values:
+    layout: post
 name: dtsn
-description: "JavaScript Developer &amp; Data Artist"
-
+description: JavaScript Developer &amp; Data Artist
 author: Daniel Saxil-Nielsen
-
 aboutPage: true
-
 markdown: kramdown
 highlighter: rouge
-
 paginate: 20
-baseurl: 'http://dtsn.me/'
-domain_name: 'http://dtsn.me'
-google_analytics: 'UA-37892446-1'
+baseurl: http://dtsn.me/
+domain_name: http://dtsn.me
+google_analytics: UA-37892446-1
 disqus: true
-disqus_shortname: 'dtsn'
-
+disqus_shortname: dtsn
 gems:
-  - jemoji
-  - jekyll-paginate
-  - jekyll-seo-tag
-
-# Details for the RSS feed generator
-url:            'http://dtsn.me'
-author:         'Daniel Saxil-Nielsen'
-authorTwitter:  'dtsn'
-
+- jemoji
+- jekyll-paginate
+- jekyll-seo-tag
+url: http://dtsn.me
+authorTwitter: dtsn
 prose:
-  rooturl: '_posts'
-  siteurl: 'http://dtsn.me'
-  media: 'media'
+  rooturl: _posts
+  siteurl: http://dtsn.me
+  media: media
   ignore:
-    - index.md
-    - _config.yml
-    - /_layouts
-    - /_includes
+  - index.md
+  - _config.yml
+  - "/_layouts"
+  - "/_includes"
   metadata:
     _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Post title"
-          placeholder: "Title"
-          alterable: true
-      - name: "description"
-        field:
-          element: "text"
-          label: "Description"
-          placeholder: "Description"
-          alterable: true
-      - name: "keywords"
-        field:
-          element: "text"
-          label: "Meta Keywords"
-          placeholder: "Comma seperated"
-          alterable: true
-      - name: "categories"
-        field:
-          element: "multiselect"
-          label: "Add Categories"
-          placeholder: "Add Categories"
-          alterable: true
-      - name: "twitterimage"
-        field:
-          element: "text"
-          label: "Twitter Card Image"
-          placeholder: "URL to image"
-          alterable: true
-
-defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post
+    - name: layout
+      field:
+        element: hidden
+        value: post
+    - name: title
+      field:
+        element: text
+        label: Post title
+        placeholder: Title
+        alterable: true
+    - name: description
+      field:
+        element: text
+        label: Description
+        placeholder: Description
+        alterable: true
+    - name: keywords
+      field:
+        element: text
+        label: Meta Keywords
+        placeholder: Comma seperated
+        alterable: true
+    - name: categories
+      field:
+        element: multiselect
+        label: Add Categories
+        placeholder: Add Categories
+        alterable: true
+    - name: twitterimage
+      field:
+        element: text
+        label: Twitter Card Image
+        placeholder: URL to image
+        alterable: true

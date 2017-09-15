@@ -1,12 +1,13 @@
---- 
+---
 title: JavaScript Custom Events
+date: 2014-02-25 00:00:00 Z
+tags:
+- JavaScript
+- Events
+- Event
+- CustomEvent
+- dispatchEvent
 layout: post
-tags: 
-  - JavaScript
-  - Events
-  - Event
-  - CustomEvent
-  - dispatchEvent
 ---
 
 I have been googling around for how to pass custom event data into a JavaScript `Event` object. Turns out you can't what you need to do is to use the realtively new object called `CustomEvent`.

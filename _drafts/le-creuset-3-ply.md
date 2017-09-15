@@ -1,11 +1,12 @@
 ---
-layout: post
-published: false
 title: Le Creuset 3 ply Stainless Steel
-categories: 
-  - product
-  - kitchen
+date: 2016-05-26 00:00:00 Z
+categories:
+- product
+- kitchen
+layout: post
 ---
+
 ![Le Creuset 3 ply]({{site.baseurl}}/media/3-ply1.jpg)
 
 

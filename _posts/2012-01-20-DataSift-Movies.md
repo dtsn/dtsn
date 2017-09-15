@@ -1,6 +1,7 @@
 ---
-layout: post
 title: DataSift Movies
+date: 2012-01-20 00:00:00 Z
+layout: post
 ---
 
 Do you remember <a href="http://fflick.com">fflick</a>? Probably not, it was a start up brought by google for a $10 million price tag a couple of years going. What fflick did was to basically gather users movie reviews across social movies. For this hackathon we decided to do the same, but using the power of DataSift we are able to gather information and give them a score.
