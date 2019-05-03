@@ -31,8 +31,8 @@ aboutPage: true
 markdown: kramdown
 highlighter: rouge
 paginate: 20
-baseurl: http://dtsn.me/
-domain_name: http://dtsn.me
+baseurl: https://dtsn.dev/
+domain_name: https://dtsn.dev
 google_analytics: UA-37892446-1
 disqus: true
 disqus_shortname: dtsn
