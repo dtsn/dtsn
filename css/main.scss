@@ -1,0 +1,29 @@
+---
+---
+
+html, body {
+	background: #4B49EF;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5;
+	font-size: 100%;
+	color: #FFF;
+}
+
+section {
+	display: flex;
+	align-items: center;
+	width: 66.66%;
+	max-width: 800px;
+	height: 100vh;
+	padding: 150px;
+
+	h1 {
+		margin: 0;
+		font-size: 4.768rem;
+		font-family: 'Asap', sans-serif;
+	}
+
+	p {
+		font-size: 1.777rem;
+	}
+}
